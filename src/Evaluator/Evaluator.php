@@ -23,7 +23,7 @@ class Evaluator {
    *
    * @return \Donquixote\Ock\Evaluator\EvaluatorInterface<T>
    *
-   * @throws \Donquixote\DID\Exception\EvaluatorException
+   * @throws \Donquixote\Ock\Exception\EvaluatorException
    */
   public static function iface(string $interface, UniversalAdapterInterface $adapter): EvaluatorInterface {
     $formula = Formula::iface($interface);
@@ -54,7 +54,7 @@ class Evaluator {
    *
    * @return T
    *
-   * @throws \Donquixote\DID\Exception\EvaluatorException
+   * @throws \Donquixote\Ock\Exception\EvaluatorException
    */
   public static function objectFromConf(string $interface, mixed $conf, UniversalAdapterInterface $adapter): object {
     return self::iface($interface, $adapter)->confGetValue($conf);
