@@ -33,7 +33,7 @@
         "phpunit/phpunit": "^9.5",
         "symfony/dependency-injection": "^6.4",
         "symfony/expression-language": "^6.4",
-        "symfony/yaml": "^6.0"
+        "symfony/yaml": "^6.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
