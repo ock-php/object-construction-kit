@@ -6,7 +6,7 @@ namespace Donquixote\Ock\Inspector;
 
 use Donquixote\ClassDiscovery\Inspector\FactoryInspectorInterface;
 use Donquixote\ClassDiscovery\Reflection\FactoryReflectionInterface;
-use Donquixote\DID\Util\AttributesUtil;
+use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Donquixote\Ock\OckPackage;
 use Symfony\Component\DependencyInjection\Attribute\AsDecorator;

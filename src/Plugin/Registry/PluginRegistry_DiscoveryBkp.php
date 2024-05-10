@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Donquixote\Ock\Plugin\Registry;
 
 use Donquixote\DID\Exception\MalformedDeclarationException;
-use Donquixote\DID\Util\AttributesUtil;
+use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface;
 use Donquixote\ClassDiscovery\Shared\ReflectionClassesIAHavingBase;
 use Donquixote\DID\Attribute\Parameter\GetService;

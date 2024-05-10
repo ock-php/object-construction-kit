@@ -9,7 +9,7 @@ use Donquixote\ClassDiscovery\Inspector\FactoryInspectorInterface;
 use Donquixote\ClassDiscovery\Reflection\ClassReflection;
 use Donquixote\ClassDiscovery\Reflection\FactoryReflectionInterface;
 use Donquixote\ClassDiscovery\Reflection\MethodReflection;
-use Donquixote\DID\Util\AttributesUtil;
+use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\DID\Attribute\Parameter\GetServiceInterface;

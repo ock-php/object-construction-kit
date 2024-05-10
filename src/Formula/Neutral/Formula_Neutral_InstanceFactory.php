@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Donquixote\Ock\Formula\Neutral;
 
 use Donquixote\DID\Exception\MalformedDeclarationException;
-use Donquixote\DID\Util\AttributesUtil;
+use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Ock\Contract\FormulaHavingInterface;
 use Donquixote\Ock\Contract\LabelHavingInterface;
