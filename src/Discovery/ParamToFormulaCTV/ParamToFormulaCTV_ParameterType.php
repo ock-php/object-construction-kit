@@ -6,7 +6,7 @@ namespace Donquixote\Ock\Discovery\ParamToFormulaCTV;
 
 use Donquixote\DID\ContainerToValue\ContainerToValue_Fixed;
 use Donquixote\DID\ContainerToValue\ContainerToValueInterface;
-use Donquixote\DID\Util\ReflectionTypeUtil;
+use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Ock\Formula\Iface\Formula_Iface;
 
 class ParamToFormulaCTV_ParameterType implements ParamToFormulaCTVInterface {

@@ -9,7 +9,7 @@ use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
 use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
 use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
 use Donquixote\DID\Util\AttributesUtil;
-use Donquixote\DID\Util\ReflectionTypeUtil;
+use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Ock\Contract\FormulaHavingInterface;
 use Donquixote\Ock\Contract\LabelHavingInterface;
 use Donquixote\Ock\Contract\NameHavingInterface;

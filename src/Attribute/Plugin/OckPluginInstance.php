@@ -9,7 +9,7 @@ use Donquixote\DID\Attribute\Parameter\GetServiceInterface;
 use Donquixote\DID\Attribute\ReflectorAwareAttributeInterface;
 use Donquixote\DID\Exception\MalformedDeclarationException;
 use Donquixote\DID\Util\AttributesUtil;
-use Donquixote\DID\Util\ReflectionTypeUtil;
+use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Ock\Contract\FormulaHavingInterface;
 use Donquixote\Ock\Contract\LabelHavingInterface;
 use Donquixote\Ock\Contract\NameHavingInterface;

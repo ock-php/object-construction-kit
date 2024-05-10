@@ -10,7 +10,7 @@ use Donquixote\ClassDiscovery\Reflection\ClassReflection;
 use Donquixote\ClassDiscovery\Reflection\FactoryReflectionInterface;
 use Donquixote\ClassDiscovery\Reflection\MethodReflection;
 use Donquixote\DID\Util\AttributesUtil;
-use Donquixote\DID\Util\ReflectionTypeUtil;
+use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\DID\Attribute\Parameter\GetServiceInterface;
 use Donquixote\DID\Attribute\ReflectorAwareAttributeInterface;
