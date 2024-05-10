@@ -12,6 +12,8 @@
         "symfony/config": "^6.4"
     },
     "require-dev": {
+        "ext-dom": "*",
+        "ext-libxml": "*",
         "phpunit/phpunit": "^9.5",
         "symfony/dependency-injection": "^6.4",
         "symfony/expression-language": "^6.4",
