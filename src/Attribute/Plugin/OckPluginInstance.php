@@ -6,7 +6,7 @@ namespace Donquixote\Ock\Attribute\Plugin;
 
 use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\DID\Attribute\Parameter\GetServiceInterface;
-use Donquixote\DID\Attribute\ReflectorAwareAttributeInterface;
+use Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
 use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
 use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;

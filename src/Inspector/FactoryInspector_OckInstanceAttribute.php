@@ -13,7 +13,7 @@ use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\DID\Attribute\Parameter\GetServiceInterface;
-use Donquixote\DID\Attribute\ReflectorAwareAttributeInterface;
+use Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
 use Donquixote\Ock\Attribute\Plugin\OckPluginInstance;
 use Donquixote\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Donquixote\Ock\Contract\FormulaHavingInterface;
@@ -149,7 +149,7 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
           $e->getMessage(),
         ), 0, $e);
       }
-      /** @var ReflectorAwareAttributeInterface $attribute */
+      /** @var \Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface $attribute */
       foreach (AttributesUtil::getAll($parameter, ReflectorAwareAttributeInterface::class) as $attribute) {
         $attribute->setReflector($parameter);
       }

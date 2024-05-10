@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Donquixote\Ock\Attribute\Parameter;
 
 use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
-use Donquixote\DID\Attribute\ReflectorAwareAttributeInterface;
+use Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
 use Donquixote\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Donquixote\Ock\Contract\FormulaHavingInterface;
 use Donquixote\Ock\Contract\LabelHavingInterface;
