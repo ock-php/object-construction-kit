@@ -1,0 +1,9 @@
+id: and
+options:
+  conditions:
+    -
+      id: odd
+    -
+      id: greater_than
+      options:
+        operand: 10

@@ -1,0 +1,4 @@
+id: native
+options:
+  decimals: 3
+  format: ',:'

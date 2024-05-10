@@ -1,0 +1,11 @@
+id: sequence
+options:
+  operations:
+    -
+      id: add
+      options:
+        increment: 5
+    -
+      id: multiply
+      options:
+        factor: 7

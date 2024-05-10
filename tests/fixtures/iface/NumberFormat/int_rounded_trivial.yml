@@ -1,0 +1,4 @@
+id: intRounded
+options:
+  intFormat:
+    id: trivial

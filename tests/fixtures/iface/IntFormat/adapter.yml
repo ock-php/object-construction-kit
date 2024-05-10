@@ -1,0 +1,4 @@
+id: numberFormat/native
+options:
+  decimals: 3
+  format: ',.'

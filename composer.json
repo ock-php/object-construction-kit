@@ -1,0 +1,56 @@
+{
+    "name": "donquixote/object-construction-kit",
+    "description": "Object Construction Kit (Ock)",
+    "license": "GPL-2.0-or-later",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../phplib/adaptism"
+        },
+        {
+            "type": "path",
+            "url": "../../phplib/class-discovery"
+        },
+        {
+            "type": "path",
+            "url": "../../phplib/codegen-tools"
+        },
+        {
+            "type": "path",
+            "url": "../../phplib/di-discovery"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "donquixote/adaptism": "*",
+        "donquixote/class-discovery": "@dev",
+        "donquixote/di-discovery": "@dev",
+        "psr/log": "^1.1.4|^2.0|^3.0",
+        "symfony/config": "^6.4"
+    },
+    "require-dev": {
+        "composer/installers": "^2.0",
+        "phpunit/phpunit": "^9.5",
+        "symfony/dependency-injection": "^6.4",
+        "symfony/expression-language": "^6.4",
+        "symfony/yaml": "^6.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Donquixote\\Ock\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Donquixote\\Ock\\Tests\\": "tests/src"
+        }
+    }
+}

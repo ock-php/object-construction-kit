@@ -1,0 +1,18 @@
+id: multiply
+options:
+  factor: 5
+decorators:
+  -
+    id: extraOpDecorator
+    options:
+      extraOp:
+        id: add
+        options:
+          increment: 1
+  -
+    id: extraOpDecorator
+    options:
+      extraOp:
+        id: add
+        options:
+          increment: 2

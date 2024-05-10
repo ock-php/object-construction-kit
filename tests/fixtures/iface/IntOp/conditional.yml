@@ -1,0 +1,9 @@
+id: conditional
+options:
+  condition:
+    id: odd
+  opIfTrue:
+    id: add
+    options:
+      increment: 7
+  opIfFalse: null
