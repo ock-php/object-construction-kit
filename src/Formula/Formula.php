@@ -34,7 +34,7 @@ final class Formula extends UtilBase {
    *   Array of formulas to validate.
    *   This array can have string keys.
    */
-  public static function validateMultiple(array $formulas) {
+  public static function validateMultiple(array $formulas): void {
     self::validate(...array_values($formulas));
   }
 

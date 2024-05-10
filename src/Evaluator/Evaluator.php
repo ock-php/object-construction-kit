@@ -95,7 +95,7 @@ class Evaluator {
    *
    * @throws \Donquixote\Ock\Exception\EvaluatorException_IncompatibleConfiguration
    */
-  public static function incompatibleConfiguration(string $message) {
+  public static function incompatibleConfiguration(string $message): void {
     throw new EvaluatorException_IncompatibleConfiguration($message);
   }
 
@@ -111,7 +111,7 @@ class Evaluator {
    *
    * @throws \Donquixote\Ock\Exception\EvaluatorException_IncompatibleConfiguration
    */
-  public static function expectedConfigButFound(string $expected, mixed $conf) {
+  public static function expectedConfigButFound(string $expected, mixed $conf): void {
     $message = $expected . ', found ' . MessageUtil::formatValue($conf);
     throw new EvaluatorException_IncompatibleConfiguration($message);
   }
