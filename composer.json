@@ -2,24 +2,6 @@
     "name": "donquixote/object-construction-kit",
     "description": "Object Construction Kit (Ock)",
     "license": "GPL-2.0-or-later",
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../phplib/adaptism"
-        },
-        {
-            "type": "path",
-            "url": "../../phplib/class-discovery"
-        },
-        {
-            "type": "path",
-            "url": "../../phplib/codegen-tools"
-        },
-        {
-            "type": "path",
-            "url": "../../phplib/di-discovery"
-        }
-    ],
     "require": {
         "php": ">=8.2",
         "donquixote/adaptism": "*",
