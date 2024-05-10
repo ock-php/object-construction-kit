@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Plugin\Registry;
 
-use Donquixote\Adaptism\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\ClassDiscovery\Discovery\DiscoveryInterface;
 use Donquixote\Ock\OckPackage;
 use Donquixote\Ock\Plugin\PluginDeclaration;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Attribute\Plugin;
 
-use Donquixote\Adaptism\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\DID\Exception\MalformedDeclarationException;
 use Donquixote\DID\Util\ReflectionTypeUtil;
 use Donquixote\Ock\Core\Formula\FormulaInterface;

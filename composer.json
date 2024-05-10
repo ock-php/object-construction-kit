@@ -7,6 +7,7 @@
         "donquixote/adaptism": "*",
         "donquixote/class-discovery": "@dev",
         "donquixote/di-discovery": "@dev",
+        "donquixote/helpers": "@dev",
         "psr/log": "^1.1.4|^2.0|^3.0",
         "symfony/config": "^6.4"
     },
