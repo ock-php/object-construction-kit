@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace Donquixote\Ock\Tests\Util;
 
 use Donquixote\Adaptism\AdapterDefinitionList\AdapterDefinitionList_Discovery;
+use Donquixote\Adaptism\AdaptismPackage;
 use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
 use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIA;
 use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIA_Concat;
 use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface;
 use Donquixote\DID\Attribute\Service;
+use Donquixote\DID\DidNamespace;
 use Donquixote\Ock\Exception\FormulaException;
 use Donquixote\Ock\OckPackage;
 use Donquixote\Ock\Plugin\GroupLabels\PluginGroupLabels;
@@ -45,11 +47,10 @@ class TestingServices {
    */
   private static function buildContainer(): ContainerInterface {
     $container = new ContainerBuilder();
-    $root = dirname(__DIR__, 3);
-    static::loadPackageServicesPhp($container, $root . '/vendor/donquixote/di-discovery');
-    static::loadPackageServicesPhp($container, $root . '/vendor/donquixote/adaptism');
-    static::loadPackageServicesPhp($container, $root);
-    static::loadPackageServicesPhp($container, $root . '/tests', 'services.test.php');
+    static::loadPackageServicesPhp($container, dirname(DidNamespace::DIR));
+    static::loadPackageServicesPhp($container, dirname(AdaptismPackage::DIR));
+    static::loadPackageServicesPhp($container, dirname(OckPackage::DIR));
+    static::loadPackageServicesPhp($container, dirname(__DIR__, 2), 'services.test.php');
     $container->setAlias(ContainerInterface::class, 'service_container');
 
     $container->compile();

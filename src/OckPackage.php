@@ -22,6 +22,8 @@ use function Symfony\Component\DependencyInjection\Loader\Configurator\tagged_it
 
 class OckPackage {
 
+  const DIR = __DIR__;
+
   const DISCOVERY_TARGET = 'ockDiscovery';
 
   const DISCOVERY_TAG_NAME = 'ock.discovery';
