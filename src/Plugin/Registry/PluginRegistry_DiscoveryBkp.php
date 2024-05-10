@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Plugin\Registry;
 
-use Donquixote\DID\Exception\MalformedDeclarationException;
+use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
 use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface;
 use Donquixote\ClassDiscovery\Shared\ReflectionClassesIAHavingBase;
@@ -63,7 +63,7 @@ class PluginRegistry_DiscoveryBkp extends ReflectionClassesIAHavingBase implemen
    * @param array<string, array<string, \Donquixote\Ock\Plugin\Plugin>> $pluginss
    * @param \ReflectionClass|\ReflectionMethod $reflector
    *
-   * @throws \Donquixote\DID\Exception\MalformedDeclarationException
+   * @throws \Donquixote\ClassDiscovery\Exception\MalformedDeclarationException
    * @throws \Donquixote\Ock\Exception\FormulaException
    * @throws \ReflectionException
    */

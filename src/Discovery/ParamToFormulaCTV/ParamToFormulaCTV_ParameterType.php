@@ -14,7 +14,7 @@ class ParamToFormulaCTV_ParameterType implements ParamToFormulaCTVInterface {
   /**
    * @inheritDoc
    *
-   * @throws \Donquixote\DID\Exception\DiscoveryException
+   * @throws \Donquixote\ClassDiscovery\Exception\DiscoveryException
    */
   public function paramGetFormulaCTV(\ReflectionParameter $parameter): ?ContainerToValueInterface {
     $class = ReflectionTypeUtil::getClassLikeType($parameter);
