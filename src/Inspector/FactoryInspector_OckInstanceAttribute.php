@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Inspector;
 
+use Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
 use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
 use Donquixote\ClassDiscovery\Inspector\FactoryInspectorInterface;
 use Donquixote\ClassDiscovery\Reflection\ClassReflection;
@@ -11,11 +12,9 @@ use Donquixote\ClassDiscovery\Reflection\FactoryReflectionInterface;
 use Donquixote\ClassDiscovery\Reflection\MethodReflection;
 use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
-use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\DID\Attribute\Parameter\GetServiceInterface;
-use Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Attribute\Plugin\OckPluginInstance;
-use Donquixote\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Donquixote\Ock\Contract\FormulaHavingInterface;
 use Donquixote\Ock\Contract\LabelHavingInterface;
 use Donquixote\Ock\Contract\NameHavingInterface;
@@ -87,14 +86,7 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
 
     $plugin = new Plugin($attribute->getLabel(), null, $formula, []);
 
-    $declaration = new PluginDeclaration($attribute->id, $types, $plugin);
-
-    // @todo Move the modifier handling to a decorating inspector.
-    foreach (AttributesUtil::getAll($reflector, PluginModifierAttributeInterface::class) as $modifier) {
-      # $declaration = $modifier->modifyPlugin($declaration);
-    }
-
-    yield $declaration;
+    yield new PluginDeclaration($attribute->id, $types, $plugin);
   }
 
   /**

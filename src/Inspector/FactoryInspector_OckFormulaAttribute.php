@@ -11,7 +11,6 @@ use Donquixote\ClassDiscovery\Reflection\MethodReflection;
 use Donquixote\ClassDiscovery\Util\AttributesUtil;
 use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Ock\Attribute\Plugin\OckPluginFormula;
-use Donquixote\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
 use Donquixote\Ock\Formula\Neutral\Formula_Passthru_FormulaFactory;
 use Donquixote\Ock\OckPackage;
@@ -69,14 +68,8 @@ class FactoryInspector_OckFormulaAttribute implements FactoryInspectorInterface 
     }
 
     $types = $rclass->getInterfaceNames();
-    $declaration = new PluginDeclaration($attribute->id, $types, $plugin);
 
-    // @todo Move the modifier handling to a decorating inspector.
-    foreach (AttributesUtil::getAll($reflector, PluginModifierAttributeInterface::class) as $modifier) {
-      # $declaration = $modifier->modifyPlugin($declaration);
-    }
-
-    yield $declaration;
+    yield new PluginDeclaration($attribute->id, $types, $plugin);
   }
 
 }
