@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Attribute\Plugin;
 
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\DID\Attribute\Parameter\GetServiceInterface;
 use Donquixote\DID\Attribute\ReflectorAwareAttributeInterface;
 use Donquixote\DID\Exception\MalformedDeclarationException;

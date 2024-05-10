@@ -6,7 +6,7 @@ namespace Donquixote\Ock\Formula\ServiceProxy;
 
 use Donquixote\DID\ContainerToValue\ContainerToValueInterface;
 use Donquixote\DID\Exception\ContainerToValueException;
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
 use Donquixote\Ock\Exception\FormulaException;
 use Psr\Container\ContainerInterface;

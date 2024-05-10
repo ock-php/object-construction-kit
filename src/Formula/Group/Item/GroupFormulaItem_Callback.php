@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Formula\Group\Item;
 
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
 use Donquixote\Ock\Exception\FormulaException;
 use Donquixote\Ock\Text\TextInterface;

@@ -7,7 +7,7 @@ namespace Donquixote\Ock\Summarizer;
 use Donquixote\Adaptism\Attribute\Adapter;
 use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
 use Donquixote\CodegenTools\Util\CodeGen;
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Formula\Validator\Formula_ConstrainedValueInterface;
 use Donquixote\Ock\Text\Text;
 use Donquixote\Ock\Text\TextInterface;

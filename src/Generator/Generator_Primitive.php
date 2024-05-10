@@ -7,7 +7,7 @@ namespace Donquixote\Ock\Generator;
 use Donquixote\Adaptism\Attribute\Adapter;
 use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
 use Donquixote\Ock\Formula\Primitive\Formula_ScalarInterface;
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 
 class Generator_Primitive implements GeneratorInterface {
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Formula\Validator;
 
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Formula\Description\Formula_DescriptionInterface;
 use Donquixote\Ock\Text\Text;
 use Donquixote\Ock\Text\TextInterface;

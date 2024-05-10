@@ -6,7 +6,7 @@ namespace Donquixote\Ock;
 
 use Donquixote\Adaptism\Exception\AdapterException;
 use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
 use Donquixote\Ock\Formula\Formula;
 use Donquixote\Ock\Util\UtilBase;

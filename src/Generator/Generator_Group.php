@@ -9,7 +9,7 @@ use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
 use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
 use Donquixote\Adaptism\Exception\AdapterException;
 use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Exception\FormulaException;
 use Donquixote\Ock\Exception\GeneratorException;
 use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;

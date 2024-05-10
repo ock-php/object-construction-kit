@@ -9,7 +9,7 @@ use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
 use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
 use Donquixote\Ock\Formula\Sequence\Formula_SequenceInterface;
 use Donquixote\Ock\Formula\SequenceVal\Formula_SequenceValInterface;
-use Donquixote\CodegenTools\Util\MessageUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\V2V\Sequence\V2V_Sequence_Trivial;
 use Donquixote\Ock\V2V\Sequence\V2V_SequenceInterface;
 
