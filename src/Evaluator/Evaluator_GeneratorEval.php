@@ -40,7 +40,7 @@ class Evaluator_GeneratorEval implements EvaluatorInterface {
    * Constructor.
    *
    * @param \Donquixote\Ock\Generator\GeneratorInterface $generator
-   * @param \Donquixote\Containerkit\Container\ContainerInterface $container
+   * @param \Psr\Container\ContainerInterface $container
    */
   public function __construct(
     private readonly GeneratorInterface $generator,

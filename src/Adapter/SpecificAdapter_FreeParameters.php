@@ -17,13 +17,13 @@ class SpecificAdapter_FreeParameters {
   /**
    * @param \Donquixote\Ock\Formula\FreeParameters\Formula_FreeParametersInterface $formula
    * @param \Psr\Container\ContainerInterface $container
-   * @param \Donquixote\DID\ParamToValue\ParamToValueInterface $paramToValue
+   * @param \Donquixote\DID\ParamToCTV\ParamToCTVInterface $paramToCTV
    *
    * @return \Donquixote\Ock\Core\Formula\FormulaInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Donquixote\ClassDiscovery\Exception\DiscoveryException
+   * @throws \Donquixote\DID\Exception\ContainerToValueException
    * @throws \ReflectionException
-   * @throws \Exception
    */
   #[Adapter]
   public static function adapt(
