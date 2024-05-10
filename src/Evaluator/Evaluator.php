@@ -6,9 +6,9 @@ namespace Donquixote\Ock\Evaluator;
 
 use Donquixote\Adaptism\Exception\AdapterException;
 use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Exception\EvaluatorException;
 use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Donquixote\Ock\Exception\EvaluatorException;
 use Donquixote\Ock\Exception\EvaluatorException_IncompatibleConfiguration;
 use Donquixote\Ock\Formula\Formula;
 use Donquixote\Ock\FormulaAdapter;
