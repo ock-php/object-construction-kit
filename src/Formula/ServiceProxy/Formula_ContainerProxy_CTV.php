@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Formula\ServiceProxy;
 
-use Donquixote\DID\ContainerToValue\ContainerToValueInterface;
+use Ock\Egg\Egg\EggInterface;
 use Donquixote\DID\Exception\ContainerToValueException;
 use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
@@ -16,10 +16,10 @@ class Formula_ContainerProxy_CTV implements Formula_ContainerProxyInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\DID\ContainerToValue\ContainerToValueInterface<FormulaInterface> $formulaCTV
+   * @param \Ock\Egg\Egg\EggInterface<FormulaInterface> $formulaCTV
    */
   public function __construct(
-    private readonly ContainerToValueInterface $formulaCTV,
+    private readonly EggInterface $formulaCTV,
   ) {}
 
   /**
