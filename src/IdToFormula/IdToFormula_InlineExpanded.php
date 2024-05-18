@@ -31,7 +31,7 @@ class IdToFormula_InlineExpanded implements IdToFormulaInterface {
       return $this->decorated->idGetFormula($id);
     }
 
-    list($prefix, $suffix) = explode('/', (string) $id, 2);
+    [$prefix, $suffix] = explode('/', (string) $id, 2);
 
     if (NULL === $rawNestedFormula = $this->decorated->idGetFormula($prefix)) {
       return NULL;

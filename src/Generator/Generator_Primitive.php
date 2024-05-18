@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Donquixote\Ock\Generator;
 
 use Donquixote\Adaptism\Attribute\Adapter;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
 use Donquixote\Ock\Formula\Primitive\Formula_ScalarInterface;
-use Donquixote\Helpers\Util\MessageUtil;
 
 class Generator_Primitive implements GeneratorInterface {
 

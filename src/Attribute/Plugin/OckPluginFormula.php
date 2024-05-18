@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Attribute\Plugin;
 
-use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
 use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
 use Donquixote\Ock\Formula\Neutral\Formula_Passthru_FormulaFactory;
 use Donquixote\Ock\Plugin\PluginDeclaration;

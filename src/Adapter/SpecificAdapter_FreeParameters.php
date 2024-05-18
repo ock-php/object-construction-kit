@@ -6,8 +6,8 @@ namespace Donquixote\Ock\Adapter;
 
 use Donquixote\Adaptism\Attribute\Adapter;
 use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\DID\ParamToCTV\ParamToCTVInterface;
 use Donquixote\DID\Attribute\Parameter\GetService;
+use Donquixote\DID\ParamToCTV\ParamToCTVInterface;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
 use Donquixote\Ock\Formula\FreeParameters\Formula_FreeParametersInterface;
 use Psr\Container\ContainerInterface;

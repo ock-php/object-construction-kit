@@ -6,8 +6,8 @@ namespace Donquixote\Ock\EvaluatorLookup;
 
 use Donquixote\Adaptism\Exception\AdapterException;
 use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\DID\Attribute\Parameter\GetService;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Evaluator\EvaluatorInterface;
 use Donquixote\Ock\Formula\Formula;
 

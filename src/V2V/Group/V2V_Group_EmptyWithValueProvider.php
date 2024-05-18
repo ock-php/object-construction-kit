@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\V2V\Group;
 
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Exception\GeneratorException_UnsupportedConfiguration;
 use Donquixote\Ock\Formula\ValueProvider\Formula_FixedPhpInterface;
-use Donquixote\Helpers\Util\MessageUtil;
 
 class V2V_Group_EmptyWithValueProvider implements V2V_GroupInterface {
 

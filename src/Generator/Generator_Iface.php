@@ -9,13 +9,13 @@ use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
 use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
 use Donquixote\Adaptism\Exception\AdapterException;
 use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Donquixote\CodegenTools\Util\PhpUtil;
 use Donquixote\DID\Attribute\Parameter\GetService;
 use Donquixote\Ock\Exception\GeneratorException;
 use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
 use Donquixote\Ock\Exception\PluginListException;
 use Donquixote\Ock\Formula\Iface\Formula_IfaceInterface;
 use Donquixote\Ock\Plugin\Map\PluginMapInterface;
-use Donquixote\CodegenTools\Util\PhpUtil;
 
 #[Adapter]
 class Generator_Iface implements GeneratorInterface {

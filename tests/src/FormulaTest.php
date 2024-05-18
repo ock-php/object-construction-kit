@@ -7,8 +7,6 @@ namespace Donquixote\Ock\Tests;
 use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
 use Donquixote\Ock\Formula\Formula;
 use Donquixote\Ock\Formula\Iface\Formula_Iface;
-use Donquixote\Ock\Generator\Generator_Boolean;
-use Donquixote\Ock\Generator\Generator_Drilldown;
 use Donquixote\Ock\Generator\Generator_Iface;
 use Donquixote\Ock\Generator\GeneratorInterface;
 use Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface;

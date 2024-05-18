@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Formula\ServiceProxy;
 
-use Ock\Egg\Egg\EggInterface;
 use Donquixote\DID\Exception\ContainerToValueException;
 use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\Core\Formula\FormulaInterface;
 use Donquixote\Ock\Exception\FormulaException;
+use Ock\Egg\Egg\EggInterface;
 use Psr\Container\ContainerInterface;
 
 class Formula_ContainerProxy_CTV implements Formula_ContainerProxyInterface {

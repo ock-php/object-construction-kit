@@ -11,7 +11,6 @@ use Donquixote\Ock\Generator\GeneratorInterface;
 use Donquixote\Ock\Summarizer\SummarizerInterface;
 use Donquixote\Ock\Text\Text;
 use Donquixote\Ock\Text\TextInterface;
-use Donquixote\CodegenTools\Util\PhpUtil;
 
 final class Formula_Identity implements FormulaInterface, GeneratorInterface, SummarizerInterface {
 

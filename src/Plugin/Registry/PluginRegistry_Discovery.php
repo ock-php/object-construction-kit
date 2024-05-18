@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Plugin\Registry;
 
-use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\ClassDiscovery\Discovery\DiscoveryInterface;
+use Donquixote\Helpers\Util\MessageUtil;
 use Donquixote\Ock\OckPackage;
 use Donquixote\Ock\Plugin\PluginDeclaration;
 use Symfony\Component\DependencyInjection\Attribute\AsAlias;

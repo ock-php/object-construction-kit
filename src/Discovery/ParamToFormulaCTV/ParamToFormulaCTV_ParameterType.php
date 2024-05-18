@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Donquixote\Ock\Discovery\ParamToFormulaCTV;
 
-use Ock\Egg\Egg\Egg_Fixed;
-use Ock\Egg\Egg\EggInterface;
 use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
 use Donquixote\Ock\Formula\Iface\Formula_Iface;
+use Ock\Egg\Egg\Egg_Fixed;
+use Ock\Egg\Egg\EggInterface;
 
 class ParamToFormulaCTV_ParameterType implements ParamToFormulaCTVInterface {
 
