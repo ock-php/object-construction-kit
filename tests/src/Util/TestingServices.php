@@ -20,6 +20,7 @@ use Donquixote\Ock\Plugin\Registry\PluginRegistry_Discovery;
 use Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface;
 use Donquixote\Ock\Translator\Translator_Passthru;
 use Donquixote\Ock\Translator\TranslatorInterface;
+use Ock\Egg\EggNamespace;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -48,6 +49,7 @@ class TestingServices {
   private static function buildContainer(): ContainerInterface {
     $container = new ContainerBuilder();
     static::loadPackageServicesPhp($container, dirname(DidNamespace::DIR));
+    static::loadPackageServicesPhp($container, dirname(EggNamespace::DIR));
     static::loadPackageServicesPhp($container, dirname(AdaptismPackage::DIR));
     static::loadPackageServicesPhp($container, dirname(OckPackage::DIR));
     static::loadPackageServicesPhp($container, dirname(__DIR__, 2), 'services.test.php');
