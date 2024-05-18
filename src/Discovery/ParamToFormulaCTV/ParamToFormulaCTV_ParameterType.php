@@ -16,7 +16,7 @@ class ParamToFormulaCTV_ParameterType implements ParamToFormulaCTVInterface {
    *
    * @throws \Donquixote\ClassDiscovery\Exception\DiscoveryException
    */
-  public function paramGetFormulaCTV(\ReflectionParameter $parameter): ?EggInterface {
+  public function paramGetFormulaEgg(\ReflectionParameter $parameter): ?EggInterface {
     $class = ReflectionTypeUtil::getClassLikeType($parameter);
     if ($class === NULL) {
       return NULL;

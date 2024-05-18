@@ -13,6 +13,6 @@ interface ParamToFormulaCTVInterface {
    *
    * @return \Ock\Egg\Egg\EggInterface<\Donquixote\Ock\Core\Formula\FormulaInterface>|null
    */
-  public function paramGetFormulaCTV(\ReflectionParameter $parameter): ?EggInterface;
+  public function paramGetFormulaEgg(\ReflectionParameter $parameter): ?EggInterface;
 
 }
