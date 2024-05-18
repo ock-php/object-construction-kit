@@ -27,7 +27,7 @@ class Formula_ContainerProxy_CTV implements Formula_ContainerProxyInterface {
    */
   public function containerGetFormula(ContainerInterface $container): FormulaInterface {
     try {
-      $candidate = $this->formulaCTV->containerGetValue($container);
+      $candidate = $this->formulaCTV->hatch($container);
     }
     catch (ContainerToValueException $e) {
       throw new FormulaException($e->getMessage(), 0, $e);

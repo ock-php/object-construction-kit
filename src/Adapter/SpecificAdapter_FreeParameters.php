@@ -37,7 +37,7 @@ class SpecificAdapter_FreeParameters {
       if ($ctv === NULL) {
         continue;
       }
-      $args[$index] = $ctv->containerGetValue($container);
+      $args[$index] = $ctv->hatch($container);
     }
     return $formula->withArgValues($args);
   }
