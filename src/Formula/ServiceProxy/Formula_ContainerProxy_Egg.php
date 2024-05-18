@@ -11,7 +11,7 @@ use Donquixote\Ock\Exception\FormulaException;
 use Ock\Egg\Egg\EggInterface;
 use Psr\Container\ContainerInterface;
 
-class Formula_ContainerProxy_CTV implements Formula_ContainerProxyInterface {
+class Formula_ContainerProxy_Egg implements Formula_ContainerProxyInterface {
 
   /**
    * Constructor.
