@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Discovery\ParamToFormulaCTV;
+namespace Donquixote\Ock\Discovery\ParamToFormulaEgg;
 
 use Ock\Egg\Egg\EggInterface;
 
-interface ParamToFormulaCTVInterface {
+interface ParamToFormulaEggInterface {
 
   /**
    * @param \ReflectionParameter $parameter
