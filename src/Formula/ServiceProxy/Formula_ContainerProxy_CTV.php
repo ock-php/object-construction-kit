@@ -16,10 +16,10 @@ class Formula_ContainerProxy_CTV implements Formula_ContainerProxyInterface {
   /**
    * Constructor.
    *
-   * @param \Ock\Egg\Egg\EggInterface<FormulaInterface> $formulaCTV
+   * @param \Ock\Egg\Egg\EggInterface<FormulaInterface> $formulaEgg
    */
   public function __construct(
-    private readonly EggInterface $formulaCTV,
+    private readonly EggInterface $formulaEgg,
   ) {}
 
   /**
@@ -27,7 +27,7 @@ class Formula_ContainerProxy_CTV implements Formula_ContainerProxyInterface {
    */
   public function containerGetFormula(ContainerInterface $container): FormulaInterface {
     try {
-      $candidate = $this->formulaCTV->hatch($container);
+      $candidate = $this->formulaEgg->hatch($container);
     }
     catch (ContainerToValueException $e) {
       throw new FormulaException($e->getMessage(), 0, $e);
