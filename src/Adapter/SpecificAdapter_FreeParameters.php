@@ -33,7 +33,7 @@ class SpecificAdapter_FreeParameters {
   ): FormulaInterface {
     $args = [];
     foreach ($formula->getFreeParameters() as $index => $parameter) {
-      $egg = $paramToEgg->paramGetCTV($parameter);
+      $egg = $paramToEgg->paramGetEgg($parameter);
       if ($egg === NULL) {
         continue;
       }
