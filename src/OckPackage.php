@@ -12,8 +12,8 @@ use Donquixote\ClassDiscovery\Inspector\FactoryInspector_Concat;
 use Donquixote\ClassDiscovery\Inspector\FactoryInspectorInterface;
 use Donquixote\ClassDiscovery\ReflectionClassesIA\ReflectionClassesIA_Concat;
 use Donquixote\ClassDiscovery\ReflectionClassesIA\ReflectionClassesIAInterface;
-use Donquixote\DID\ClassToCTV\ClassToCTV_Construct;
-use Donquixote\DID\ClassToCTV\ClassToCTVInterface;
+use Ock\Egg\ClassToEgg\ClassToEgg_Construct;
+use Ock\Egg\ClassToEgg\ClassToEggInterface;
 use Ock\Egg\ParamToEgg\ParamToEgg_Chain;
 use Ock\Egg\ParamToEgg\ParamToEggInterface;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
@@ -60,8 +60,8 @@ class OckPackage {
       ->arg(0, new Reference($discoveryClassesServiceId))
       ->arg(1, new Reference($discoveryInspectorServiceId));
 
-    $services->set(ClassToCTVInterface::class)
-      ->class(ClassToCTV_Construct::class);
+    $services->set(ClassToEggInterface::class)
+      ->class(ClassToEgg_Construct::class);
 
     $services->set(ParamToEggInterface::class)
       ->class(ParamToEgg_Chain::class);
