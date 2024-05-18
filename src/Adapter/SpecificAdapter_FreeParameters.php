@@ -17,7 +17,7 @@ class SpecificAdapter_FreeParameters {
   /**
    * @param \Donquixote\Ock\Formula\FreeParameters\Formula_FreeParametersInterface $formula
    * @param \Psr\Container\ContainerInterface $container
-   * @param \Ock\Egg\ParamToEgg\ParamToEggInterface $paramToCTV
+   * @param \Ock\Egg\ParamToEgg\ParamToEggInterface $paramToEgg
    *
    * @return \Donquixote\Ock\Core\Formula\FormulaInterface
    *
@@ -29,11 +29,11 @@ class SpecificAdapter_FreeParameters {
   public static function adapt(
     #[Adaptee] Formula_FreeParametersInterface $formula,
     #[GetService] ContainerInterface $container,
-    #[GetService] ParamToEggInterface $paramToCTV,
+    #[GetService] ParamToEggInterface $paramToEgg,
   ): FormulaInterface {
     $args = [];
     foreach ($formula->getFreeParameters() as $index => $parameter) {
-      $egg = $paramToCTV->paramGetCTV($parameter);
+      $egg = $paramToEgg->paramGetCTV($parameter);
       if ($egg === NULL) {
         continue;
       }
