@@ -1,13 +1,13 @@
 {
-    "name": "donquixote/object-construction-kit",
+    "name": "ock/object-construction-kit",
     "description": "Object Construction Kit (Ock)",
     "license": "GPL-2.0-or-later",
     "require": {
         "php": ">=8.2",
-        "donquixote/adaptism": "*",
-        "donquixote/class-discovery": "@dev",
-        "donquixote/di-discovery": "@dev",
-        "donquixote/helpers": "@dev",
+        "ock/adaptism": "*",
+        "ock/class-discovery": "@dev",
+        "ock/di-discovery": "@dev",
+        "ock/helpers": "@dev",
         "psr/log": "^1.1.4|^2.0|^3.0",
         "symfony/config": "^6.4"
     },
