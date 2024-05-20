@@ -7,9 +7,9 @@ namespace Ock\Ock\Adapter;
 use Ock\Adaptism\Attribute\Adapter;
 use Ock\Adaptism\Attribute\Parameter\Adaptee;
 use Ock\DID\Attribute\Parameter\GetService;
+use Ock\Egg\ParamToEgg\ParamToEggInterface;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Formula\FreeParameters\Formula_FreeParametersInterface;
-use Ock\Egg\ParamToEgg\ParamToEggInterface;
 use Psr\Container\ContainerInterface;
 
 class SpecificAdapter_FreeParameters {

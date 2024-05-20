@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Ock\Ock\Discovery\ParamToFormulaEgg;
 
 use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
-use Ock\Ock\Formula\Iface\Formula_Iface;
 use Ock\Egg\Egg\Egg_Fixed;
 use Ock\Egg\Egg\EggInterface;
+use Ock\Ock\Formula\Iface\Formula_Iface;
 
 class ParamToFormulaEgg_ParameterType implements ParamToFormulaEggInterface {
 
