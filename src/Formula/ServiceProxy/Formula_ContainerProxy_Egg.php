@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Ock\Ock\Formula\ServiceProxy;
 
-use Ock\DID\Exception\ContainerToValueException;
 use Ock\Egg\Egg\EggInterface;
 use Ock\Helpers\Util\MessageUtil;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Exception\FormulaException;
+use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 
 class Formula_ContainerProxy_Egg implements Formula_ContainerProxyInterface {
@@ -29,7 +29,7 @@ class Formula_ContainerProxy_Egg implements Formula_ContainerProxyInterface {
     try {
       $candidate = $this->formulaEgg->hatch($container);
     }
-    catch (ContainerToValueException $e) {
+    catch (ContainerExceptionInterface $e) {
       throw new FormulaException($e->getMessage(), 0, $e);
     }
     if ($candidate === NULL || $candidate instanceof FormulaInterface) {
