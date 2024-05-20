@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\StringVal;
+namespace Ock\Ock\Formula\StringVal;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Textfield\Formula_TextfieldInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Textfield\Formula_TextfieldInterface;
 
 abstract class Formula_StringValBase implements Formula_StringValInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Textfield\Formula_TextfieldInterface $decorated
+   * @param \Ock\Ock\Formula\Textfield\Formula_TextfieldInterface $decorated
    */
   public function __construct(
     private readonly Formula_TextfieldInterface $decorated,

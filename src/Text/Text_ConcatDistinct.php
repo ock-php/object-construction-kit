@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
 class Text_ConcatDistinct extends Text_ListConcat {
 

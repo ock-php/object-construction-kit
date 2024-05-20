@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select\Option;
+namespace Ock\Ock\Formula\Select\Option;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 class SelectOption implements SelectOptionInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface|null $label
-   * @param \Donquixote\Ock\Text\TextInterface|null $groupLabel
+   * @param \Ock\Ock\Text\TextInterface|null $label
+   * @param \Ock\Ock\Text\TextInterface|null $groupLabel
    */
   public function __construct(
     private readonly ?TextInterface $label,

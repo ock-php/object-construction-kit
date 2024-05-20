@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\FormulaAdapter;
-use Donquixote\Ock\Util\UtilBase;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\FormulaAdapter;
+use Ock\Ock\Util\UtilBase;
 
 final class Summarizer extends UtilBase {
 
   /**
    * @param string $interface
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return \Donquixote\Ock\Summarizer\SummarizerInterface
+   * @return \Ock\Ock\Summarizer\SummarizerInterface
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   public static function fromIface(
     string $interface,
@@ -30,12 +30,12 @@ final class Summarizer extends UtilBase {
   }
 
   /**
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return \Donquixote\Ock\Summarizer\SummarizerInterface
+   * @return \Ock\Ock\Summarizer\SummarizerInterface
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    *   Cannot build a generator for the given formula.
    */
   public static function fromFormula(

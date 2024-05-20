@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\FreeParameters;
+namespace Ock\Ock\Formula\FreeParameters;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 abstract class Formula_FreeParametersBase implements Formula_FreeParametersInterface {
 
@@ -50,7 +50,7 @@ abstract class Formula_FreeParametersBase implements Formula_FreeParametersInter
   }
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   protected function resolveIfPossible(): FormulaInterface {
     if ($this->freeParameters !== []) {
@@ -64,7 +64,7 @@ abstract class Formula_FreeParametersBase implements Formula_FreeParametersInter
   /**
    * @param array $args
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   abstract protected function callArgs(array $args): FormulaInterface;
 

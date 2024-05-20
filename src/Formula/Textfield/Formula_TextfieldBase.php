@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Textfield;
+namespace Ock\Ock\Formula\Textfield;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 abstract class Formula_TextfieldBase implements Formula_TextfieldInterface {
 

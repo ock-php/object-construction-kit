@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Formula\Select\Option\SelectOptionInterface;
-use Donquixote\Ock\Text\TextInterface;
-use Donquixote\Ock\Translator\Translator;
+use Ock\Ock\Formula\Select\Option\SelectOptionInterface;
+use Ock\Ock\Text\TextInterface;
+use Ock\Ock\Translator\Translator;
 
 class Formula_Select_FromOptions implements Formula_SelectInterface {
 
   /**
-   * @var \Donquixote\Ock\Text\TextInterface[]|null
+   * @var \Ock\Ock\Text\TextInterface[]|null
    */
   private ?array $groupLabels = NULL;
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Select\Option\SelectOptionInterface[] $options
+   * @param \Ock\Ock\Formula\Select\Option\SelectOptionInterface[] $options
    */
   public function __construct(
     private readonly array $options,
@@ -27,7 +27,7 @@ class Formula_Select_FromOptions implements Formula_SelectInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Select\Option\SelectOptionInterface ...$options
+   * @param \Ock\Ock\Formula\Select\Option\SelectOptionInterface ...$options
    *
    * @psalm-suppress UnusedParam
    */

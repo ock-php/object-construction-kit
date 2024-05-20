@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\PluginModifier;
+namespace Ock\Ock\Attribute\PluginModifier;
 
-use Donquixote\Ock\Plugin\PluginDeclaration;
+use Ock\Ock\Plugin\PluginDeclaration;
 
 interface PluginModifierAttributeInterface {
 
   /**
-   * @param \Donquixote\Ock\Plugin\PluginDeclaration $declaration
+   * @param \Ock\Ock\Plugin\PluginDeclaration $declaration
    *
-   * @return \Donquixote\Ock\Plugin\PluginDeclaration
+   * @return \Ock\Ock\Plugin\PluginDeclaration
    */
   public function modifyPlugin(PluginDeclaration $declaration): PluginDeclaration;
 

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Ock\Formula\ValueProvider\Formula_FixedPhpInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Ock\Formula\ValueProvider\Formula_FixedPhpInterface;
 
 #[Adapter]
 class Generator_ValueProvider implements GeneratorInterface {
@@ -13,7 +13,7 @@ class Generator_ValueProvider implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\ValueProvider\Formula_FixedPhpInterface $formula
+   * @param \Ock\Ock\Formula\ValueProvider\Formula_FixedPhpInterface $formula
    */
   public function __construct(
     private readonly Formula_FixedPhpInterface $formula,

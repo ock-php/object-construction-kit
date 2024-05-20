@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Donquixote\Ock\Tests\Fixture\IntCondition\IntCondition_And;
-use Donquixote\Ock\Tests\Fixture\IntCondition\IntCondition_GreaterThan;
-use Donquixote\Ock\Tests\Fixture\IntCondition\IntCondition_Odd;
-use Donquixote\Ock\Tests\Fixture\IntCondition\IntConditionInterface;
+use Ock\Ock\Tests\Fixture\IntCondition\IntCondition_And;
+use Ock\Ock\Tests\Fixture\IntCondition\IntCondition_GreaterThan;
+use Ock\Ock\Tests\Fixture\IntCondition\IntCondition_Odd;
+use Ock\Ock\Tests\Fixture\IntCondition\IntConditionInterface;
 
 return static function (): IntConditionInterface {
   return new IntCondition_And([

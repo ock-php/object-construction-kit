@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Plugin\Lookup;
+namespace Ock\Ock\Plugin\Lookup;
 
-use Donquixote\Ock\Plugin\Plugin;
+use Ock\Ock\Plugin\Plugin;
 
 interface PluginLookupInterface {
 
@@ -13,7 +13,7 @@ interface PluginLookupInterface {
    *
    * @param string|int $id
    *
-   * @return \Donquixote\Ock\Plugin\Plugin|null
+   * @return \Ock\Ock\Plugin\Plugin|null
    */
   public function getPlugin(string|int $id): ?Plugin;
 

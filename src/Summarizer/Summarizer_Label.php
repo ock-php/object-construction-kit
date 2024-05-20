@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\Label\Formula_LabelInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\Label\Formula_LabelInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 /**
  * Decorator that prepends a "<label>: " to a summary.
@@ -17,8 +17,8 @@ use Donquixote\Ock\Text\TextInterface;
 class Summarizer_Label implements SummarizerInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Label\Formula_LabelInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Label\Formula_LabelInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self|null
    */
@@ -40,8 +40,8 @@ class Summarizer_Label implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Summarizer\SummarizerInterface $decorated
-   * @param \Donquixote\Ock\Text\TextInterface $label
+   * @param \Ock\Ock\Summarizer\SummarizerInterface $decorated
+   * @param \Ock\Ock\Text\TextInterface $label
    */
   public function __construct(
     private readonly SummarizerInterface $decorated,

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
-use Donquixote\Ock\Translator\TranslatorInterface;
+use Ock\Ock\Translator\TranslatorInterface;
 
 /**
  * Generic interface for values that can be used as text.
@@ -14,7 +14,7 @@ use Donquixote\Ock\Translator\TranslatorInterface;
 interface TextInterface {
 
   /**
-   * @param \Donquixote\Ock\Translator\TranslatorInterface $translator
+   * @param \Ock\Ock\Translator\TranslatorInterface $translator
    *
    * @return string
    */

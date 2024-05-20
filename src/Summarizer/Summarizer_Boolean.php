@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Ock\Formula\Boolean\Formula_BooleanInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Ock\Formula\Boolean\Formula_BooleanInterface;
+use Ock\Ock\Text\TextInterface;
 
 #[Adapter]
 class Summarizer_Boolean implements SummarizerInterface {
@@ -14,7 +14,7 @@ class Summarizer_Boolean implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Boolean\Formula_BooleanInterface $formula
+   * @param \Ock\Ock\Formula\Boolean\Formula_BooleanInterface $formula
    */
   public function __construct(
     private readonly Formula_BooleanInterface $formula,

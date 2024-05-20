@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group;
+namespace Ock\Ock\Formula\Group;
 
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Evaluator\Evaluator;
-use Donquixote\Ock\Exception\EvaluatorException;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface;
-use Donquixote\Ock\FormulaAdapter;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Evaluator\Evaluator;
+use Ock\Ock\Exception\EvaluatorException;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface;
+use Ock\Ock\FormulaAdapter;
+use Ock\Ock\Text\TextInterface;
 
 class GroupHelper {
 
   /**
-   * @var \Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
+   * @var \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
    */
   private array $originalItems = [];
 
@@ -59,14 +59,14 @@ class GroupHelper {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
    */
   public function __construct(
     private readonly UniversalAdapterInterface $adapter,
   ) {}
 
   /**
-   * @param \Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface[] $originalItems
+   * @param \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface[] $originalItems
    *
    * @return static
    */
@@ -113,9 +113,9 @@ class GroupHelper {
   /**
    * @param string|int $key
    *
-   * @return \Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface
+   * @return \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function keyGetOriginalItem(string|int $key): GroupFormulaItemInterface {
     if (NULL === $originalItem = $this->originalItems[$key] ?? NULL) {
@@ -131,8 +131,8 @@ class GroupHelper {
    *
    * @return T[]
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Adaptism\Exception\AdapterException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function getObjects(string $interface): array {
     $objects = [];
@@ -150,8 +150,8 @@ class GroupHelper {
    *
    * @return T
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Adaptism\Exception\AdapterException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function keyGetObject(string|int $key, string $interface): object {
     return FormulaAdapter::requireObject(
@@ -162,9 +162,9 @@ class GroupHelper {
   }
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface[]
+   * @return \Ock\Ock\Core\Formula\FormulaInterface[]
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function getFormulas(): array {
     $formulas = [];
@@ -177,8 +177,8 @@ class GroupHelper {
   /**
    * @param string|int $key
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function keyGetFormula(string|int $key): FormulaInterface {
     return $this->formulas[$key]
@@ -189,8 +189,8 @@ class GroupHelper {
   /**
    * @param string|int $key
    *
-   * @return \Donquixote\Ock\Text\TextInterface
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @return \Ock\Ock\Text\TextInterface
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function keyGetLabel(string|int $key): TextInterface {
     return $this->labels[$key]
@@ -203,7 +203,7 @@ class GroupHelper {
    *
    * @return array
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function keyGetArgs(string|int $key): array {
     if (NULL === $args =& $this->argss[$key]) {
@@ -223,7 +223,7 @@ class GroupHelper {
    *
    * @return mixed
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function keyGetValue(string|int $key): mixed {
     if (!array_key_exists($key, $this->resolvedValues)) {

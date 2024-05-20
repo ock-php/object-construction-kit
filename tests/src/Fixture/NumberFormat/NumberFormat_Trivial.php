@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\NumberFormat;
+namespace Ock\Ock\Tests\Fixture\NumberFormat;
 
-use Donquixote\Ock\Attribute\Plugin\OckPluginInstance;
+use Ock\Ock\Attribute\Plugin\OckPluginInstance;
 
 /**
  * Adapter from NumberFormat to IntFormat.

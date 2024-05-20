@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Primitive;
+namespace Ock\Ock\Formula\Primitive;
 
 class Formula_Bool implements Formula_ScalarInterface {
 

@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Util;
+namespace Ock\Ock\Tests\Util;
 
-use Donquixote\Adaptism\AdapterDefinitionList\AdapterDefinitionList_Discovery;
-use Donquixote\Adaptism\AdaptismPackage;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIA;
-use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIA_Concat;
-use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface;
-use Donquixote\DID\Attribute\Service;
-use Donquixote\DID\DidNamespace;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\OckPackage;
-use Donquixote\Ock\Plugin\GroupLabels\PluginGroupLabels;
-use Donquixote\Ock\Plugin\GroupLabels\PluginGroupLabelsInterface;
-use Donquixote\Ock\Plugin\Registry\PluginRegistry_Discovery;
-use Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface;
-use Donquixote\Ock\Translator\Translator_Passthru;
-use Donquixote\Ock\Translator\TranslatorInterface;
+use Ock\Adaptism\AdapterDefinitionList\AdapterDefinitionList_Discovery;
+use Ock\Adaptism\AdaptismPackage;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\ClassDiscovery\ClassFilesIA\ClassFilesIA;
+use Ock\ClassDiscovery\ClassFilesIA\ClassFilesIA_Concat;
+use Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface;
+use Ock\DID\Attribute\Service;
+use Ock\DID\DidNamespace;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\OckPackage;
+use Ock\Ock\Plugin\GroupLabels\PluginGroupLabels;
+use Ock\Ock\Plugin\GroupLabels\PluginGroupLabelsInterface;
+use Ock\Ock\Plugin\Registry\PluginRegistry_Discovery;
+use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
+use Ock\Ock\Translator\Translator_Passthru;
+use Ock\Ock\Translator\TranslatorInterface;
 use Ock\Egg\EggNamespace;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\Config\FileLocator;
@@ -76,7 +76,7 @@ class TestingServices {
   }
 
   /**
-   * @return \Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
+   * @return \Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
    *
    * @throws \ReflectionException
    */
@@ -92,7 +92,7 @@ class TestingServices {
   }
 
   /**
-   * @return \Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
+   * @return \Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
    * @throws \ReflectionException
    */
   #[Service(serviceIdSuffix: PluginRegistry_Discovery::class)]
@@ -102,7 +102,7 @@ class TestingServices {
   }
 
   /**
-   * @return \Donquixote\Ock\Plugin\GroupLabels\PluginGroupLabelsInterface
+   * @return \Ock\Ock\Plugin\GroupLabels\PluginGroupLabelsInterface
    */
   #[Service]
   public static function getPluginGroupLabels(): PluginGroupLabelsInterface {
@@ -110,7 +110,7 @@ class TestingServices {
   }
 
   /**
-   * @return \Donquixote\Ock\Translator\TranslatorInterface
+   * @return \Ock\Ock\Translator\TranslatorInterface
    */
   #[Service]
   public static function getTranslator(): TranslatorInterface {
@@ -118,7 +118,7 @@ class TestingServices {
   }
 
   /**
-   * @return \Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
+   * @return \Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
    * @throws \ReflectionException
    */
   #[Service(serviceIdSuffix: AdapterDefinitionList_Discovery::class)]

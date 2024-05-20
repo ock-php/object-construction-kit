@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Neutral;
+namespace Ock\Ock\Formula\Neutral;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 class Formula_Neutral_ProxyWithCallable extends Formula_Passthru_ProxyBase {
 

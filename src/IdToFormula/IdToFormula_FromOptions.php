@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\IdToFormula;
+namespace Ock\Ock\IdToFormula;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Drilldown\Option\DrilldownOptionInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Drilldown\Option\DrilldownOptionInterface;
 
 class IdToFormula_FromOptions implements IdToFormulaInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Drilldown\Option\DrilldownOptionInterface[] $options
+   * @param \Ock\Ock\Formula\Drilldown\Option\DrilldownOptionInterface[] $options
    */
   public function __construct(
     private readonly array $options,
@@ -21,7 +21,7 @@ class IdToFormula_FromOptions implements IdToFormulaInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Drilldown\Option\DrilldownOptionInterface ...$options
+   * @param \Ock\Ock\Formula\Drilldown\Option\DrilldownOptionInterface ...$options
    */
   private static function validateOptions(DrilldownOptionInterface ...$options): void {}
 

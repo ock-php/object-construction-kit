@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select\Grouped;
+namespace Ock\Ock\Formula\Select\Grouped;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Optgroup {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface|null $label
+   * @param \Ock\Ock\Text\TextInterface|null $label
    *   The group label, or NULL for top-level options.
-   * @param \Donquixote\Ock\Text\TextInterface[] $options
+   * @param \Ock\Ock\Text\TextInterface[] $options
    *   Option labels within the group.
    *
    */
@@ -23,7 +23,7 @@ class Optgroup {
   ) {}
 
   /**
-   * @return \Donquixote\Ock\Text\TextInterface|null
+   * @return \Ock\Ock\Text\TextInterface|null
    *   Optgroup label, or NULL if this is for top-level options.
    */
   public function getLabel(): ?TextInterface {
@@ -31,7 +31,7 @@ class Optgroup {
   }
 
   /**
-   * @return \Donquixote\Ock\Text\TextInterface[]
+   * @return \Ock\Ock\Text\TextInterface[]
    */
   public function getOptions(): array {
     return $this->options;

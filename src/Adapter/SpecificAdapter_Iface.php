@@ -2,33 +2,33 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Adapter;
+namespace Ock\Ock\Adapter;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\DID\Attribute\Parameter\GetService;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\PluginListException;
-use Donquixote\Ock\Formula\Drilldown\Formula_Drilldown;
-use Donquixote\Ock\Formula\Iface\Formula_IfaceInterface;
-use Donquixote\Ock\Formula\Select\Formula_Select_FromPlugins;
-use Donquixote\Ock\Formula\Select\Formula_Select_InlineExpanded;
-use Donquixote\Ock\IdToFormula\IdToFormula_FromPlugins;
-use Donquixote\Ock\IdToFormula\IdToFormula_InlineExpanded;
-use Donquixote\Ock\IdToFormula\IdToFormula_Replace;
-use Donquixote\Ock\Plugin\GroupLabels\PluginGroupLabelsInterface;
-use Donquixote\Ock\Plugin\Map\PluginMapInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\DID\Attribute\Parameter\GetService;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\PluginListException;
+use Ock\Ock\Formula\Drilldown\Formula_Drilldown;
+use Ock\Ock\Formula\Iface\Formula_IfaceInterface;
+use Ock\Ock\Formula\Select\Formula_Select_FromPlugins;
+use Ock\Ock\Formula\Select\Formula_Select_InlineExpanded;
+use Ock\Ock\IdToFormula\IdToFormula_FromPlugins;
+use Ock\Ock\IdToFormula\IdToFormula_InlineExpanded;
+use Ock\Ock\IdToFormula\IdToFormula_Replace;
+use Ock\Ock\Plugin\GroupLabels\PluginGroupLabelsInterface;
+use Ock\Ock\Plugin\Map\PluginMapInterface;
 
 class SpecificAdapter_Iface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Plugin\Map\PluginMapInterface $pluginMap
-   * @param \Donquixote\Ock\Plugin\GroupLabels\PluginGroupLabelsInterface $groupLabels
+   * @param \Ock\Ock\Plugin\Map\PluginMapInterface $pluginMap
+   * @param \Ock\Ock\Plugin\GroupLabels\PluginGroupLabelsInterface $groupLabels
    */
   public function __construct(
     #[GetService] private readonly PluginMapInterface $pluginMap,
@@ -36,7 +36,7 @@ class SpecificAdapter_Iface {
   ) {}
 
   /**
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public function adapt(
@@ -58,12 +58,12 @@ class SpecificAdapter_Iface {
   /**
    * @param class-string $type
    * @param bool $or_null
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
-   * @throws \Donquixote\Ock\Exception\PluginListException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\PluginListException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   protected function typeGetFormula(
     string $type,

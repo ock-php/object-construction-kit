@@ -2,32 +2,32 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Inspector;
+namespace Ock\Ock\Inspector;
 
-use Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
-use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
-use Donquixote\ClassDiscovery\Inspector\FactoryInspectorInterface;
-use Donquixote\ClassDiscovery\Reflection\ClassReflection;
-use Donquixote\ClassDiscovery\Reflection\FactoryReflectionInterface;
-use Donquixote\ClassDiscovery\Reflection\MethodReflection;
-use Donquixote\ClassDiscovery\Util\AttributesUtil;
-use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
-use Donquixote\DID\Attribute\Parameter\GetServiceInterface;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Attribute\Plugin\OckPluginInstance;
-use Donquixote\Ock\Contract\FormulaHavingInterface;
-use Donquixote\Ock\Contract\LabelHavingInterface;
-use Donquixote\Ock\Contract\NameHavingInterface;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Exception\GroupFormulaDuplicateKeyException;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Group\GroupFormulaBuilder;
-use Donquixote\Ock\Formula\Iface\Formula_Iface;
-use Donquixote\Ock\OckPackage;
-use Donquixote\Ock\Plugin\Plugin;
-use Donquixote\Ock\Plugin\PluginDeclaration;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Util\IdentifierLabelUtil;
+use Ock\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
+use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
+use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
+use Ock\ClassDiscovery\Reflection\ClassReflection;
+use Ock\ClassDiscovery\Reflection\FactoryReflectionInterface;
+use Ock\ClassDiscovery\Reflection\MethodReflection;
+use Ock\ClassDiscovery\Util\AttributesUtil;
+use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\DID\Attribute\Parameter\GetServiceInterface;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Attribute\Plugin\OckPluginInstance;
+use Ock\Ock\Contract\FormulaHavingInterface;
+use Ock\Ock\Contract\LabelHavingInterface;
+use Ock\Ock\Contract\NameHavingInterface;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Exception\GroupFormulaDuplicateKeyException;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Group\GroupFormulaBuilder;
+use Ock\Ock\Formula\Iface\Formula_Iface;
+use Ock\Ock\OckPackage;
+use Ock\Ock\Plugin\Plugin;
+use Ock\Ock\Plugin\PluginDeclaration;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Util\IdentifierLabelUtil;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 /**
@@ -92,9 +92,9 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
   /**
    * @param \ReflectionParameter[] $parameters
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupFormulaBuilder
    *
-   * @throws \Donquixote\ClassDiscovery\Exception\DiscoveryException
+   * @throws \Ock\ClassDiscovery\Exception\DiscoveryException
    */
   private function buildGroupFormula(array $parameters): GroupFormulaBuilder {
     $builder = Formula::group();
@@ -141,7 +141,7 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
           $e->getMessage(),
         ), 0, $e);
       }
-      /** @var \Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface $attribute */
+      /** @var \Ock\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface $attribute */
       foreach (AttributesUtil::getAll($parameter, ReflectorAwareAttributeInterface::class) as $attribute) {
         $attribute->setReflector($parameter);
       }

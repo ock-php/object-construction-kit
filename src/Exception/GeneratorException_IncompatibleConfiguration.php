@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Exception;
+namespace Ock\Ock\Exception;
 
 /**
  * Configuration provided is not compatible with current system state.

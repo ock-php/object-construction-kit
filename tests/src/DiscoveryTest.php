@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests;
+namespace Ock\Ock\Tests;
 
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\ClassDiscovery\NamespaceDirectory;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Sequence\Formula_SequenceInterface;
-use Donquixote\Ock\Generator\Generator;
-use Donquixote\Ock\Generator\Generator_Neutral;
-use Donquixote\Ock\Generator\GeneratorInterface;
-use Donquixote\Ock\OckNamespace;
-use Donquixote\Ock\Plugin\Plugin;
-use Donquixote\Ock\Plugin\Registry\PluginRegistryInterface;
-use Donquixote\Ock\Tests\Fixture\IntCondition\IntCondition_GreaterThan;
-use Donquixote\Ock\Tests\Fixture\IntCondition\IntConditionInterface;
-use Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface;
-use Donquixote\Ock\Tests\Util\TestingServices;
-use Donquixote\Ock\Text\Text;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\ClassDiscovery\NamespaceDirectory;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Sequence\Formula_SequenceInterface;
+use Ock\Ock\Generator\Generator;
+use Ock\Ock\Generator\Generator_Neutral;
+use Ock\Ock\Generator\GeneratorInterface;
+use Ock\Ock\OckNamespace;
+use Ock\Ock\Plugin\Plugin;
+use Ock\Ock\Plugin\Registry\PluginRegistryInterface;
+use Ock\Ock\Tests\Fixture\IntCondition\IntCondition_GreaterThan;
+use Ock\Ock\Tests\Fixture\IntCondition\IntConditionInterface;
+use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
+use Ock\Ock\Tests\Util\TestingServices;
+use Ock\Ock\Text\Text;
 
 class DiscoveryTest extends FormulaTestBase {
 
@@ -42,14 +42,14 @@ class DiscoveryTest extends FormulaTestBase {
   /**
    * Tests plugin discovery.
    *
-   * @throws \Donquixote\Ock\Exception\GeneratorException
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
-   * @throws \Donquixote\Ock\Exception\PluginListException
-   * @throws \Donquixote\DID\Exception\ContainerToValueException
+   * @throws \Ock\Ock\Exception\GeneratorException
+   * @throws \Ock\Adaptism\Exception\AdapterException
+   * @throws \Ock\Ock\Exception\PluginListException
+   * @throws \Ock\DID\Exception\ContainerToValueException
    */
   public function testPluginDiscovery(): void {
     $container = TestingServices::getContainer();
-    /** @var \Donquixote\Ock\Plugin\Registry\PluginRegistryInterface $registry */
+    /** @var \Ock\Ock\Plugin\Registry\PluginRegistryInterface $registry */
     $registry = $container->get(PluginRegistryInterface::class);
     $pluginss = $registry->getPluginsByType();
 

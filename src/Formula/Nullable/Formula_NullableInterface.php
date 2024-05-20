@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Nullable;
+namespace Ock\Ock\Formula\Nullable;
 
 interface Formula_NullableInterface {
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Transform;
+namespace Ock\Ock\Formula\Transform;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 interface Formula_TransformInterface {
 
@@ -37,7 +37,7 @@ interface Formula_TransformInterface {
   public function pack(mixed $unpacked_conf): mixed;
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getDecorated(): FormulaInterface;
 

@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Inspector;
+namespace Ock\Ock\Inspector;
 
-use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
-use Donquixote\ClassDiscovery\Inspector\FactoryInspectorInterface;
-use Donquixote\ClassDiscovery\Reflection\FactoryReflectionInterface;
-use Donquixote\ClassDiscovery\Reflection\MethodReflection;
-use Donquixote\ClassDiscovery\Util\AttributesUtil;
-use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
-use Donquixote\Ock\Attribute\Plugin\OckPluginFormula;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Neutral\Formula_Passthru_FormulaFactory;
-use Donquixote\Ock\OckPackage;
-use Donquixote\Ock\Plugin\Plugin;
-use Donquixote\Ock\Plugin\PluginDeclaration;
+use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
+use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
+use Ock\ClassDiscovery\Reflection\FactoryReflectionInterface;
+use Ock\ClassDiscovery\Reflection\MethodReflection;
+use Ock\ClassDiscovery\Util\AttributesUtil;
+use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\Ock\Attribute\Plugin\OckPluginFormula;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Neutral\Formula_Passthru_FormulaFactory;
+use Ock\Ock\OckPackage;
+use Ock\Ock\Plugin\Plugin;
+use Ock\Ock\Plugin\PluginDeclaration;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 #[AutoconfigureTag(OckPackage::DISCOVERY_TAG_NAME)]

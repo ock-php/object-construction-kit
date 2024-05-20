@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\ServiceProxy;
+namespace Ock\Ock\Formula\ServiceProxy;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\FormulaException;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\FormulaException;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 

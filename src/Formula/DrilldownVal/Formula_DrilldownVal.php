@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\DrilldownVal;
+namespace Ock\Ock\Formula\DrilldownVal;
 
-use Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface;
-use Donquixote\Ock\V2V\Drilldown\V2V_Drilldown_Arrify;
-use Donquixote\Ock\V2V\Drilldown\V2V_Drilldown_Merge;
-use Donquixote\Ock\V2V\Drilldown\V2V_DrilldownInterface;
+use Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface;
+use Ock\Ock\V2V\Drilldown\V2V_Drilldown_Arrify;
+use Ock\Ock\V2V\Drilldown\V2V_Drilldown_Merge;
+use Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface;
 
 class Formula_DrilldownVal implements Formula_DrilldownValInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $decorated
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $decorated
    * @param string|null $idKey
    * @param string|null $optionsKey
    *
@@ -34,7 +34,7 @@ class Formula_DrilldownVal implements Formula_DrilldownValInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $decorated
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $decorated
    * @param string|null $idKey
    *
    * @return self
@@ -53,8 +53,8 @@ class Formula_DrilldownVal implements Formula_DrilldownValInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $decorated
-   * @param \Donquixote\Ock\V2V\Drilldown\V2V_DrilldownInterface $v2v
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $decorated
+   * @param \Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface $v2v
    */
   public function __construct(
     private readonly Formula_DrilldownInterface $decorated,

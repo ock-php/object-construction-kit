@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\FreeParameters;
+namespace Ock\Ock\Formula\FreeParameters;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 interface Formula_FreeParametersInterface extends FormulaInterface {
 
@@ -18,7 +18,7 @@ interface Formula_FreeParametersInterface extends FormulaInterface {
   /**
    * @param mixed[] $args
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function withArgValues(array $args): FormulaInterface;
 

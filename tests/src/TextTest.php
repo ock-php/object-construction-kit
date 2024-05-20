@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests;
+namespace Ock\Ock\Tests;
 
-use Donquixote\Ock\Tests\Translator\Translator_Test;
-use Donquixote\Ock\Tests\Util\XmlTestUtil;
-use Donquixote\Ock\Text\TextInterface;
-use Donquixote\Ock\Translator\Translator_Passthru;
+use Ock\Ock\Tests\Translator\Translator_Test;
+use Ock\Ock\Tests\Util\XmlTestUtil;
+use Ock\Ock\Text\TextInterface;
+use Ock\Ock\Translator\Translator_Passthru;
 use PHPUnit\Framework\TestCase;
 
 class TextTest extends TestCase {

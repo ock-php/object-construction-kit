@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\SelectOld;
+namespace Ock\Ock\Formula\SelectOld;
 
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Select_Fixed implements Formula_SelectInterface {
 
   /**
    * Flattened options.
    *
-   * @var \Donquixote\Ock\Text\TextInterface[]
+   * @var \Ock\Ock\Text\TextInterface[]
    */
   private array $flatOptions;
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface[] $options
+   * @param \Ock\Ock\Text\TextInterface[] $options
    *
    * @return self
    */
@@ -28,10 +28,10 @@ class Formula_Select_Fixed implements Formula_SelectInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[][] $groupedOptions
+   * @param \Ock\Ock\Text\TextInterface[][] $groupedOptions
    *   Format: $[$group_id][$option_value] = $option_label,
    *   with $group_id === '' for top-level options.
-   * @param \Donquixote\Ock\Text\TextInterface[] $groups
+   * @param \Ock\Ock\Text\TextInterface[] $groups
    *   Optgroup labels, without the top-level group.
    */
   public function __construct(
@@ -45,9 +45,9 @@ class Formula_Select_Fixed implements Formula_SelectInterface {
 
   /**
    * @param string $id
-   * @param \Donquixote\Ock\Text\TextInterface $label
+   * @param \Ock\Ock\Text\TextInterface $label
    * @param string $group_id
-   * @param \Donquixote\Ock\Text\TextInterface|null $group_label
+   * @param \Ock\Ock\Text\TextInterface|null $group_label
    *
    * @return static
    */

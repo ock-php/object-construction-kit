@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Markup;
+namespace Ock\Ock\Markup;
 
 interface MarkupInterface {
 

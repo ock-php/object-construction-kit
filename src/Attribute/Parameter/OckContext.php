@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Parameter;
+namespace Ock\Ock\Attribute\Parameter;
 
-use Donquixote\Ock\Contract\FormulaHavingInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Contract\FormulaHavingInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 #[\Attribute(\Attribute::TARGET_PARAMETER|\Attribute::TARGET_PROPERTY)]
 class OckContext implements FormulaHavingInterface {
@@ -15,7 +15,7 @@ class OckContext implements FormulaHavingInterface {
   ) {}
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getFormula(): FormulaInterface {
     throw new \RuntimeException('Not implemented, ' . $this->name);

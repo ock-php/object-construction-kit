@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\ServiceProxy;
+namespace Ock\Ock\Formula\ServiceProxy;
 
-use Donquixote\DID\Exception\ContainerToValueException;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\FormulaException;
+use Ock\DID\Exception\ContainerToValueException;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\FormulaException;
 use Ock\Egg\Egg\EggInterface;
 use Psr\Container\ContainerInterface;
 

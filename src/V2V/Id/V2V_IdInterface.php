@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Id;
+namespace Ock\Ock\V2V\Id;
 
 interface V2V_IdInterface {
 

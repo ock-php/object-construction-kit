@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Iface;
+namespace Ock\Ock\Formula\Iface;
 
 class Formula_Iface implements Formula_IfaceInterface {
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Util;
+namespace Ock\Ock\Util;
 
 /**
  * Base class for utility classes which shall only have static methods.

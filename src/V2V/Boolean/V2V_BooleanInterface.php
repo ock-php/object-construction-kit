@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Boolean;
+namespace Ock\Ock\V2V\Boolean;
 
 interface V2V_BooleanInterface {
 

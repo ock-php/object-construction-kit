@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface;
-use Donquixote\Ock\IdToFormula\IdToFormulaInterface;
+use Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface;
+use Ock\Ock\IdToFormula\IdToFormulaInterface;
 
 class Formula_Select_TwoStepFlatSelectComposite extends Formula_Select_TwoStepFlatSelectGrandBase {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface $idFormula
-   * @param \Donquixote\Ock\IdToFormula\IdToFormulaInterface $idToSubFormula
+   * @param \Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface $idFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToSubFormula
    */
   public function __construct(
     private readonly Formula_FlatSelectInterface $idFormula,
@@ -21,7 +21,7 @@ class Formula_Select_TwoStepFlatSelectComposite extends Formula_Select_TwoStepFl
   ) {}
 
   /**
-   * @return \Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface
+   * @return \Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface
    */
   protected function getIdFormula(): Formula_FlatSelectInterface {
     return $this->idFormula;
@@ -30,8 +30,8 @@ class Formula_Select_TwoStepFlatSelectComposite extends Formula_Select_TwoStepFl
   /**
    * @param string $id
    *
-   * @return \Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface|null
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @return \Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface|null
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   protected function idGetSubFormula(string $id): ?Formula_FlatSelectInterface {
     $subFormula = $this->idToSubFormula->idGetFormula($id);

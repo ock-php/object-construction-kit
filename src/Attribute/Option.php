@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute;
+namespace Ock\Ock\Attribute;
 
 /**
  * Annotates a configurable parameter.

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Formula\Primitive\Formula_ScalarInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Formula\Primitive\Formula_ScalarInterface;
 
 class Generator_Primitive implements GeneratorInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Primitive\Formula_ScalarInterface $formula
+   * @param \Ock\Ock\Formula\Primitive\Formula_ScalarInterface $formula
    *
    * @return self
    */
@@ -24,7 +24,7 @@ class Generator_Primitive implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Primitive\Formula_ScalarInterface $formula
+   * @param \Ock\Ock\Formula\Primitive\Formula_ScalarInterface $formula
    */
   public function __construct(
     private readonly Formula_ScalarInterface $formula,

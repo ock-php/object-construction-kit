@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Plugin\Map;
+namespace Ock\Ock\Plugin\Map;
 
 use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
 use Symfony\Component\DependencyInjection\Attribute\AutowireDecorated;
@@ -16,14 +16,14 @@ class PluginMap_Buffer implements PluginMapInterface {
   private ?array $types;
 
   /**
-   * @var \Donquixote\Ock\Plugin\Plugin[][]
+   * @var \Ock\Ock\Plugin\Plugin[][]
    */
   private array $pluginss = [];
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Plugin\Map\PluginMapInterface $decorated
+   * @param \Ock\Ock\Plugin\Map\PluginMapInterface $decorated
    */
   public function __construct(
     #[AutowireDecorated]

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Group;
+namespace Ock\Ock\V2V\Group;
 
-use Donquixote\CodegenTools\Util\CodeGen;
+use Ock\CodegenTools\Util\CodeGen;
 
 class V2V_Group_ObjectMethodCall implements V2V_GroupInterface {
 

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 interface SummarizerInterface {
 
   /**
    * @param mixed $conf
    *
-   * @return null|\Donquixote\Ock\Text\TextInterface
+   * @return null|\Ock\Ock\Text\TextInterface
    *
-   * @throws \Donquixote\Ock\Exception\SummarizerException
+   * @throws \Ock\Ock\Exception\SummarizerException
    */
   public function confGetSummary(mixed $conf): ?TextInterface;
 

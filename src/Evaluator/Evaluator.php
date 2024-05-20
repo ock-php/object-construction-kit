@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Evaluator;
+namespace Ock\Ock\Evaluator;
 
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\EvaluatorException;
-use Donquixote\Ock\Exception\EvaluatorException_IncompatibleConfiguration;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\FormulaAdapter;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\EvaluatorException;
+use Ock\Ock\Exception\EvaluatorException_IncompatibleConfiguration;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\FormulaAdapter;
 
 class Evaluator {
 
@@ -19,11 +19,11 @@ class Evaluator {
    * @template T as object
    *
    * @param class-string<T> $interface
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
    *
-   * @return \Donquixote\Ock\Evaluator\EvaluatorInterface<T>
+   * @return \Ock\Ock\Evaluator\EvaluatorInterface<T>
    *
-   * @throws \Donquixote\Ock\Exception\EvaluatorException
+   * @throws \Ock\Ock\Exception\EvaluatorException
    */
   public static function iface(string $interface, UniversalAdapterInterface $adapter): EvaluatorInterface {
     $formula = Formula::iface($interface);
@@ -50,11 +50,11 @@ class Evaluator {
    *
    * @param class-string<T> $interface
    * @param mixed $conf
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
    *
    * @return T
    *
-   * @throws \Donquixote\Ock\Exception\EvaluatorException
+   * @throws \Ock\Ock\Exception\EvaluatorException
    */
   public static function objectFromConf(string $interface, mixed $conf, UniversalAdapterInterface $adapter): object {
     return self::iface($interface, $adapter)->confGetValue($conf);
@@ -63,15 +63,15 @@ class Evaluator {
   /**
    * Materializes an evaluator from a formula.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
    *   Formula.
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *   Service that can materialize other objects from formulas.
    *
-   * @return \Donquixote\Ock\Evaluator\EvaluatorInterface
+   * @return \Ock\Ock\Evaluator\EvaluatorInterface
    *   Materialized evaluator.
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    *   Cannot build a evaluator for the given formula.
    */
   public static function fromFormula(
@@ -93,7 +93,7 @@ class Evaluator {
    *
    * @return never-return
    *
-   * @throws \Donquixote\Ock\Exception\EvaluatorException_IncompatibleConfiguration
+   * @throws \Ock\Ock\Exception\EvaluatorException_IncompatibleConfiguration
    */
   public static function incompatibleConfiguration(string $message): void {
     throw new EvaluatorException_IncompatibleConfiguration($message);
@@ -109,7 +109,7 @@ class Evaluator {
    *
    * @return never-return
    *
-   * @throws \Donquixote\Ock\Exception\EvaluatorException_IncompatibleConfiguration
+   * @throws \Ock\Ock\Exception\EvaluatorException_IncompatibleConfiguration
    */
   public static function expectedConfigButFound(string $expected, mixed $conf): void {
     $message = $expected . ', found ' . MessageUtil::formatValue($conf);

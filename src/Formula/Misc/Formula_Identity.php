@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Misc;
+namespace Ock\Ock\Formula\Misc;
 
-use Donquixote\CodegenTools\Util\CodeGen;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Generator\GeneratorInterface;
-use Donquixote\Ock\Summarizer\SummarizerInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\CodegenTools\Util\CodeGen;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Generator\GeneratorInterface;
+use Ock\Ock\Summarizer\SummarizerInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 final class Formula_Identity implements FormulaInterface, GeneratorInterface, SummarizerInterface {
 

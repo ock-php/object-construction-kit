@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Validator;
+namespace Ock\Ock\Formula\Validator;
 
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Text\Text;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Text\Text;
 
 class Formula_ConstrainedValue_NativeTypeList implements Formula_ConstrainedValueInterface {
 

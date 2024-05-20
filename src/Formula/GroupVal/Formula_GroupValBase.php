@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\GroupVal;
+namespace Ock\Ock\Formula\GroupVal;
 
-use Donquixote\Ock\Formula\Group\Formula_GroupInterface;
+use Ock\Ock\Formula\Group\Formula_GroupInterface;
 
 abstract class Formula_GroupValBase implements Formula_GroupValInterface {
 
@@ -13,7 +13,7 @@ abstract class Formula_GroupValBase implements Formula_GroupValInterface {
    *
    * Same as the parent, but must be a group formula.
    *
-   * @param \Donquixote\Ock\Formula\Group\Formula_GroupInterface $decorated
+   * @param \Ock\Ock\Formula\Group\Formula_GroupInterface $decorated
    */
   public function __construct(
     private readonly Formula_GroupInterface $decorated,

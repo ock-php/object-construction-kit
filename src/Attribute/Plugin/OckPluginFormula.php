@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Plugin;
+namespace Ock\Ock\Attribute\Plugin;
 
-use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
-use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Neutral\Formula_Passthru_FormulaFactory;
-use Donquixote\Ock\Plugin\PluginDeclaration;
+use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
+use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Neutral\Formula_Passthru_FormulaFactory;
+use Ock\Ock\Plugin\PluginDeclaration;
 
 #[\Attribute(\Attribute::TARGET_METHOD)]
 class OckPluginFormula extends PluginAttributeBase {

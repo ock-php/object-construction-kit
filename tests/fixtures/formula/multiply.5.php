@@ -2,6 +2,6 @@
 
 declare(strict_types=1);
 
-use Donquixote\Ock\Tests\Fixture\IntOp\IntOp_Multiply;
+use Ock\Ock\Tests\Fixture\IntOp\IntOp_Multiply;
 
 return new IntOp_Multiply(5);

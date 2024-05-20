@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests;
+namespace Ock\Ock\Tests;
 
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Iface\Formula_Iface;
-use Donquixote\Ock\Generator\Generator_Iface;
-use Donquixote\Ock\Generator\GeneratorInterface;
-use Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface;
-use Donquixote\Ock\Tests\Util\TestingServices;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Iface\Formula_Iface;
+use Ock\Ock\Generator\Generator_Iface;
+use Ock\Ock\Generator\GeneratorInterface;
+use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
+use Ock\Ock\Tests\Util\TestingServices;
 
 /**
  * @psalm-suppress PropertyNotSetInConstructor
@@ -18,8 +18,8 @@ use Donquixote\Ock\Tests\Util\TestingServices;
 class FormulaTest extends FormulaTestBase {
 
   /**
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
-   * @throws \Donquixote\DID\Exception\ContainerToValueException
+   * @throws \Ock\Adaptism\Exception\AdapterException
+   * @throws \Ock\DID\Exception\ContainerToValueException
    */
   public function testFormula(): void {
     $formula = Formula::iface(IntOpInterface::class);

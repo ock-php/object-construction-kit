@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\IntOp;
+namespace Ock\Ock\Tests\Fixture\IntOp;
 
 interface IntOpInterface {
 

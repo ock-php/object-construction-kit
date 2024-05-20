@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Donquixote\Ock\Text\Text;
+use Ock\Ock\Text\Text;
 
 // Don't create global vars.
 return call_user_func(static function () {

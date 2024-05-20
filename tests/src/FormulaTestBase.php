@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests;
+namespace Ock\Ock\Tests;
 
 use PHPUnit\Framework\TestCase;
 

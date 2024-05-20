@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Neutral;
+namespace Ock\Ock\Formula\Neutral;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Formula\FreeParameters\Formula_FreeParameters;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Formula\FreeParameters\Formula_FreeParameters;
 
 class Formula_Neutral_FormulaClass extends Formula_Passthru_ProxyBase {
 

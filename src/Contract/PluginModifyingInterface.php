@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Contract;
+namespace Ock\Ock\Contract;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 /**
  * Generic interface for objects that provide a formula.
@@ -12,7 +12,7 @@ use Donquixote\Ock\Core\Formula\FormulaInterface;
 interface PluginModifyingInterface {
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getFormula(): FormulaInterface;
 

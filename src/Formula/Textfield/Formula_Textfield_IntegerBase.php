@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Textfield;
+namespace Ock\Ock\Formula\Textfield;
 
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Formula\StringVal\Formula_StringVal;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\V2V\String\V2V_StringInterface;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Formula\StringVal\Formula_StringVal;
+use Ock\Ock\Text\Text;
+use Ock\Ock\V2V\String\V2V_StringInterface;
 
 abstract class Formula_Textfield_IntegerBase extends Formula_TextfieldBase implements V2V_StringInterface {
 
   /**
-   * @return \Donquixote\Ock\Formula\StringVal\Formula_StringVal
+   * @return \Ock\Ock\Formula\StringVal\Formula_StringVal
    */
   public function createValFormula(): Formula_StringVal {
     return new Formula_StringVal($this, $this);
@@ -36,7 +36,7 @@ abstract class Formula_Textfield_IntegerBase extends Formula_TextfieldBase imple
   /**
    * @param int $number
    *
-   * @return \Donquixote\Ock\Text\TextInterface[]
+   * @return \Ock\Ock\Text\TextInterface[]
    */
   protected function numberGetValidationErrors(int $number): array {
     return [];

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group\Item;
+namespace Ock\Ock\Formula\Group\Item;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Text\TextInterface;
 
 interface GroupFormulaItemInterface {
 
@@ -18,16 +18,16 @@ interface GroupFormulaItemInterface {
   /**
    * @param array $args
    *
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    */
   public function getLabel(array $args = []): TextInterface;
 
   /**
    * @param mixed[] $args
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function getFormula(array $args = []): FormulaInterface;
 

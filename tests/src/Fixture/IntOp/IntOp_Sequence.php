@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\IntOp;
+namespace Ock\Ock\Tests\Fixture\IntOp;
 
-use Donquixote\Ock\Attribute\Plugin\OckPluginFormula;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Text\Text;
+use Ock\Ock\Attribute\Plugin\OckPluginFormula;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Text\Text;
 
 class IntOp_Sequence implements IntOpInterface {
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   #[OckPluginFormula(self::class, "sequence", "Sequence")]
   public static function formula(): FormulaInterface {
@@ -29,7 +29,7 @@ class IntOp_Sequence implements IntOpInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface[] $operations
+   * @param \Ock\Ock\Tests\Fixture\IntOp\IntOpInterface[] $operations
    */
   public function __construct(private readonly array $operations) {
   }

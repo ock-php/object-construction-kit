@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Sequence;
+namespace Ock\Ock\Formula\Sequence;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Text\TextInterface;
 
 interface Formula_SequenceInterface extends FormulaInterface {
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getItemFormula(): FormulaInterface;
 
@@ -20,9 +20,9 @@ interface Formula_SequenceInterface extends FormulaInterface {
    * @param int|null $delta
    *   Index of the sequence item, or NULL for the "new item" item.
    *
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function deltaGetItemLabel(?int $delta): TextInterface;
 

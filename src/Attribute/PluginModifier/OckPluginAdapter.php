@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\PluginModifier;
+namespace Ock\Ock\Attribute\PluginModifier;
 
-use Donquixote\Ock\Plugin\PluginDeclaration;
+use Ock\Ock\Plugin\PluginDeclaration;
 
 /**
  * Attribute to

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Group;
+namespace Ock\Ock\V2V\Group;
 
 class V2V_Group_IfConfigKeyThenExpression implements V2V_GroupInterface {
 
@@ -10,8 +10,8 @@ class V2V_Group_IfConfigKeyThenExpression implements V2V_GroupInterface {
    * Constructor.
    *
    * @param string $conditionConfigKey
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface $expressionIfTrue
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface $expressionIfFalse
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface $expressionIfTrue
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface $expressionIfFalse
    */
   public function __construct(
     private readonly string $conditionConfigKey,

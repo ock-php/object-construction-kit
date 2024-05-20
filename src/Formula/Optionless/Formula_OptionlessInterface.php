@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Optionless;
+namespace Ock\Ock\Formula\Optionless;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 /**
  * Common base interface for all formulas that are not configurable.

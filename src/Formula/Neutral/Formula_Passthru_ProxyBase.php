@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Neutral;
+namespace Ock\Ock\Formula\Neutral;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 /**
  * A "proxy" formula can be created before the decorated formula exists.
@@ -14,7 +14,7 @@ use Donquixote\Ock\Core\Formula\FormulaInterface;
 abstract class Formula_Passthru_ProxyBase implements Formula_PassthruInterface {
 
   /**
-   * @var \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @var \Ock\Ock\Core\Formula\FormulaInterface
    */
   private FormulaInterface $decorated;
 
@@ -27,9 +27,9 @@ abstract class Formula_Passthru_ProxyBase implements Formula_PassthruInterface {
   }
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   abstract protected function doGetDecorated(): FormulaInterface;
 

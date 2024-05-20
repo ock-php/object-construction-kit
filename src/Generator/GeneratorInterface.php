@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
 interface GeneratorInterface {
 
@@ -11,7 +11,7 @@ interface GeneratorInterface {
    *
    * @return string
    *
-   * @throws \Donquixote\Ock\Exception\GeneratorException
+   * @throws \Ock\Ock\Exception\GeneratorException
    *   Configuration is incompatible or not supported.
    */
   public function confGetPhp(mixed $conf): string;

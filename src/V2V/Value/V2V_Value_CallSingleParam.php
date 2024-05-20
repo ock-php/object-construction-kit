@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Value;
+namespace Ock\Ock\V2V\Value;
 
-use Donquixote\CodegenTools\Util\CodeGen;
+use Ock\CodegenTools\Util\CodeGen;
 
 class V2V_Value_CallSingleParam implements V2V_ValueInterface {
 

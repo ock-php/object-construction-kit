@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\TwoStep;
+namespace Ock\Ock\V2V\TwoStep;
 
 interface V2V_TwoStepInterface {
 

@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\SelectOld;
+namespace Ock\Ock\Formula\SelectOld;
 
-use Donquixote\Ock\Text\Text;
+use Ock\Ock\Text\Text;
 
 abstract class Formula_Select_BufferedBase implements Formula_SelectInterface {
 
   /**
    * Buffered optgroups.
    *
-   * @var \Donquixote\Ock\Text\TextInterface[]
+   * @var \Ock\Ock\Text\TextInterface[]
    */
   private array $groups = [];
 
   /**
    * Buffered grouped options, with '' for top-level options.
    *
-   * @var \Donquixote\Ock\Text\TextInterface[][]|null
+   * @var \Ock\Ock\Text\TextInterface[][]|null
    */
   private ?array $groupedOptions;
 
@@ -41,7 +41,7 @@ abstract class Formula_Select_BufferedBase implements Formula_SelectInterface {
   /**
    * Initializes buffered options and groups.
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    *   Failure to initialize the formula.
    */
   private function init(): void {
@@ -58,13 +58,13 @@ abstract class Formula_Select_BufferedBase implements Formula_SelectInterface {
   /**
    * Initializes grouped options and optgroup labels.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[][] $grouped_options
+   * @param \Ock\Ock\Text\TextInterface[][] $grouped_options
    *   Format: $[$group_id][$id] = $label,
    *   with $group_id === '' for top-level options.
-   * @param \Donquixote\Ock\Text\TextInterface[] $group_labels
+   * @param \Ock\Ock\Text\TextInterface[] $group_labels
    *   Format: $[$optgroup_id] = $optgroup_label.
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    *   Failure to initialize the formula.
    */
   abstract protected function initialize(array &$grouped_options, array &$group_labels): void;

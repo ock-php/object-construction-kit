@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Drilldown;
+namespace Ock\Ock\Formula\Drilldown;
 
-use Donquixote\Ock\Formula\Id\Formula_IdInterface;
-use Donquixote\Ock\Formula\Select\Formula_Select_FromOptions;
-use Donquixote\Ock\IdToFormula\IdToFormula_FromOptions;
-use Donquixote\Ock\IdToFormula\IdToFormulaInterface;
+use Ock\Ock\Formula\Id\Formula_IdInterface;
+use Ock\Ock\Formula\Select\Formula_Select_FromOptions;
+use Ock\Ock\IdToFormula\IdToFormula_FromOptions;
+use Ock\Ock\IdToFormula\IdToFormulaInterface;
 
 class Formula_Drilldown extends Formula_Drilldown_CustomKeysBase {
 
   /**
-   * @param \Donquixote\Ock\Formula\Id\Formula_IdInterface $idFormula
-   * @param \Donquixote\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\Formula\Id\Formula_IdInterface $idFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
    * @param bool $orNull
    *
    * @return self
@@ -23,7 +23,7 @@ class Formula_Drilldown extends Formula_Drilldown_CustomKeysBase {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Drilldown\Option\DrilldownOptionInterface[] $options
+   * @param \Ock\Ock\Formula\Drilldown\Option\DrilldownOptionInterface[] $options
    * @param bool $orNull
    *
    * @return self
@@ -38,8 +38,8 @@ class Formula_Drilldown extends Formula_Drilldown_CustomKeysBase {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Id\Formula_IdInterface $idFormula
-   * @param \Donquixote\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\Formula\Id\Formula_IdInterface $idFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
    * @param bool $orNull
    */
   public function __construct(

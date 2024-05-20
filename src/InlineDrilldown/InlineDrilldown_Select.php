@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\InlineDrilldown;
+namespace Ock\Ock\InlineDrilldown;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Id\Formula_IdInterface;
-use Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface;
-use Donquixote\Ock\Formula\Select\Formula_Select_FromFlatSelect;
-use Donquixote\Ock\Formula\Select\Formula_SelectInterface;
-use Donquixote\Ock\Formula\ValueProvider\Formula_FixedPhp;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Id\Formula_IdInterface;
+use Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface;
+use Ock\Ock\Formula\Select\Formula_Select_FromFlatSelect;
+use Ock\Ock\Formula\Select\Formula_SelectInterface;
+use Ock\Ock\Formula\ValueProvider\Formula_FixedPhp;
 
 class InlineDrilldown_Select implements InlineDrilldownInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface $formula
+   * @param \Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface $formula
    *
    * @return self
    */
@@ -26,7 +26,7 @@ class InlineDrilldown_Select implements InlineDrilldownInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Select\Formula_SelectInterface $formula
+   * @param \Ock\Ock\Formula\Select\Formula_SelectInterface $formula
    *
    * @return self
    */
@@ -38,7 +38,7 @@ class InlineDrilldown_Select implements InlineDrilldownInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Select\Formula_SelectInterface $formula
+   * @param \Ock\Ock\Formula\Select\Formula_SelectInterface $formula
    */
   public function __construct(
     private readonly Formula_SelectInterface $formula,

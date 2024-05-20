@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Drilldown;
+namespace Ock\Ock\Formula\Drilldown;
 
 trait Formula_Drilldown_CustomKeysTrait {
 

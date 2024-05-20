@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Plugin\Map;
+namespace Ock\Ock\Plugin\Map;
 
-use Donquixote\Ock\Plugin\Registry\PluginRegistryInterface;
+use Ock\Ock\Plugin\Registry\PluginRegistryInterface;
 use Symfony\Component\DependencyInjection\Attribute\AsAlias;
 
 #[AsAlias(public: true)]
@@ -13,7 +13,7 @@ class PluginMap_Registry implements PluginMapInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Plugin\Registry\PluginRegistryInterface $registry
+   * @param \Ock\Ock\Plugin\Registry\PluginRegistryInterface $registry
    */
   public function __construct(
     private readonly PluginRegistryInterface $registry,

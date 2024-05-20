@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Donquixote\\Ock\\": "src"
+            "Ock\\Ock\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Donquixote\\Ock\\Tests\\": "tests/src"
+            "Ock\\Ock\\Tests\\": "tests/src"
         }
     }
 }

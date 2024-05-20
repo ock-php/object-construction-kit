@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Context;
+namespace Ock\Ock\Context;
 
-use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
 
 /**
- * @see \Donquixote\Ock\Todo\ContextTodo
+ * @see \Ock\Ock\Todo\ContextTodo
  */
 class CfContext implements CfContextInterface {
 

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Boolean;
+namespace Ock\Ock\Formula\Boolean;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Boolean implements Formula_BooleanInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface|null $trueSummary
-   * @param \Donquixote\Ock\Text\TextInterface|null $falseSummary
+   * @param \Ock\Ock\Text\TextInterface|null $trueSummary
+   * @param \Ock\Ock\Text\TextInterface|null $falseSummary
    */
   public function __construct(
     private readonly ?TextInterface $trueSummary,

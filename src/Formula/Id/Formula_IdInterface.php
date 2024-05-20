@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Id;
+namespace Ock\Ock\Formula\Id;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 /**
  * Base interface for formulas where the value is id-like (string or integer).
@@ -21,7 +21,7 @@ interface Formula_IdInterface extends FormulaInterface {
    *
    * @return bool
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function idIsKnown(string|int $id): bool;
 

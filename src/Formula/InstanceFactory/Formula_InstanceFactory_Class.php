@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\InstanceFactory;
+namespace Ock\Ock\Formula\InstanceFactory;
 
-use Donquixote\Ock\V2V\Group\V2V_Group_Call;
-use Donquixote\Ock\V2V\Group\V2V_GroupInterface;
+use Ock\Ock\V2V\Group\V2V_Group_Call;
+use Ock\Ock\V2V\Group\V2V_GroupInterface;
 
 class Formula_InstanceFactory_Class implements Formula_InstanceFactoryInterface {
 
@@ -24,7 +24,7 @@ class Formula_InstanceFactory_Class implements Formula_InstanceFactoryInterface 
   }
 
   /**
-   * @return \Donquixote\Ock\V2V\Group\V2V_GroupInterface
+   * @return \Ock\Ock\V2V\Group\V2V_GroupInterface
    */
   public function getV2V(): V2V_GroupInterface {
     return V2V_Group_Call::fromClass($this->class);

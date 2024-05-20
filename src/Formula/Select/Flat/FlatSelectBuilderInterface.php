@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select\Flat;
+namespace Ock\Ock\Formula\Select\Flat;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 interface FlatSelectBuilderInterface {
 
@@ -12,7 +12,7 @@ interface FlatSelectBuilderInterface {
    * Adds a select option.
    *
    * @param string $name
-   * @param \Donquixote\Ock\Text\TextInterface $label
+   * @param \Ock\Ock\Text\TextInterface $label
    *
    * @return $this
    */
@@ -21,7 +21,7 @@ interface FlatSelectBuilderInterface {
   /**
    * Builds the formula.
    *
-   * @return \Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface
+   * @return \Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface
    */
   public function create(): Formula_FlatSelectInterface;
 

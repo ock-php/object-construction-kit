@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\GroupVal;
+namespace Ock\Ock\Formula\GroupVal;
 
-use Donquixote\Ock\Formula\Group\Formula_Group_Empty;
-use Donquixote\Ock\Formula\Group\Formula_GroupInterface;
-use Donquixote\Ock\Formula\ValueProvider\Formula_FixedPhpInterface;
-use Donquixote\Ock\V2V\Group\V2V_Group_EmptyWithValueProvider;
-use Donquixote\Ock\V2V\Group\V2V_GroupInterface;
+use Ock\Ock\Formula\Group\Formula_Group_Empty;
+use Ock\Ock\Formula\Group\Formula_GroupInterface;
+use Ock\Ock\Formula\ValueProvider\Formula_FixedPhpInterface;
+use Ock\Ock\V2V\Group\V2V_Group_EmptyWithValueProvider;
+use Ock\Ock\V2V\Group\V2V_GroupInterface;
 
 class Formula_GroupVal extends Formula_GroupValBase {
 
   /**
-   * @param \Donquixote\Ock\Formula\ValueProvider\Formula_FixedPhpInterface $valueProvider
+   * @param \Ock\Ock\Formula\ValueProvider\Formula_FixedPhpInterface $valueProvider
    *
    * @return self
    */
@@ -27,8 +27,8 @@ class Formula_GroupVal extends Formula_GroupValBase {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Group\Formula_GroupInterface $decorated
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface $v2v
+   * @param \Ock\Ock\Formula\Group\Formula_GroupInterface $decorated
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface $v2v
    */
   public function __construct(
     Formula_GroupInterface $decorated,

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\IdToFormula;
+namespace Ock\Ock\IdToFormula;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Id\Formula_IdInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Id\Formula_IdInterface;
 
 class IdToFormula_FilterDecorator implements IdToFormulaInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\IdToFormula\IdToFormulaInterface $decorated
-   * @param \Donquixote\Ock\Formula\Id\Formula_IdInterface $condition
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $decorated
+   * @param \Ock\Ock\Formula\Id\Formula_IdInterface $condition
    *
    * @todo There should be a narrower interface for $condition parameter.
    */

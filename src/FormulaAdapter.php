@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock;
+namespace Ock\Ock;
 
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Util\UtilBase;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Util\UtilBase;
 
 final class FormulaAdapter extends UtilBase {
 
@@ -18,13 +18,13 @@ final class FormulaAdapter extends UtilBase {
    *
    * @template T as object
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface[] $itemFormulas
+   * @param \Ock\Ock\Core\Formula\FormulaInterface[] $itemFormulas
    * @param class-string<T> $interface
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return T[]
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   public static function getMultiple(array $itemFormulas, string $interface, UniversalAdapterInterface $universalAdapter): array {
 
@@ -41,13 +41,13 @@ final class FormulaAdapter extends UtilBase {
   /**
    * @template T as object
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
    * @param class-string<T> $interface
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return T|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   public static function getObject(
     FormulaInterface $formula,
@@ -60,13 +60,13 @@ final class FormulaAdapter extends UtilBase {
   /**
    * @template T as object
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
    * @param class-string<T> $interface
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return T
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   public static function requireObject(
     FormulaInterface $formula,

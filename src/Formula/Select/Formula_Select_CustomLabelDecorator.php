@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Text\TextInterface;
-use Donquixote\Ock\TextLookup\TextLookupInterface;
+use Ock\Ock\Text\TextInterface;
+use Ock\Ock\TextLookup\TextLookupInterface;
 
 /**
  * @todo Maybe "Options" should be renamed to "Choice"?
@@ -13,26 +13,26 @@ use Donquixote\Ock\TextLookup\TextLookupInterface;
 class Formula_Select_CustomLabelDecorator implements Formula_SelectInterface {
 
   /**
-   * @var \Donquixote\Ock\TextLookup\TextLookupInterface|null
+   * @var \Ock\Ock\TextLookup\TextLookupInterface|null
    */
   private ?TextLookupInterface $labelLookup = NULL;
 
   /**
-   * @var \Donquixote\Ock\TextLookup\TextLookupInterface|null
+   * @var \Ock\Ock\TextLookup\TextLookupInterface|null
    */
   private ?TextLookupInterface $groupLabelLookup = NULL;
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Select\Formula_SelectInterface $decorated
+   * @param \Ock\Ock\Formula\Select\Formula_SelectInterface $decorated
    */
   public function __construct(
     private readonly Formula_SelectInterface $decorated,
   ) {}
 
   /**
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface $textLookup
+   * @param \Ock\Ock\TextLookup\TextLookupInterface $textLookup
    *
    * @return static
    */
@@ -43,7 +43,7 @@ class Formula_Select_CustomLabelDecorator implements Formula_SelectInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface $textLookup
+   * @param \Ock\Ock\TextLookup\TextLookupInterface $textLookup
    *
    * @return static
    */

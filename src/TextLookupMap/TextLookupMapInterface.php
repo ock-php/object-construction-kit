@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\TextLookupMap;
+namespace Ock\Ock\TextLookupMap;
 
-use Donquixote\Ock\TextLookup\TextLookupInterface;
+use Ock\Ock\TextLookup\TextLookupInterface;
 
 interface TextLookupMapInterface {
 
@@ -13,7 +13,7 @@ interface TextLookupMapInterface {
    *
    * @param string $id
    *
-   * @return \Donquixote\Ock\TextLookup\TextLookupInterface|null
+   * @return \Ock\Ock\TextLookup\TextLookupInterface|null
    */
   public function idGetTextLookup(string $id): ?TextLookupInterface;
 

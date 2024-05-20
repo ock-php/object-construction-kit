@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Translator;
+namespace Ock\Ock\Translator;
 
 class Translator {
 
   /**
-   * @return \Donquixote\Ock\Translator\TranslatorInterface
+   * @return \Ock\Ock\Translator\TranslatorInterface
    */
   public static function passthru(): TranslatorInterface {
     return new Translator_Passthru();

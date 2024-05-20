@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\String;
+namespace Ock\Ock\V2V\String;
 
 final class V2V_String_Trivial implements V2V_StringInterface {
 

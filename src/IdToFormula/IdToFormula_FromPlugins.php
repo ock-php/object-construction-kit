@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\IdToFormula;
+namespace Ock\Ock\IdToFormula;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Plugin\Plugin;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Plugin\Plugin;
 
 class IdToFormula_FromPlugins implements IdToFormulaInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Plugin\Plugin[] $plugins
+   * @param \Ock\Ock\Plugin\Plugin[] $plugins
    */
   public function __construct(
     private readonly array $plugins,

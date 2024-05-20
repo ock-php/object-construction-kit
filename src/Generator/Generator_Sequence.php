@@ -2,26 +2,26 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Formula\Sequence\Formula_SequenceInterface;
-use Donquixote\Ock\Formula\SequenceVal\Formula_SequenceValInterface;
-use Donquixote\Ock\V2V\Sequence\V2V_Sequence_Trivial;
-use Donquixote\Ock\V2V\Sequence\V2V_SequenceInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Formula\Sequence\Formula_SequenceInterface;
+use Ock\Ock\Formula\SequenceVal\Formula_SequenceValInterface;
+use Ock\Ock\V2V\Sequence\V2V_Sequence_Trivial;
+use Ock\Ock\V2V\Sequence\V2V_SequenceInterface;
 
 class Generator_Sequence implements GeneratorInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Sequence\Formula_SequenceInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Sequence\Formula_SequenceInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function createFromSequenceFormula(Formula_SequenceInterface $formula, UniversalAdapterInterface $universalAdapter): ?Generator_Sequence {
@@ -29,12 +29,12 @@ class Generator_Sequence implements GeneratorInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\SequenceVal\Formula_SequenceValInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\SequenceVal\Formula_SequenceValInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function createFromSequenceValFormula(Formula_SequenceValInterface $formula, UniversalAdapterInterface $universalAdapter): ?Generator_Sequence {
@@ -42,13 +42,13 @@ class Generator_Sequence implements GeneratorInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Sequence\Formula_SequenceInterface $formula
-   * @param \Donquixote\Ock\V2V\Sequence\V2V_SequenceInterface $v2v
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Sequence\Formula_SequenceInterface $formula
+   * @param \Ock\Ock\V2V\Sequence\V2V_SequenceInterface $v2v
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   private static function create(
     Formula_SequenceInterface $formula,
@@ -67,8 +67,8 @@ class Generator_Sequence implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Generator\GeneratorInterface $itemGenerator
-   * @param \Donquixote\Ock\V2V\Sequence\V2V_SequenceInterface $v2v
+   * @param \Ock\Ock\Generator\GeneratorInterface $itemGenerator
+   * @param \Ock\Ock\V2V\Sequence\V2V_SequenceInterface $v2v
    */
   protected function __construct(
     private readonly GeneratorInterface $itemGenerator,

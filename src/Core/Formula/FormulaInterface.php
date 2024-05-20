@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Core\Formula;
+namespace Ock\Ock\Core\Formula;
 
-use Donquixote\Ock\Core\Formula\Base\FormulaBaseInterface;
+use Ock\Ock\Core\Formula\Base\FormulaBaseInterface;
 
 /**
  * This is a declarative interface only. It has no methods.

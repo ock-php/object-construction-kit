@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Plugin\Map\PluginMapInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Plugin\Map\PluginMapInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Select_FromPluginMap implements Formula_SelectInterface {
 
   /**
-   * @var \Donquixote\Ock\Plugin\Plugin[]|null
+   * @var \Ock\Ock\Plugin\Plugin[]|null
    */
   private ?array $plugins = null;
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Plugin\Map\PluginMapInterface $pluginMap
+   * @param \Ock\Ock\Plugin\Map\PluginMapInterface $pluginMap
    * @param string $type
    */
   public function __construct(
@@ -56,9 +56,9 @@ class Formula_Select_FromPluginMap implements Formula_SelectInterface {
   }
 
   /**
-   * @return \Donquixote\Ock\Plugin\Plugin[]
+   * @return \Ock\Ock\Plugin\Plugin[]
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function getPlugins(): array {
     return $this->plugins

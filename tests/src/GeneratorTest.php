@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests;
+namespace Ock\Ock\Tests;
 
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\CodegenTools\CodeFormatter;
-use Donquixote\CodegenTools\Util\PhpUtil;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\GeneratorException;
-use Donquixote\Ock\Generator\Generator;
-use Donquixote\Ock\Generator\GeneratorInterface;
-use Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface;
-use Donquixote\Ock\Tests\Util\TestingServices;
-use Donquixote\Ock\Tests\Util\TestUtil;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\CodegenTools\CodeFormatter;
+use Ock\CodegenTools\Util\PhpUtil;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\GeneratorException;
+use Ock\Ock\Generator\Generator;
+use Ock\Ock\Generator\GeneratorInterface;
+use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
+use Ock\Ock\Tests\Util\TestingServices;
+use Ock\Ock\Tests\Util\TestUtil;
 use Symfony\Component\Yaml\Yaml;
 
 /**
@@ -77,7 +77,7 @@ class GeneratorTest extends FormulaTestBase {
   }
 
   /**
-   * @param \Donquixote\Ock\Generator\GeneratorInterface $generator
+   * @param \Ock\Ock\Generator\GeneratorInterface $generator
    * @param mixed $conf
    * @param string $file_expected
    * @param string|null $interface
@@ -94,7 +94,7 @@ class GeneratorTest extends FormulaTestBase {
   }
 
   /**
-   * @param \Donquixote\Ock\Exception\GeneratorException $e
+   * @param \Ock\Ock\Exception\GeneratorException $e
    * @param string $file_expected
    */
   private static function assertExceptionPhpFile(GeneratorException $e, string $file_expected): void {

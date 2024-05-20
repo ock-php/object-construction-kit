@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Value;
+namespace Ock\Ock\V2V\Value;
 
-use Donquixote\Ock\V2V\Group\V2V_GroupInterface;
+use Ock\Ock\V2V\Group\V2V_GroupInterface;
 
 class V2V_Value_GroupV2V implements V2V_ValueInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface $groupV2V
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface $groupV2V
    * @param string $key
    */
   public function __construct(

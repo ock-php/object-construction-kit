@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Optionlessness;
+namespace Ock\Ock\Optionlessness;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Ock\Formula\Optionless\Formula_OptionlessInterface;
-use Donquixote\Ock\Util\UtilBase;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Ock\Formula\Optionless\Formula_OptionlessInterface;
+use Ock\Ock\Util\UtilBase;
 
 /**
  * Adapter from Formula_Optionless* to Optionlessness*.
@@ -14,9 +14,9 @@ use Donquixote\Ock\Util\UtilBase;
 final class Optionlessness_Optionless extends UtilBase {
 
   /**
-   * @param \Donquixote\Ock\Formula\Optionless\Formula_OptionlessInterface $formula
+   * @param \Ock\Ock\Formula\Optionless\Formula_OptionlessInterface $formula
    *
-   * @return \Donquixote\Ock\Optionlessness\OptionlessnessInterface
+   * @return \Ock\Ock\Optionlessness\OptionlessnessInterface
    */
   #[Adapter]
   public static function fromFormula(

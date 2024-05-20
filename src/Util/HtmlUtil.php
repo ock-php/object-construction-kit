@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Util;
+namespace Ock\Ock\Util;
 
 class HtmlUtil {
 

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
-use Donquixote\Ock\Translator\TranslatorInterface;
+use Ock\Ock\Translator\TranslatorInterface;
 
 abstract class Text_ListBase extends TextBase {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $items
+   * @param \Ock\Ock\Text\TextInterface[] $items
    */
   public function __construct(
     private array $items,
@@ -20,7 +20,7 @@ abstract class Text_ListBase extends TextBase {
   }
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface $item
+   * @param \Ock\Ock\Text\TextInterface $item
    *
    * @return static
    */
@@ -31,7 +31,7 @@ abstract class Text_ListBase extends TextBase {
   }
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface $item
+   * @param \Ock\Ock\Text\TextInterface $item
    *
    * @return $this
    */

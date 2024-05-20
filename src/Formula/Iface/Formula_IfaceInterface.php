@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Iface;
+namespace Ock\Ock\Formula\Iface;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 interface Formula_IfaceInterface extends FormulaInterface {
 

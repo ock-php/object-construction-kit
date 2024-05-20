@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Drilldown;
+namespace Ock\Ock\Formula\Drilldown;
 
 abstract class Formula_Drilldown_CustomKeysBase extends Formula_DrilldownBase {
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Exception;
+namespace Ock\Ock\Exception;
 
 /**
  * A plugin is incorrectly defined.

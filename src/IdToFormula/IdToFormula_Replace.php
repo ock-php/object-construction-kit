@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\IdToFormula;
+namespace Ock\Ock\IdToFormula;
 
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
 
 class IdToFormula_Replace implements IdToFormulaInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\IdToFormula\IdToFormulaInterface $decorated
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $decorated
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    */
   public function __construct(
     private readonly IdToFormulaInterface $decorated,

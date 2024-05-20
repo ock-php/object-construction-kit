@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Cache;
+namespace Ock\Ock\Formula\Cache;
 
 interface Formula_CacheBaseInterface {
 

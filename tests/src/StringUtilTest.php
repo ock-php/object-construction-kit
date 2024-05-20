@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests;
+namespace Ock\Ock\Tests;
 
-use Donquixote\Ock\Util\StringUtil;
+use Ock\Ock\Util\StringUtil;
 use PHPUnit\Framework\TestCase;
 
 class StringUtilTest extends TestCase {

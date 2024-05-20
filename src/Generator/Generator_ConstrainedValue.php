@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\CodegenTools\Util\CodeGen;
-use Donquixote\Ock\Exception\GeneratorException;
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Formula\Validator\Formula_ConstrainedValueInterface;
-use Donquixote\Ock\Translator\Translator_Passthru;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\CodegenTools\Util\CodeGen;
+use Ock\Ock\Exception\GeneratorException;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Formula\Validator\Formula_ConstrainedValueInterface;
+use Ock\Ock\Translator\Translator_Passthru;
 
 #[Adapter]
 class Generator_ConstrainedValue implements GeneratorInterface {
@@ -18,7 +18,7 @@ class Generator_ConstrainedValue implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Validator\Formula_ConstrainedValueInterface $formula
+   * @param \Ock\Ock\Formula\Validator\Formula_ConstrainedValueInterface $formula
    */
   public function __construct(
     #[Adaptee]

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Boolean;
+namespace Ock\Ock\V2V\Boolean;
 
 class V2V_Boolean_Trivial implements V2V_BooleanInterface {
 

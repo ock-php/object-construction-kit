@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\TextLookupMap;
+namespace Ock\Ock\TextLookupMap;
 
-use Donquixote\Ock\TextLookup\TextLookupInterface;
+use Ock\Ock\TextLookup\TextLookupInterface;
 
 class TextLookupMap_Fixed implements TextLookupMapInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface[] $lookups
+   * @param \Ock\Ock\TextLookup\TextLookupInterface[] $lookups
    */
   public function __construct(
     private readonly array $lookups,

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\DrilldownKeysHelper\DrilldownKeysHelper;
-use Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\DrilldownKeysHelper\DrilldownKeysHelper;
+use Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 #[Adapter]
 class Summarizer_Drilldown implements SummarizerInterface {
@@ -18,8 +18,8 @@ class Summarizer_Drilldown implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    */
   public function __construct(
     private readonly Formula_DrilldownInterface $formula,

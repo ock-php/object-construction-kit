@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Sequence;
+namespace Ock\Ock\Formula\Sequence;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Sequence implements Formula_SequenceInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $itemFormula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $itemFormula
    */
   public function __construct(
     private readonly FormulaInterface $itemFormula,
@@ -37,11 +37,11 @@ class Formula_Sequence implements Formula_SequenceInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface $newItemLabel
-   * @param \Donquixote\Ock\Text\TextInterface $itemLabelN
+   * @param \Ock\Ock\Text\TextInterface $newItemLabel
+   * @param \Ock\Ock\Text\TextInterface $itemLabelN
    * @param string $placeholder
    *
-   * @return \Donquixote\Ock\Formula\Sequence\Formula_Sequence_ItemLabelT
+   * @return \Ock\Ock\Formula\Sequence\Formula_Sequence_ItemLabelT
    */
   public function withItemLabels(
     TextInterface $newItemLabel,
@@ -59,7 +59,7 @@ class Formula_Sequence implements Formula_SequenceInterface {
   /**
    * @param callable(int|null): (TextInterface|string) $itemLabelCallback
    *
-   * @return \Donquixote\Ock\Formula\Sequence\Formula_Sequence_ItemLabelCallback
+   * @return \Ock\Ock\Formula\Sequence\Formula_Sequence_ItemLabelCallback
    */
   public function withItemLabelCallback(
     callable $itemLabelCallback,

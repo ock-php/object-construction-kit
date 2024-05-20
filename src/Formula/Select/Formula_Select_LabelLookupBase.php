@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Text\TextInterface;
-use Donquixote\Ock\TextLookup\TextLookupInterface;
+use Ock\Ock\Text\TextInterface;
+use Ock\Ock\TextLookup\TextLookupInterface;
 
 /**
  * Select formula using TextLookup* objects for option labels and group labels.
@@ -15,8 +15,8 @@ abstract class Formula_Select_LabelLookupBase implements Formula_SelectInterface
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface $labelLookup
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface $groupLabelLookup
+   * @param \Ock\Ock\TextLookup\TextLookupInterface $labelLookup
+   * @param \Ock\Ock\TextLookup\TextLookupInterface $groupLabelLookup
    */
   public function __construct(
     private readonly TextLookupInterface $labelLookup,

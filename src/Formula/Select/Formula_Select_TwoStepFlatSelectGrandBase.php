@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_SelectInterface {
 
@@ -72,10 +72,10 @@ abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_Sele
   }
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface $label0
-   * @param \Donquixote\Ock\Text\TextInterface $label1
+   * @param \Ock\Ock\Text\TextInterface $label0
+   * @param \Ock\Ock\Text\TextInterface $label1
    *
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    */
   protected function combineLabels(TextInterface $label0, TextInterface $label1): TextInterface {
     return Text::concat([$label0, $label1], ' - ');
@@ -102,14 +102,14 @@ abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_Sele
   }
 
   /**
-   * @return \Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface
+   * @return \Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface
    */
   abstract protected function getIdFormula(): Formula_FlatSelectInterface;
 
   /**
    * @param string $id
    *
-   * @return \Donquixote\Ock\Formula\Select\Flat\Formula_FlatSelectInterface|null
+   * @return \Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface|null
    */
   abstract protected function idGetSubFormula(string $id): ?Formula_FlatSelectInterface;
 

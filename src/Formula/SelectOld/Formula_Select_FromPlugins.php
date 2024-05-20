@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\SelectOld;
+namespace Ock\Ock\Formula\SelectOld;
 
-use Donquixote\Ock\Plugin\Plugin;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Plugin\Plugin;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Select_FromPlugins extends Formula_Select_BufferedBase {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Plugin\Plugin[] $plugins
-   * @param \Donquixote\Ock\Text\TextInterface[] $groupLabels
+   * @param \Ock\Ock\Plugin\Plugin[] $plugins
+   * @param \Ock\Ock\Text\TextInterface[] $groupLabels
    */
   public function __construct(
     private readonly array $plugins,

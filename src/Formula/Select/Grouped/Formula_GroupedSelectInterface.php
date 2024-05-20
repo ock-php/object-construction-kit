@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select\Grouped;
+namespace Ock\Ock\Formula\Select\Grouped;
 
-use Donquixote\Ock\Formula\IdToLabel\Formula_IdToLabelInterface;
+use Ock\Ock\Formula\IdToLabel\Formula_IdToLabelInterface;
 
 /**
  * @todo Maybe "Options" should be renamed to "Choice"?

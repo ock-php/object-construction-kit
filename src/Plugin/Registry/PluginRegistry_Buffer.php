@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Plugin\Registry;
+namespace Ock\Ock\Plugin\Registry;
 
 use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
 
@@ -13,14 +13,14 @@ use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
 class PluginRegistry_Buffer implements PluginRegistryInterface {
 
   /**
-   * @var \Donquixote\Ock\Plugin\Plugin[][]|null
+   * @var \Ock\Ock\Plugin\Plugin[][]|null
    */
   private ?array $pluginss;
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Plugin\Registry\PluginRegistryInterface $decorated
+   * @param \Ock\Ock\Plugin\Registry\PluginRegistryInterface $decorated
    */
   public function __construct(
     private readonly PluginRegistryInterface $decorated,

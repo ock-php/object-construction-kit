@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Para;
+namespace Ock\Ock\Formula\Para;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\FormulaBase\Formula_ConfPassthruInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\FormulaBase\Formula_ConfPassthruInterface;
 
 interface Formula_ParaInterface extends Formula_ConfPassthruInterface {
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getParaFormula(): FormulaInterface;
 

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\EvaluatorLookup;
+namespace Ock\Ock\EvaluatorLookup;
 
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\DID\Attribute\Parameter\GetService;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Evaluator\EvaluatorInterface;
-use Donquixote\Ock\Formula\Formula;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\DID\Attribute\Parameter\GetService;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Evaluator\EvaluatorInterface;
+use Ock\Ock\Formula\Formula;
 
 class EvaluatorLookup implements EvaluatorLookupInterface {
 
@@ -21,7 +21,7 @@ class EvaluatorLookup implements EvaluatorLookupInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
    */
   public function __construct(
     #[GetService]
@@ -35,7 +35,7 @@ class EvaluatorLookup implements EvaluatorLookupInterface {
    *
    * @return EvaluatorInterface<T>
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   public function interfaceGetEvaluator(string $interface): EvaluatorInterface {
     return $this->evaluators[$interface]
@@ -47,9 +47,9 @@ class EvaluatorLookup implements EvaluatorLookupInterface {
    *
    * @param class-string<T> $interface
    *
-   * @return \Donquixote\Ock\Evaluator\EvaluatorInterface<T>
+   * @return \Ock\Ock\Evaluator\EvaluatorInterface<T>
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   private function createEvaluator(string $interface): EvaluatorInterface {
     $formula = Formula::iface($interface);

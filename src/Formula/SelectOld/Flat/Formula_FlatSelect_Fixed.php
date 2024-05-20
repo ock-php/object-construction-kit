@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\SelectOld\Flat;
+namespace Ock\Ock\Formula\SelectOld\Flat;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_FlatSelect_Fixed implements Formula_FlatSelectInterface, FlatSelectBuilderInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $options
+   * @param \Ock\Ock\Text\TextInterface[] $options
    */
   public function __construct(
     private array $options,

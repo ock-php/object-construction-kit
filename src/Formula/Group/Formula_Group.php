@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group;
+namespace Ock\Ock\Formula\Group;
 
-use Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface;
+use Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface;
 
 class Formula_Group implements Formula_GroupInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface[] $items
+   * @param \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface[] $items
    */
   public function __construct(
     private readonly array $items,

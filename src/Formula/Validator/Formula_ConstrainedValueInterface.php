@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Validator;
+namespace Ock\Ock\Formula\Validator;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 interface Formula_ConstrainedValueInterface extends FormulaInterface {
 
   /**
    * @param mixed $conf
    *
-   * @return \Iterator<int, \Donquixote\Ock\Text\TextInterface>
+   * @return \Iterator<int, \Ock\Ock\Text\TextInterface>
    *   List of validation failures.
    */
   public function validate(mixed $conf): \Iterator;

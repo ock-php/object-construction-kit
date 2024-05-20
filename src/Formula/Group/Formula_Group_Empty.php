@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group;
+namespace Ock\Ock\Formula\Group;
 
 class Formula_Group_Empty implements Formula_GroupInterface {
 

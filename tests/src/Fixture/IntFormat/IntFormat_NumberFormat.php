@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\IntFormat;
+namespace Ock\Ock\Tests\Fixture\IntFormat;
 
-use Donquixote\Ock\Attribute\Parameter\OckAdaptee;
-use Donquixote\Ock\Attribute\Plugin\OckPluginInstance;
-use Donquixote\Ock\Attribute\PluginModifier\OckPluginAdapter;
-use Donquixote\Ock\Tests\Fixture\NumberFormat\NumberFormatInterface;
+use Ock\Ock\Attribute\Parameter\OckAdaptee;
+use Ock\Ock\Attribute\Plugin\OckPluginInstance;
+use Ock\Ock\Attribute\PluginModifier\OckPluginAdapter;
+use Ock\Ock\Tests\Fixture\NumberFormat\NumberFormatInterface;
 
 /**
  * Adapter from NumberFormat to IntFormat.
@@ -19,7 +19,7 @@ class IntFormat_NumberFormat implements IntFormatInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Tests\Fixture\NumberFormat\NumberFormatInterface $numberFormat
+   * @param \Ock\Ock\Tests\Fixture\NumberFormat\NumberFormatInterface $numberFormat
    */
   public function __construct(
     #[OckAdaptee]

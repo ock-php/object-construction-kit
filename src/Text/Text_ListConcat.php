@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
 class Text_ListConcat extends Text_ListBase {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $items
+   * @param \Ock\Ock\Text\TextInterface[] $items
    * @param string $separator
    */
   public function __construct(

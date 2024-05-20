@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Optionlessness;
+namespace Ock\Ock\Optionlessness;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\Group\Formula_GroupInterface;
-use Donquixote\Ock\Util\UtilBase;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\Group\Formula_GroupInterface;
+use Ock\Ock\Util\UtilBase;
 
 /**
  * Adapter from Formula_Group* to Optionlessness*.
@@ -15,12 +15,12 @@ use Donquixote\Ock\Util\UtilBase;
 final class Optionlessness_Group extends UtilBase {
 
   /**
-   * @param \Donquixote\Ock\Formula\Group\Formula_GroupInterface $group
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Group\Formula_GroupInterface $group
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return \Donquixote\Ock\Optionlessness\OptionlessnessInterface
+   * @return \Ock\Ock\Optionlessness\OptionlessnessInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   #[Adapter]
   public static function fromFormula(

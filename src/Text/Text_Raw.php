@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
-use Donquixote\Ock\Translator\TranslatorInterface;
+use Ock\Ock\Translator\TranslatorInterface;
 
 /**
  * Raw text, potentially unsafe for output.

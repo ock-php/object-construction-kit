@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group\Item;
+namespace Ock\Ock\Formula\Group\Item;
 
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Text\TextInterface;
 
 class GroupFormulaItem_Callback implements GroupFormulaItemInterface {
 

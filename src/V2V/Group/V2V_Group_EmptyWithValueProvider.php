@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Group;
+namespace Ock\Ock\V2V\Group;
 
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Exception\GeneratorException_UnsupportedConfiguration;
-use Donquixote\Ock\Formula\ValueProvider\Formula_FixedPhpInterface;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Exception\GeneratorException_UnsupportedConfiguration;
+use Ock\Ock\Formula\ValueProvider\Formula_FixedPhpInterface;
 
 class V2V_Group_EmptyWithValueProvider implements V2V_GroupInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\ValueProvider\Formula_FixedPhpInterface $valueProvider
+   * @param \Ock\Ock\Formula\ValueProvider\Formula_FixedPhpInterface $valueProvider
    */
   public function __construct(
     private readonly Formula_FixedPhpInterface $valueProvider,

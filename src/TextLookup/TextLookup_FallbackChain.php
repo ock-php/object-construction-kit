@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\TextLookup;
+namespace Ock\Ock\TextLookup;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 /**
  * Helper object to provide labels in bulk.
@@ -14,7 +14,7 @@ class TextLookup_FallbackChain implements TextLookupInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface[] $lookups
+   * @param \Ock\Ock\TextLookup\TextLookupInterface[] $lookups
    */
   public function __construct(
     private readonly array $lookups,

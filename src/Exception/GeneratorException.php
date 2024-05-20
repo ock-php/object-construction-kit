@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Exception;
+namespace Ock\Ock\Exception;
 
 /**
  * Failed to generate code.
  *
  * See child classes for more specific reasons.
  *
- * @see \Donquixote\Ock\Generator\GeneratorInterface
+ * @see \Ock\Ock\Generator\GeneratorInterface
  */
 class GeneratorException extends \Exception {
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\IdToFormula;
+namespace Ock\Ock\IdToFormula;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 /**
- * @template T of \Donquixote\Ock\Core\Formula\FormulaInterface
+ * @template T of \Ock\Ock\Core\Formula\FormulaInterface
  */
 interface IdToFormulaInterface {
 
@@ -16,7 +16,7 @@ interface IdToFormulaInterface {
    *
    * @return T|null
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function idGetFormula(string|int $id): ?FormulaInterface;
 

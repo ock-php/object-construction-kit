@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Ock\Formula\Boolean\Formula_BooleanInterface;
-use Donquixote\Ock\Formula\BoolVal\Formula_BoolValInterface;
-use Donquixote\Ock\V2V\Boolean\V2V_Boolean_Trivial;
-use Donquixote\Ock\V2V\Boolean\V2V_BooleanInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Ock\Formula\Boolean\Formula_BooleanInterface;
+use Ock\Ock\Formula\BoolVal\Formula_BoolValInterface;
+use Ock\Ock\V2V\Boolean\V2V_Boolean_Trivial;
+use Ock\Ock\V2V\Boolean\V2V_BooleanInterface;
 
 class Generator_Boolean implements GeneratorInterface {
 
@@ -31,7 +31,7 @@ class Generator_Boolean implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\V2V\Boolean\V2V_BooleanInterface $v2v
+   * @param \Ock\Ock\V2V\Boolean\V2V_BooleanInterface $v2v
    */
   public function __construct(
     private readonly V2V_BooleanInterface $v2v,

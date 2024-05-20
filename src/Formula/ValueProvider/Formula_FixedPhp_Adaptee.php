@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\ValueProvider;
+namespace Ock\Ock\Formula\ValueProvider;
 
-use Donquixote\CodegenTools\Util\PhpUtil;
+use Ock\CodegenTools\Util\PhpUtil;
 
 class Formula_FixedPhp_Adaptee implements Formula_FixedPhpInterface {
 

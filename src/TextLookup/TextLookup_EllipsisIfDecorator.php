@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\TextLookup;
+namespace Ock\Ock\TextLookup;
 
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 /**
  * Helper object to provide labels in bulk.
@@ -15,7 +15,7 @@ class TextLookup_EllipsisIfDecorator implements TextLookupInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface $decorated
+   * @param \Ock\Ock\TextLookup\TextLookupInterface $decorated
    * @param callable(string|int): bool $idNeedsEllipsis
    */
   public function __construct(

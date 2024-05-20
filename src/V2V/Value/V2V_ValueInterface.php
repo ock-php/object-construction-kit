@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Value;
+namespace Ock\Ock\V2V\Value;
 
 interface V2V_ValueInterface {
 
@@ -12,7 +12,7 @@ interface V2V_ValueInterface {
    *
    * @return string
    *
-   * @throws \Donquixote\Ock\Exception\GeneratorException
+   * @throws \Ock\Ock\Exception\GeneratorException
    */
   public function phpGetPhp(string $php, mixed $conf): string;
 

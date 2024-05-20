@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
-use Donquixote\Ock\Translator\TranslatorInterface;
+use Ock\Ock\Translator\TranslatorInterface;
 
 class Text_ReplaceOne extends TextBase {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface $source
+   * @param \Ock\Ock\Text\TextInterface $source
    * @param string $token
-   * @param \Donquixote\Ock\Text\TextInterface $replacement
+   * @param \Ock\Ock\Text\TextInterface $replacement
    */
   public function __construct(
     private readonly TextInterface $source,

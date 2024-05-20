@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\Optional\Formula_OptionalInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\Optional\Formula_OptionalInterface;
 
 class Generator_Optional implements GeneratorInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Optional\Formula_OptionalInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Optional\Formula_OptionalInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return \Donquixote\Ock\Generator\GeneratorInterface|null
+   * @return \Ock\Ock\Generator\GeneratorInterface|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function create(
@@ -37,8 +37,8 @@ class Generator_Optional implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Generator\GeneratorInterface $decorated
-   * @param \Donquixote\Ock\Formula\Optional\Formula_OptionalInterface $formula
+   * @param \Ock\Ock\Generator\GeneratorInterface $decorated
+   * @param \Ock\Ock\Formula\Optional\Formula_OptionalInterface $formula
    */
   public function __construct(
     private readonly GeneratorInterface $decorated,

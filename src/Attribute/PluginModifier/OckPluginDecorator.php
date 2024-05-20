@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\PluginModifier;
+namespace Ock\Ock\Attribute\PluginModifier;
 
-use Donquixote\Ock\Plugin\PluginDeclaration;
+use Ock\Ock\Plugin\PluginDeclaration;
 
 /**
  * Marks the annotated plugin as a decorator.
@@ -12,7 +12,7 @@ use Donquixote\Ock\Plugin\PluginDeclaration;
  * This should be used in combination with another attribute to declare the
  * actual plugin.
  *
- * @see \Donquixote\Ock\Attribute\Plugin\PluginAttributeInterface
+ * @see \Ock\Ock\Attribute\Plugin\PluginAttributeInterface
  *   Use one of these to declare the actual plugin.
  */
 #[\Attribute(\Attribute::TARGET_CLASS)]

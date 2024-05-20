@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group;
+namespace Ock\Ock\Formula\Group;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 interface Formula_GroupInterface extends FormulaInterface {
 
   /**
-   * @return \Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
+   * @return \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function getItems(): array;
 

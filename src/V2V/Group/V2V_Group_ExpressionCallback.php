@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Group;
+namespace Ock\Ock\V2V\Group;
 
 class V2V_Group_ExpressionCallback implements V2V_GroupInterface {
 

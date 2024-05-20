@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\IdToFormula;
+namespace Ock\Ock\IdToFormula;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 class IdToFormula_Buffer implements IdToFormulaInterface {
 
   /**
-   * @var \Donquixote\Ock\Core\Formula\FormulaInterface[]
+   * @var \Ock\Ock\Core\Formula\FormulaInterface[]
    */
   private array $buffer = [];
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\IdToFormula\IdToFormulaInterface $decorated
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $decorated
    */
   public function __construct(
     private readonly IdToFormulaInterface $decorated,

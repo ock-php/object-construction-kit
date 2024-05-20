@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Para;
+namespace Ock\Ock\Formula\Para;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 class Formula_Para implements Formula_ParaInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $decorated
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $paraFormula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $decorated
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $paraFormula
    */
   public function __construct(
     private readonly FormulaInterface $decorated,

@@ -2,28 +2,28 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\DrilldownKeysHelper\DrilldownKeysHelper;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Exception\GeneratorException;
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Exception\GeneratorException_UnsupportedConfiguration;
-use Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface;
-use Donquixote\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface;
-use Donquixote\Ock\V2V\Drilldown\V2V_Drilldown_Trivial;
-use Donquixote\Ock\V2V\Drilldown\V2V_DrilldownInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\DrilldownKeysHelper\DrilldownKeysHelper;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Exception\GeneratorException;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Exception\GeneratorException_UnsupportedConfiguration;
+use Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface;
+use Ock\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface;
+use Ock\Ock\V2V\Drilldown\V2V_Drilldown_Trivial;
+use Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface;
 
 class Generator_Drilldown implements GeneratorInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self
    */
@@ -36,8 +36,8 @@ class Generator_Drilldown implements GeneratorInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self
    */
@@ -52,9 +52,9 @@ class Generator_Drilldown implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
-   * @param \Donquixote\Ock\V2V\Drilldown\V2V_DrilldownInterface $v2v
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
+   * @param \Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface $v2v
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    */
   protected function __construct(
     private readonly Formula_DrilldownInterface $formula,
@@ -90,7 +90,7 @@ class Generator_Drilldown implements GeneratorInterface {
    *
    * @return string
    *
-   * @throws \Donquixote\Ock\Exception\GeneratorException
+   * @throws \Ock\Ock\Exception\GeneratorException
    *   Configuration is incompatible or not supported.
    */
   private function idConfGetSubValuePhp(string|int $id, mixed $subConf): string {

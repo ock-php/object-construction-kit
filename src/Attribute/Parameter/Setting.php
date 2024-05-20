@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Parameter;
+namespace Ock\Ock\Attribute\Parameter;
 
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 /**
  * Marks a configurable parameter.
@@ -27,7 +27,7 @@ class Setting {
   }
 
   /**
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    */
   public function getLabel(): TextInterface {
     return $this->translate

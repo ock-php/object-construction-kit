@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\DefaultConf;
+namespace Ock\Ock\Formula\DefaultConf;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 class Formula_DefaultConf implements Formula_DefaultConfInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $decorated
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $decorated
    * @param mixed $defaultConf
    */
   public function __construct(

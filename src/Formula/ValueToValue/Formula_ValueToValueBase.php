@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\ValueToValue;
+namespace Ock\Ock\Formula\ValueToValue;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Label\Formula_Label;
-use Donquixote\Ock\FormulaBase\Decorator\Formula_DecoratorBase;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Label\Formula_Label;
+use Ock\Ock\FormulaBase\Decorator\Formula_DecoratorBase;
+use Ock\Ock\Text\TextInterface;
 
 abstract class Formula_ValueToValueBase extends Formula_DecoratorBase implements Formula_ValueToValueInterface {
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface $label
+   * @param \Ock\Ock\Text\TextInterface $label
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function withLabel(TextInterface $label): FormulaInterface {
     return new Formula_Label($this, $label);

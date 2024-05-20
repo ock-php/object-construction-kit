@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Ock\Formula\Textfield\Formula_TextfieldInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Ock\Formula\Textfield\Formula_TextfieldInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 #[Adapter]
 class Summarizer_Textfield implements SummarizerInterface {
@@ -15,7 +15,7 @@ class Summarizer_Textfield implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Textfield\Formula_TextfieldInterface $formula
+   * @param \Ock\Ock\Formula\Textfield\Formula_TextfieldInterface $formula
    */
   public function __construct(
     private readonly Formula_TextfieldInterface $formula,

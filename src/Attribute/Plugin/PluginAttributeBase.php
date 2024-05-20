@@ -6,13 +6,13 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Plugin;
+namespace Ock\Ock\Attribute\Plugin;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Plugin\Plugin;
-use Donquixote\Ock\Plugin\PluginDeclaration;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Plugin\Plugin;
+use Ock\Ock\Plugin\PluginDeclaration;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 abstract class PluginAttributeBase implements PluginAttributeInterface {
 

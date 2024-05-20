@@ -2,29 +2,29 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Evaluator;
+namespace Ock\Ock\Evaluator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\DID\Attribute\Parameter\GetService;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\EvaluatorException;
-use Donquixote\Ock\Exception\GeneratorException;
-use Donquixote\Ock\Generator\Generator;
-use Donquixote\Ock\Generator\GeneratorInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\DID\Attribute\Parameter\GetService;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\EvaluatorException;
+use Ock\Ock\Exception\GeneratorException;
+use Ock\Ock\Generator\Generator;
+use Ock\Ock\Generator\GeneratorInterface;
 use Psr\Container\ContainerInterface;
 
 class Evaluator_GeneratorEval implements EvaluatorInterface {
 
   /**
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    * @param \Psr\Container\ContainerInterface $container
    *
-   * @return \Donquixote\Ock\Evaluator\EvaluatorInterface
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @return \Ock\Ock\Evaluator\EvaluatorInterface
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function create(
@@ -39,7 +39,7 @@ class Evaluator_GeneratorEval implements EvaluatorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Generator\GeneratorInterface $generator
+   * @param \Ock\Ock\Generator\GeneratorInterface $generator
    * @param \Psr\Container\ContainerInterface $container
    */
   public function __construct(

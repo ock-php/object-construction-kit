@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Exception\GeneratorException;
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Formula\Para\Formula_ParaInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Exception\GeneratorException;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Formula\Para\Formula_ParaInterface;
 
 class Generator_Para implements GeneratorInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Para\Formula_ParaInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Para\Formula_ParaInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function create(Formula_ParaInterface $formula, UniversalAdapterInterface $universalAdapter): Generator_Para {
@@ -30,8 +30,8 @@ class Generator_Para implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Generator\GeneratorInterface $decorated
-   * @param \Donquixote\Ock\Generator\GeneratorInterface $paraGenerator
+   * @param \Ock\Ock\Generator\GeneratorInterface $decorated
+   * @param \Ock\Ock\Generator\GeneratorInterface $paraGenerator
    */
   public function __construct(
     private readonly GeneratorInterface $decorated,

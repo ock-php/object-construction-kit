@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
 /**
  * Utility class with static methods.
@@ -10,16 +10,16 @@ namespace Donquixote\Ock\Text;
 class Text {
 
   /**
-   * @return \Donquixote\Ock\Text\TextBuilder
+   * @return \Ock\Ock\Text\TextBuilder
    */
   public static function builder(): TextBuilder {
     return new TextBuilder();
   }
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface $text
+   * @param \Ock\Ock\Text\TextInterface $text
    *
-   * @return \Donquixote\Ock\Text\TextBase
+   * @return \Ock\Ock\Text\TextBase
    */
   public static function fluent(TextInterface $text): TextBase {
     return $text instanceof TextBase
@@ -30,12 +30,12 @@ class Text {
   /**
    * Builds a text object for "Label: Value".
    *
-   * @param \Donquixote\Ock\Text\TextInterface $label
+   * @param \Ock\Ock\Text\TextInterface $label
    *   Label.
-   * @param \Donquixote\Ock\Text\TextInterface $value
+   * @param \Ock\Ock\Text\TextInterface $value
    *   Value.
    *
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    */
   public static function label(TextInterface $label, TextInterface $value): TextInterface {
     return static::t('@label: @value', [
@@ -53,7 +53,7 @@ class Text {
    *   String to be translated, or NULL.
    * @param array $replacements
    *
-   * @return \Donquixote\Ock\Text\TextBuilderBase|null
+   * @return \Ock\Ock\Text\TextBuilderBase|null
    *   Text object, or NULL.
    */
   public static function tOrNull(?string $string, array $replacements = []): ?TextBuilderBase {
@@ -67,10 +67,10 @@ class Text {
    *
    * @param string $string
    *   Original untranslated text with placeholders.
-   * @param \Donquixote\Ock\Text\TextInterface[] $replacements
+   * @param \Ock\Ock\Text\TextInterface[] $replacements
    *   Replacements.
    *
-   * @return \Donquixote\Ock\Text\TextBuilderBase
+   * @return \Ock\Ock\Text\TextBuilderBase
    *   Translatable text object.
    */
   public static function t(string $string, array $replacements = []): TextBuilderBase {
@@ -86,10 +86,10 @@ class Text {
    *
    * @param string $string
    *   Original language-neutral text with placeholders.
-   * @param \Donquixote\Ock\Text\TextInterface[] $replacements
+   * @param \Ock\Ock\Text\TextInterface[] $replacements
    *   Replacements.
    *
-   * @return \Donquixote\Ock\Text\TextBuilderBase
+   * @return \Ock\Ock\Text\TextBuilderBase
    *   Text object.
    */
   public static function s(string $string, array $replacements = []): TextBuilderBase {
@@ -116,7 +116,7 @@ class Text {
    * @param int $number
    *   Integer number.
    *
-   * @return \Donquixote\Ock\Text\TextBuilderBase
+   * @return \Ock\Ock\Text\TextBuilderBase
    *   Text object.
    */
   public static function i(int $number): TextBuilderBase {
@@ -126,10 +126,10 @@ class Text {
   /**
    * Builds a text object for a html list with <ul>.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $parts
+   * @param \Ock\Ock\Text\TextInterface[] $parts
    *   List items.
    *
-   * @return \Donquixote\Ock\Text\Text_ListBase
+   * @return \Ock\Ock\Text\Text_ListBase
    *   Translatable text object.
    */
   public static function ul(array $parts = []): Text_ListBase {
@@ -139,10 +139,10 @@ class Text {
   /**
    * Builds a text object for a html list with <ol>.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $parts
+   * @param \Ock\Ock\Text\TextInterface[] $parts
    *   List items.
    *
-   * @return \Donquixote\Ock\Text\Text_ListBase
+   * @return \Ock\Ock\Text\Text_ListBase
    *   Translatable text object.
    */
   public static function ol(array $parts = []): Text_ListBase {
@@ -152,12 +152,12 @@ class Text {
   /**
    * Builds a text object for a html list with <ul> or <ol>.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $parts
+   * @param \Ock\Ock\Text\TextInterface[] $parts
    *   List items.
    * @param string $tag
    *   One of 'ul' or 'ol'.
    *
-   * @return \Donquixote\Ock\Text\Text_ListBase
+   * @return \Ock\Ock\Text\Text_ListBase
    *   Translatable text object.
    */
   protected static function ulOrOl(array $parts, string $tag): Text_ListBase {
@@ -170,12 +170,12 @@ class Text {
   /**
    * Gets a non-translatable text object.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $parts
+   * @param \Ock\Ock\Text\TextInterface[] $parts
    *   List items.
    * @param string $glue
    *   Glue string between the items.
    *
-   * @return \Donquixote\Ock\Text\Text_ListBase
+   * @return \Ock\Ock\Text\Text_ListBase
    *   Translatable text object.
    */
   public static function concat(array $parts, string $glue = ''): Text_ListBase {
@@ -185,12 +185,12 @@ class Text {
   /**
    * Shows a list of distinct values.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $parts
+   * @param \Ock\Ock\Text\TextInterface[] $parts
    *   List items.
    * @param string $glue
    *   Glue string between the items.
    *
-   * @return \Donquixote\Ock\Text\Text_ListBase
+   * @return \Ock\Ock\Text\Text_ListBase
    *   Translatable text object.
    */
   public static function concatDistinct(array $parts, string $glue = ' | '): Text_ListBase {
@@ -200,14 +200,14 @@ class Text {
   /**
    * Validates text objects.
    *
-   * @param \Donquixote\Ock\Text\TextInterface ...$texts
+   * @param \Ock\Ock\Text\TextInterface ...$texts
    */
   public static function validate(TextInterface ...$texts): void {}
 
   /**
    * Validates text objects.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $texts
+   * @param \Ock\Ock\Text\TextInterface[] $texts
    *   Text objects to validate.
    *   In PHP < 8.0, string keys are not allowed here.
    */
@@ -218,7 +218,7 @@ class Text {
   /**
    * Validates arrays of text objects.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[][] $textss
+   * @param \Ock\Ock\Text\TextInterface[][] $textss
    *   Arrays of text objects.
    *   This array can have string keys.
    */

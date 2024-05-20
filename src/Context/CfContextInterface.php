@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Context;
+namespace Ock\Ock\Context;
 
 /**
- * @see \Donquixote\Ock\Todo\ContextTodo
+ * @see \Ock\Ock\Todo\ContextTodo
  */
 interface CfContextInterface {
 

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\FormulaAdapter;
-use Donquixote\Ock\Util\UtilBase;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\FormulaAdapter;
+use Ock\Ock\Util\UtilBase;
 
 final class Generator extends UtilBase {
 
@@ -17,14 +17,14 @@ final class Generator extends UtilBase {
    *
    * @param string $interface
    *   Interface name.
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *   Service that can materialize other objects from formulas.
    *
-   * @return \Donquixote\Ock\Generator\GeneratorInterface
+   * @return \Ock\Ock\Generator\GeneratorInterface
    *   Generator. Evaluating the code of this generator should create an
    *   instance of $interface.
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    *   Cannot build a generator for the given interface.
    */
   public static function fromIface(
@@ -39,15 +39,15 @@ final class Generator extends UtilBase {
   /**
    * Materializes a generator from a formula.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
    *   Formula.
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *   Service that can materialize other objects from formulas.
    *
-   * @return \Donquixote\Ock\Generator\GeneratorInterface
+   * @return \Ock\Ock\Generator\GeneratorInterface
    *   Materialized generator.
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    *   Cannot build a generator for the given formula.
    */
   public static function fromFormula(

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Optional;
+namespace Ock\Ock\Formula\Optional;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Optional extends Formula_OptionalBase {
 
   /**
-   * @var \Donquixote\Ock\Text\TextInterface|null
+   * @var \Ock\Ock\Text\TextInterface|null
    */
   private ?TextInterface $emptySummary;
 
@@ -19,7 +19,7 @@ class Formula_Optional extends Formula_OptionalBase {
   private string $emptyPhp = 'NULL';
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface $emptySummary
+   * @param \Ock\Ock\Text\TextInterface $emptySummary
    *
    * @return static
    */

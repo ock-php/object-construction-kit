@@ -2,27 +2,27 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Form\Common;
+namespace Ock\Ock\Form\Common;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\AdapterTargetType;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\Contextual\Formula_ContextualInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\AdapterTargetType;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\Contextual\Formula_ContextualInterface;
 
 class FormatorCommon_Contextual {
 
   /**
-   * @template T as \Donquixote\Ock\Form\Common\FormatorCommonInterface
+   * @template T as \Ock\Ock\Form\Common\FormatorCommonInterface
    *
-   * @param \Donquixote\Ock\Formula\Contextual\Formula_ContextualInterface $formula
+   * @param \Ock\Ock\Formula\Contextual\Formula_ContextualInterface $formula
    * @param class-string<T> $interface
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return T|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function adapt(

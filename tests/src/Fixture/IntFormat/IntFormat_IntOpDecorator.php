@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\IntFormat;
+namespace Ock\Ock\Tests\Fixture\IntFormat;
 
-use Donquixote\Ock\Attribute\Parameter\OckDecorated;
-use Donquixote\Ock\Attribute\Parameter\OckOption;
-use Donquixote\Ock\Attribute\Plugin\OckPluginInstance;
-use Donquixote\Ock\Attribute\PluginModifier\OckPluginDecorator;
-use Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface;
+use Ock\Ock\Attribute\Parameter\OckDecorated;
+use Ock\Ock\Attribute\Parameter\OckOption;
+use Ock\Ock\Attribute\Plugin\OckPluginInstance;
+use Ock\Ock\Attribute\PluginModifier\OckPluginDecorator;
+use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
 
 #[OckPluginInstance('intOpDecorator', 'Integer operation decorator')]
 #[OckPluginDecorator]
@@ -17,8 +17,8 @@ class IntFormat_IntOpDecorator implements IntFormatInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Tests\Fixture\IntFormat\IntFormatInterface|null $decorated
-   * @param \Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface $intOp
+   * @param \Ock\Ock\Tests\Fixture\IntFormat\IntFormatInterface|null $decorated
+   * @param \Ock\Ock\Tests\Fixture\IntOp\IntOpInterface $intOp
    */
   public function __construct(
     #[OckDecorated]

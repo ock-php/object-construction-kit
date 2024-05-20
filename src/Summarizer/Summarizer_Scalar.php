@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Ock\Formula\Primitive\Formula_ScalarInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Ock\Formula\Primitive\Formula_ScalarInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 #[Adapter]
 class Summarizer_Scalar implements SummarizerInterface {
@@ -15,7 +15,7 @@ class Summarizer_Scalar implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Primitive\Formula_ScalarInterface $formula
+   * @param \Ock\Ock\Formula\Primitive\Formula_ScalarInterface $formula
    */
   public function __construct(
     private readonly Formula_ScalarInterface $formula,

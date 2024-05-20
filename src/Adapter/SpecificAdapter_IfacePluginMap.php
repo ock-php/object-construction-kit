@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Adapter;
+namespace Ock\Ock\Adapter;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\DID\Attribute\Parameter\GetService;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\PluginListException;
-use Donquixote\Ock\Formula\Drilldown\Formula_Drilldown;
-use Donquixote\Ock\Formula\Iface\Formula_IfaceInterface;
-use Donquixote\Ock\Formula\Select\Formula_Select_FromPlugins;
-use Donquixote\Ock\IdToFormula\IdToFormula_FromPlugins;
-use Donquixote\Ock\Plugin\Map\PluginMapInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\DID\Attribute\Parameter\GetService;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\PluginListException;
+use Ock\Ock\Formula\Drilldown\Formula_Drilldown;
+use Ock\Ock\Formula\Iface\Formula_IfaceInterface;
+use Ock\Ock\Formula\Select\Formula_Select_FromPlugins;
+use Ock\Ock\IdToFormula\IdToFormula_FromPlugins;
+use Ock\Ock\Plugin\Map\PluginMapInterface;
 
 class SpecificAdapter_IfacePluginMap {
 
   /**
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function formulaGetReplacement(

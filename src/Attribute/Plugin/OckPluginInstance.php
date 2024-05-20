@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Plugin;
+namespace Ock\Ock\Attribute\Plugin;
 
-use Donquixote\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
-use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
-use Donquixote\ClassDiscovery\Util\AttributesUtil;
-use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
-use Donquixote\DID\Attribute\Parameter\GetServiceInterface;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Contract\FormulaHavingInterface;
-use Donquixote\Ock\Contract\LabelHavingInterface;
-use Donquixote\Ock\Contract\NameHavingInterface;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Group\GroupFormulaBuilder;
-use Donquixote\Ock\Formula\Iface\Formula_Iface;
-use Donquixote\Ock\Plugin\PluginDeclaration;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Util\IdentifierLabelUtil;
+use Ock\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
+use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
+use Ock\ClassDiscovery\Util\AttributesUtil;
+use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\DID\Attribute\Parameter\GetServiceInterface;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Contract\FormulaHavingInterface;
+use Ock\Ock\Contract\LabelHavingInterface;
+use Ock\Ock\Contract\NameHavingInterface;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Group\GroupFormulaBuilder;
+use Ock\Ock\Formula\Iface\Formula_Iface;
+use Ock\Ock\Plugin\PluginDeclaration;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Util\IdentifierLabelUtil;
 
 /**
  * Marks a method or a class as producing a plugin instance.
@@ -31,7 +31,7 @@ use Donquixote\Ock\Util\IdentifierLabelUtil;
  *
  * At the moment, non-static methods are not supported.
  *
- * @see \Donquixote\Ock\Inspector\FactoryInspector_OckInstanceAttribute
+ * @see \Ock\Ock\Inspector\FactoryInspector_OckInstanceAttribute
  */
 #[\Attribute(\Attribute::TARGET_CLASS | \Attribute::TARGET_METHOD)]
 class OckPluginInstance extends PluginAttributeBase {
@@ -91,10 +91,10 @@ class OckPluginInstance extends PluginAttributeBase {
    * @param \ReflectionParameter[] $parameters
    * @param list<string> $types
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupFormulaBuilder
    *
-   * @throws \Donquixote\ClassDiscovery\Exception\MalformedDeclarationException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\ClassDiscovery\Exception\MalformedDeclarationException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function buildGroupFormula(array $parameters): GroupFormulaBuilder {
     $builder = Formula::group();

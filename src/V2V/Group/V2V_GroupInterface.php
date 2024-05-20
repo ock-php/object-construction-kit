@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Group;
+namespace Ock\Ock\V2V\Group;
 
 interface V2V_GroupInterface {
 
@@ -12,7 +12,7 @@ interface V2V_GroupInterface {
    *
    * @return string
    *
-   * @throws \Donquixote\Ock\Exception\GeneratorException
+   * @throws \Ock\Ock\Exception\GeneratorException
    */
   public function itemsPhpGetPhp(array $itemsPhp, array $conf): string;
 

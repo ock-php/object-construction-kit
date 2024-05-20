@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Textfield;
+namespace Ock\Ock\Formula\Textfield;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Text\TextInterface;
 
 /**
  * @todo What about limited number of characters?
@@ -13,7 +13,7 @@ use Donquixote\Ock\Text\TextInterface;
 interface Formula_TextfieldInterface extends FormulaInterface {
 
   /**
-   * @return \Donquixote\Ock\Text\TextInterface|null
+   * @return \Ock\Ock\Text\TextInterface|null
    */
   public function getDescription(): ?TextInterface;
 
@@ -27,7 +27,7 @@ interface Formula_TextfieldInterface extends FormulaInterface {
   /**
    * @param string $text
    *
-   * @return \Donquixote\Ock\Text\TextInterface[]
+   * @return \Ock\Ock\Text\TextInterface[]
    */
   public function textGetValidationErrors(string $text): array;
 

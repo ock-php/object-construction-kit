@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Formula\StringVal\Formula_StringValInterface;
-use Donquixote\Ock\Formula\Textfield\Formula_TextfieldInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Translator\Translator;
-use Donquixote\Ock\V2V\String\V2V_String_Trivial;
-use Donquixote\Ock\V2V\String\V2V_StringInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Formula\StringVal\Formula_StringValInterface;
+use Ock\Ock\Formula\Textfield\Formula_TextfieldInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Translator\Translator;
+use Ock\Ock\V2V\String\V2V_String_Trivial;
+use Ock\Ock\V2V\String\V2V_StringInterface;
 
 class Generator_Textfield implements GeneratorInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Textfield\Formula_TextfieldInterface $formula
+   * @param \Ock\Ock\Formula\Textfield\Formula_TextfieldInterface $formula
    *
    * @return self
    */
@@ -27,7 +27,7 @@ class Generator_Textfield implements GeneratorInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\StringVal\Formula_StringValInterface $formula
+   * @param \Ock\Ock\Formula\StringVal\Formula_StringValInterface $formula
    *
    * @return self
    */
@@ -39,8 +39,8 @@ class Generator_Textfield implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Textfield\Formula_TextfieldInterface $formula
-   * @param \Donquixote\Ock\V2V\String\V2V_StringInterface $v2v
+   * @param \Ock\Ock\Formula\Textfield\Formula_TextfieldInterface $formula
+   * @param \Ock\Ock\V2V\String\V2V_StringInterface $v2v
    */
   public function __construct(
     private readonly Formula_TextfieldInterface $formula,

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\IntOp;
+namespace Ock\Ock\Tests\Fixture\IntOp;
 
-use Donquixote\Ock\Attribute\Plugin\OckPluginFormula;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Primitive\Formula_Int;
-use Donquixote\Ock\Text\Text;
+use Ock\Ock\Attribute\Plugin\OckPluginFormula;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Primitive\Formula_Int;
+use Ock\Ock\Text\Text;
 
 class IntOp_Add implements IntOpInterface {
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   #[OckPluginFormula(self::class, "add", "Add")]
   public static function formula(): FormulaInterface {

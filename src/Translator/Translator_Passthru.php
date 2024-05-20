@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Translator;
+namespace Ock\Ock\Translator;
 
 class Translator_Passthru implements TranslatorInterface {
 

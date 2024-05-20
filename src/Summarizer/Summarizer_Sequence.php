@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\Sequence\Formula_SequenceInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\Sequence\Formula_SequenceInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 class Summarizer_Sequence implements SummarizerInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Sequence\Formula_SequenceInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Sequence\Formula_SequenceInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return \Donquixote\Ock\Summarizer\Summarizer_Sequence|null
+   * @return \Ock\Ock\Summarizer\Summarizer_Sequence|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function create(
@@ -42,7 +42,7 @@ class Summarizer_Sequence implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Summarizer\SummarizerInterface $itemSummarizer
+   * @param \Ock\Ock\Summarizer\SummarizerInterface $itemSummarizer
    */
   public function __construct(
     private readonly SummarizerInterface $itemSummarizer,

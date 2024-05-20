@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Contract;
+namespace Ock\Ock\Contract;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 /**
  * Generic interface for objects that provide a label.
@@ -12,7 +12,7 @@ use Donquixote\Ock\Text\TextInterface;
 interface LabelHavingInterface {
 
   /**
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    */
   public function getLabel(): TextInterface;
 

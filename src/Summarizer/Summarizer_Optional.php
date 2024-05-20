@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\Optional\Formula_OptionalInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\Optional\Formula_OptionalInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Summarizer_Optional implements SummarizerInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\Optional\Formula_OptionalInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Optional\Formula_OptionalInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return \Donquixote\Ock\Summarizer\SummarizerInterface|null
+   * @return \Ock\Ock\Summarizer\SummarizerInterface|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function create(
@@ -37,8 +37,8 @@ class Summarizer_Optional implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Optional\Formula_OptionalInterface $formula
-   * @param \Donquixote\Ock\Summarizer\SummarizerInterface $decorated
+   * @param \Ock\Ock\Formula\Optional\Formula_OptionalInterface $formula
+   * @param \Ock\Ock\Summarizer\SummarizerInterface $decorated
    */
   public function __construct(
     private readonly Formula_OptionalInterface $formula,

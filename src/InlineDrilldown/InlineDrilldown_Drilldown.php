@@ -2,30 +2,30 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\InlineDrilldown;
+namespace Ock\Ock\InlineDrilldown;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface;
-use Donquixote\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Id\Formula_IdInterface;
-use Donquixote\Ock\Formula\Select\Formula_SelectInterface;
-use Donquixote\Ock\Formula\ValueToValue\Formula_ValueToValue;
-use Donquixote\Ock\V2V\Drilldown\V2V_Drilldown_Trivial;
-use Donquixote\Ock\V2V\Drilldown\V2V_DrilldownInterface;
-use Donquixote\Ock\V2V\Value\V2V_Value_DrilldownFixedId;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface;
+use Ock\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Id\Formula_IdInterface;
+use Ock\Ock\Formula\Select\Formula_SelectInterface;
+use Ock\Ock\Formula\ValueToValue\Formula_ValueToValue;
+use Ock\Ock\V2V\Drilldown\V2V_Drilldown_Trivial;
+use Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface;
+use Ock\Ock\V2V\Value\V2V_Value_DrilldownFixedId;
 
 class InlineDrilldown_Drilldown implements InlineDrilldownInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function fromDrilldownVal(
@@ -39,12 +39,12 @@ class InlineDrilldown_Drilldown implements InlineDrilldownInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function fromDrilldown(
@@ -58,13 +58,13 @@ class InlineDrilldown_Drilldown implements InlineDrilldownInterface {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
-   * @param \Donquixote\Ock\V2V\Drilldown\V2V_DrilldownInterface $v2v
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
+   * @param \Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface $v2v
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   public static function create(
     Formula_DrilldownInterface $formula,
@@ -86,9 +86,9 @@ class InlineDrilldown_Drilldown implements InlineDrilldownInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Select\Formula_SelectInterface $idFormula
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
-   * @param \Donquixote\Ock\V2V\Drilldown\V2V_DrilldownInterface $v2v
+   * @param \Ock\Ock\Formula\Select\Formula_SelectInterface $idFormula
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
+   * @param \Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface $v2v
    */
   public function __construct(
     private readonly Formula_SelectInterface $idFormula,

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Parameter;
+namespace Ock\Ock\Attribute\Parameter;
 
-use Donquixote\DID\Attribute\Parameter\ServiceArgumentAttributeInterface;
+use Ock\DID\Attribute\Parameter\ServiceArgumentAttributeInterface;
 
 /**
  * Marks a parameter to expect a service from the container.

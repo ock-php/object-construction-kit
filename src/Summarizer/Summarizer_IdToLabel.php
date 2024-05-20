@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Ock\Formula\IdToLabel\Formula_IdToLabelInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
-use Donquixote\Ock\Util\ConfUtil;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Ock\Formula\IdToLabel\Formula_IdToLabelInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
+use Ock\Ock\Util\ConfUtil;
 
 #[Adapter]
 class Summarizer_IdToLabel implements SummarizerInterface {
@@ -16,7 +16,7 @@ class Summarizer_IdToLabel implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\IdToLabel\Formula_IdToLabelInterface $formula
+   * @param \Ock\Ock\Formula\IdToLabel\Formula_IdToLabelInterface $formula
    */
   public function __construct(
     private readonly Formula_IdToLabelInterface $formula,

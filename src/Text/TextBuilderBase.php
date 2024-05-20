@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
 /**
  * Base class with additional convenience methods.
@@ -11,7 +11,7 @@ abstract class TextBuilderBase extends TextBase {
 
   /**
    * @param string $token
-   * @param \Donquixote\Ock\Text\TextInterface $replacement
+   * @param \Ock\Ock\Text\TextInterface $replacement
    *
    * @return self
    */

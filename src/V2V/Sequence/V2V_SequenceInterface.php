@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Sequence;
+namespace Ock\Ock\V2V\Sequence;
 
 interface V2V_SequenceInterface {
 

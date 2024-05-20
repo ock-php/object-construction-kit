@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\CodegenTools\Util\PhpUtil;
-use Donquixote\DID\Attribute\Parameter\GetService;
-use Donquixote\Ock\Exception\GeneratorException;
-use Donquixote\Ock\Exception\GeneratorException_IncompatibleConfiguration;
-use Donquixote\Ock\Exception\PluginListException;
-use Donquixote\Ock\Formula\Iface\Formula_IfaceInterface;
-use Donquixote\Ock\Plugin\Map\PluginMapInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\CodegenTools\Util\PhpUtil;
+use Ock\DID\Attribute\Parameter\GetService;
+use Ock\Ock\Exception\GeneratorException;
+use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
+use Ock\Ock\Exception\PluginListException;
+use Ock\Ock\Formula\Iface\Formula_IfaceInterface;
+use Ock\Ock\Plugin\Map\PluginMapInterface;
 
 #[Adapter]
 class Generator_Iface implements GeneratorInterface {
@@ -33,9 +33,9 @@ class Generator_Iface implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Iface\Formula_IfaceInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
-   * @param \Donquixote\Ock\Plugin\Map\PluginMapInterface $pluginMap
+   * @param \Ock\Ock\Formula\Iface\Formula_IfaceInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Plugin\Map\PluginMapInterface $pluginMap
    */
   public function __construct(
     #[Adaptee]

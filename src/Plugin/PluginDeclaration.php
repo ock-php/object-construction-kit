@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Plugin;
+namespace Ock\Ock\Plugin;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 class PluginDeclaration {
 
@@ -14,7 +14,7 @@ class PluginDeclaration {
    * @param string $id
    *   Plugin id.
    * @param list<string> $types
-   * @param \Donquixote\Ock\Plugin\Plugin $plugin
+   * @param \Ock\Ock\Plugin\Plugin $plugin
    *   The actual plugin object.
    */
   public function __construct(
@@ -47,14 +47,14 @@ class PluginDeclaration {
   }
 
   /**
-   * @return \Donquixote\Ock\Plugin\Plugin
+   * @return \Ock\Ock\Plugin\Plugin
    */
   public function getPlugin(): Plugin {
     return $this->plugin;
   }
 
   /**
-   * @param \Donquixote\Ock\Plugin\Plugin $plugin
+   * @param \Ock\Ock\Plugin\Plugin $plugin
    *
    * @return static
    */
@@ -77,7 +77,7 @@ class PluginDeclaration {
   }
 
   /**
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
    *
    * @return static
    */

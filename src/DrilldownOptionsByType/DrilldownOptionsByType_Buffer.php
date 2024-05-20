@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\DrilldownOptionsByType;
+namespace Ock\Ock\DrilldownOptionsByType;
 
 class DrilldownOptionsByType_Buffer implements DrilldownOptionsByTypeInterface {
 
   /**
-   * @var \Donquixote\Ock\Formula\Drilldown\Option\DrilldownOptionInterface[][]|null
+   * @var \Ock\Ock\Formula\Drilldown\Option\DrilldownOptionInterface[][]|null
    */
   private ?array $buffer = null;
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\DrilldownOptionsByType\DrilldownOptionsByTypeInterface $decorated
+   * @param \Ock\Ock\DrilldownOptionsByType\DrilldownOptionsByTypeInterface $decorated
    */
   public function __construct(
     private readonly DrilldownOptionsByTypeInterface $decorated,
@@ -23,7 +23,7 @@ class DrilldownOptionsByType_Buffer implements DrilldownOptionsByTypeInterface {
   /**
    * Gets drilldown options by type.
    *
-   * @return \Donquixote\Ock\Formula\Drilldown\Option\DrilldownOptionInterface[][]
+   * @return \Ock\Ock\Formula\Drilldown\Option\DrilldownOptionInterface[][]
    *   Format: $[$type][$id] = $option.
    */
   public function getDrilldownOptionsByType(): array {

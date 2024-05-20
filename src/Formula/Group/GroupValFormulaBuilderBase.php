@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group;
+namespace Ock\Ock\Formula\Group;
 
-use Donquixote\CodegenTools\Util\CodeGen;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Formula\GroupVal\Formula_GroupVal;
-use Donquixote\Ock\V2V\Group\V2V_Group_Call;
-use Donquixote\Ock\V2V\Group\V2V_Group_ExpressionCallback;
-use Donquixote\Ock\V2V\Group\V2V_Group_Fixed;
-use Donquixote\Ock\V2V\Group\V2V_Group_ObjectMethodCall;
-use Donquixote\Ock\V2V\Group\V2V_Group_PhpPlaceholders;
-use Donquixote\Ock\V2V\Group\V2V_Group_Pick;
-use Donquixote\Ock\V2V\Group\V2V_Group_Rekey;
-use Donquixote\Ock\V2V\Group\V2V_Group_Trivial;
-use Donquixote\Ock\V2V\Group\V2V_GroupInterface;
+use Ock\CodegenTools\Util\CodeGen;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Formula\GroupVal\Formula_GroupVal;
+use Ock\Ock\V2V\Group\V2V_Group_Call;
+use Ock\Ock\V2V\Group\V2V_Group_ExpressionCallback;
+use Ock\Ock\V2V\Group\V2V_Group_Fixed;
+use Ock\Ock\V2V\Group\V2V_Group_ObjectMethodCall;
+use Ock\Ock\V2V\Group\V2V_Group_PhpPlaceholders;
+use Ock\Ock\V2V\Group\V2V_Group_Pick;
+use Ock\Ock\V2V\Group\V2V_Group_Rekey;
+use Ock\Ock\V2V\Group\V2V_Group_Trivial;
+use Ock\Ock\V2V\Group\V2V_GroupInterface;
 
 abstract class GroupValFormulaBuilderBase {
 
@@ -25,9 +25,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param class-string $class
    * @param list<string> $keys
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addConstruct(string $key, string $class, array $keys = []): GroupValFormulaBuilder {
     try {
@@ -47,9 +47,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param callable $callback
    * @param list<string> $sourceKeys
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addCall(string $key, callable $callback, array $sourceKeys = []): GroupValFormulaBuilder {
     try {
@@ -70,9 +70,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $method
    * @param array $paramKeys
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addObjectMethodCall(string $key, string $objectKey, string $method, array $paramKeys): GroupValFormulaBuilder {
     return $this->addExpression(
@@ -83,12 +83,12 @@ abstract class GroupValFormulaBuilderBase {
 
   /**
    * @param string $key
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface $v2v
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface $v2v
    * @param list<string>|null $keys
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addExpression(string $key, V2V_GroupInterface $v2v, array $keys = NULL): GroupValFormulaBuilder {
     if ($keys !== NULL) {
@@ -102,9 +102,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $glue
    * @param string $sourceConfKey
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addStringPartExpressions(array $keys, string $glue, string $sourceConfKey): GroupValFormulaBuilder {
     $instance = $this;
@@ -125,9 +125,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $key
    * @param callable(string[], mixed[]): string $expressionCallback
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addExpressionCallback(string $key, callable $expressionCallback): GroupValFormulaBuilder {
     $v2v = new V2V_Group_ExpressionCallback($expressionCallback);
@@ -138,9 +138,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param string[] $keys
    * @param callable(string[], mixed[]): (string[]) $multiExpressionCallback
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addMultiExpressionCallback(array $keys, callable $multiExpressionCallback): GroupValFormulaBuilder {
     $instance = $this;
@@ -157,9 +157,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $key
    * @param string $phpWithPlaceholders
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addExpressionPhp(string $key, string $phpWithPlaceholders): GroupValFormulaBuilder {
     return $this->addExpression(
@@ -174,7 +174,7 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $key
    * @param mixed $value
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
    * @throws \Exception
    *   Value is not supported for export.
@@ -189,9 +189,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $key
    * @param mixed $value
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addScalar(string $key, string|int|bool|float $value): GroupValFormulaBuilder {
     return $this->addValuePhp($key, CodeGen::phpValueUnchecked($value));
@@ -201,9 +201,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $key
    * @param callable $callback
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addValueCall(string $key, callable $callback): GroupValFormulaBuilder {
     return $this->addValuePhp($key, CodeGen::phpCall($callback));
@@ -213,9 +213,9 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $key
    * @param string $php
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addValuePhp(string $key, string $php): GroupValFormulaBuilder {
     return $this->addExpression($key, new V2V_Group_Fixed($php));
@@ -227,7 +227,7 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $class
    * @param string[]|null $keys
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
    * @throws \ReflectionException
    *   Class does not exist.
@@ -242,7 +242,7 @@ abstract class GroupValFormulaBuilderBase {
    * @param callable $callback
    * @param string[]|null $keys
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function call(callable $callback, array $keys = NULL): FormulaInterface {
     return $this->val(V2V_Group_Call::fromCallable($callback), $keys);
@@ -255,7 +255,7 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $method
    * @param array $paramKeys
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function callObjectMethod(string $objectKey, string $method, array $paramKeys): FormulaInterface {
     return $this->val(new V2V_Group_ObjectMethodCall(
@@ -266,10 +266,10 @@ abstract class GroupValFormulaBuilderBase {
   }
 
   /**
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface $v2v
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface $v2v
    * @param string[]|null $keys
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function val(V2V_GroupInterface $v2v, array $keys = NULL): FormulaInterface {
     return $this->buildGroupValFormula($v2v, $keys);
@@ -278,7 +278,7 @@ abstract class GroupValFormulaBuilderBase {
   /**
    * @param string $phpWithPlaceholders
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function buildPhp(string $phpWithPlaceholders): FormulaInterface {
     return $this->buildGroupValFormula(
@@ -290,7 +290,7 @@ abstract class GroupValFormulaBuilderBase {
    * @param class-string $class
    * @param array $phpArgsWithPlaceholders
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function constructPhp(string $class, array $phpArgsWithPlaceholders): FormulaInterface {
     return $this->buildPhp(CodeGen::phpConstruct(
@@ -303,7 +303,7 @@ abstract class GroupValFormulaBuilderBase {
    * @param callable $callback
    * @param array $phpArgsWithPlaceholders
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function callPhp(callable $callback, array $phpArgsWithPlaceholders): FormulaInterface {
     return $this->buildPhp(CodeGen::phpCall(
@@ -315,17 +315,17 @@ abstract class GroupValFormulaBuilderBase {
   /**
    * @param string[] $keys
    *
-   * @return \Donquixote\Ock\Formula\GroupVal\Formula_GroupVal
+   * @return \Ock\Ock\Formula\GroupVal\Formula_GroupVal
    */
   public function buildRekeyed(array $keys): Formula_GroupVal {
     return $this->buildGroupValFormula(NULL, $keys);
   }
 
   /**
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface|null $v2v
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface|null $v2v
    * @param string[]|null $keys
    *
-   * @return \Donquixote\Ock\Formula\GroupVal\Formula_GroupVal|\Donquixote\Ock\Formula\Group\Formula_Group
+   * @return \Ock\Ock\Formula\GroupVal\Formula_GroupVal|\Ock\Ock\Formula\Group\Formula_Group
    */
   public function buildGroupValFormula(V2V_GroupInterface $v2v = NULL, array $keys = NULL): Formula_GroupVal|Formula_Group {
     $formula = $this->getGroupFormula();
@@ -346,7 +346,7 @@ abstract class GroupValFormulaBuilderBase {
    * @param callable $getPhp
    * @param string[]|null $keys
    *
-   * @return \Donquixote\Ock\Formula\GroupVal\Formula_GroupVal
+   * @return \Ock\Ock\Formula\GroupVal\Formula_GroupVal
    */
   public function generate(callable $getPhp, array $keys = NULL): Formula_GroupVal {
     return $this->buildGroupValFormula(
@@ -363,7 +363,7 @@ abstract class GroupValFormulaBuilderBase {
   /**
    * @param string $key
    *
-   * @return \Donquixote\Ock\Formula\GroupVal\Formula_GroupVal
+   * @return \Ock\Ock\Formula\GroupVal\Formula_GroupVal
    */
   public function pick(string $key): Formula_GroupVal {
     return $this->buildGroupValFormula(new V2V_Group_Pick($key));
@@ -371,23 +371,23 @@ abstract class GroupValFormulaBuilderBase {
 
   /**
    * @param string $key
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface $v2v
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface $v2v
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   abstract protected function doAddExpression(string $key, V2V_GroupInterface $v2v): GroupValFormulaBuilder;
 
   /**
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface|null $v2v
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface|null $v2v
    *
-   * @return \Donquixote\Ock\V2V\Group\V2V_GroupInterface|null
+   * @return \Ock\Ock\V2V\Group\V2V_GroupInterface|null
    */
   abstract protected function decorateV2V(?V2V_GroupInterface $v2v): ?V2V_GroupInterface;
 
   /**
-   * @return \Donquixote\Ock\Formula\Group\Formula_Group
+   * @return \Ock\Ock\Formula\Group\Formula_Group
    */
   abstract protected function getGroupFormula(): Formula_Group;
 

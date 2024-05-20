@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Util;
+namespace Ock\Ock\Tests\Util;
 
 use PHPUnit\Util\Xml\Loader;
 

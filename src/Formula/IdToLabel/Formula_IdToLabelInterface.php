@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\IdToLabel;
+namespace Ock\Ock\Formula\IdToLabel;
 
-use Donquixote\Ock\Formula\Id\Formula_IdInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Formula\Id\Formula_IdInterface;
+use Ock\Ock\Text\TextInterface;
 
 interface Formula_IdToLabelInterface extends Formula_IdInterface {
 
@@ -15,10 +15,10 @@ interface Formula_IdToLabelInterface extends Formula_IdInterface {
    * @param string|int $id
    *   The id.
    *
-   * @return \Donquixote\Ock\Text\TextInterface|null
+   * @return \Ock\Ock\Text\TextInterface|null
    *   The label as a string or stringable object.
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function idGetLabel(string|int $id): ?TextInterface;
 

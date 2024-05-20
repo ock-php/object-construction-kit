@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\SelectOld;
+namespace Ock\Ock\Formula\SelectOld;
 
-use Donquixote\Ock\Formula\SelectOld\Option\SelectOptionInterface;
-use Donquixote\Ock\Text\TextInterface;
-use Donquixote\Ock\Translator\Translator;
+use Ock\Ock\Formula\SelectOld\Option\SelectOptionInterface;
+use Ock\Ock\Text\TextInterface;
+use Ock\Ock\Translator\Translator;
 
 class Formula_Select_FromOptions extends Formula_Select_BufferedBase {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\SelectOld\Option\SelectOptionInterface[] $options
+   * @param \Ock\Ock\Formula\SelectOld\Option\SelectOptionInterface[] $options
    */
   public function __construct(
     private readonly array $options,
@@ -22,7 +22,7 @@ class Formula_Select_FromOptions extends Formula_Select_BufferedBase {
   }
 
   /**
-   * @param \Donquixote\Ock\Formula\SelectOld\Option\SelectOptionInterface ...$options
+   * @param \Ock\Ock\Formula\SelectOld\Option\SelectOptionInterface ...$options
    *
    * @psalm-suppress UnusedParam
    */

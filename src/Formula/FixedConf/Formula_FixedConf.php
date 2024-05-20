@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\FixedConf;
+namespace Ock\Ock\Formula\FixedConf;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 class Formula_FixedConf implements Formula_FixedConfInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $decorated
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $decorated
    * @param mixed $conf
    */
   public function __construct(

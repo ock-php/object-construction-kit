@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\DefaultConf\Formula_DefaultConfInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\DefaultConf\Formula_DefaultConfInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Summarizer_DefaultConf implements SummarizerInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\DefaultConf\Formula_DefaultConfInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\DefaultConf\Formula_DefaultConfInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self|null
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
   public static function create(
@@ -40,7 +40,7 @@ class Summarizer_DefaultConf implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Summarizer\SummarizerInterface $decorated
+   * @param \Ock\Ock\Summarizer\SummarizerInterface $decorated
    * @param mixed $defaultConf
    */
   public function __construct(

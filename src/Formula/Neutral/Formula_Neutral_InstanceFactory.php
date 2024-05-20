@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Neutral;
+namespace Ock\Ock\Formula\Neutral;
 
-use Donquixote\ClassDiscovery\Exception\MalformedDeclarationException;
-use Donquixote\ClassDiscovery\Util\AttributesUtil;
-use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
-use Donquixote\Ock\Contract\FormulaHavingInterface;
-use Donquixote\Ock\Contract\LabelHavingInterface;
-use Donquixote\Ock\Contract\NameHavingInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Group\GroupFormulaBuilder;
-use Donquixote\Ock\Formula\Iface\Formula_Iface;
-use Donquixote\Ock\Util\IdentifierLabelUtil;
-use Donquixote\Ock\Util\ReflectionUtil;
+use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
+use Ock\ClassDiscovery\Util\AttributesUtil;
+use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\Ock\Contract\FormulaHavingInterface;
+use Ock\Ock\Contract\LabelHavingInterface;
+use Ock\Ock\Contract\NameHavingInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Group\GroupFormulaBuilder;
+use Ock\Ock\Formula\Iface\Formula_Iface;
+use Ock\Ock\Util\IdentifierLabelUtil;
+use Ock\Ock\Util\ReflectionUtil;
 
 class Formula_Neutral_InstanceFactory extends Formula_Passthru_ProxyBase {
 
@@ -47,10 +47,10 @@ class Formula_Neutral_InstanceFactory extends Formula_Passthru_ProxyBase {
   /**
    * @param \ReflectionParameter[] $parameters
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupFormulaBuilder
    *
-   * @throws \Donquixote\ClassDiscovery\Exception\MalformedDeclarationException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\ClassDiscovery\Exception\MalformedDeclarationException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function buildGroupFormula(array $parameters): GroupFormulaBuilder {
     $builder = Formula::group();

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\TextLookup;
+namespace Ock\Ock\TextLookup;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 /**
  * Helper object to provide labels in bulk.
@@ -16,7 +16,7 @@ interface TextLookupInterface {
   /**
    * @param string|int $id
    *
-   * @return \Donquixote\Ock\Text\TextInterface|null
+   * @return \Ock\Ock\Text\TextInterface|null
    */
   public function idGetText(string|int $id): ?TextInterface;
 

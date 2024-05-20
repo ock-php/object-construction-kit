@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Parameter;
+namespace Ock\Ock\Attribute\Parameter;
 
-use Donquixote\Ock\Contract\LabelHavingInterface;
-use Donquixote\Ock\Contract\NameHavingInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Contract\LabelHavingInterface;
+use Ock\Ock\Contract\NameHavingInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 #[\Attribute(\Attribute::TARGET_PARAMETER|\Attribute::TARGET_PROPERTY)]
 class OckOption implements NameHavingInterface, LabelHavingInterface {

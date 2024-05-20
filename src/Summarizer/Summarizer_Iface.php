@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Summarizer;
+namespace Ock\Ock\Summarizer;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\DID\Attribute\Parameter\GetService;
-use Donquixote\Ock\Formula\Iface\Formula_IfaceInterface;
-use Donquixote\Ock\Plugin\Map\PluginMapInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\DID\Attribute\Parameter\GetService;
+use Ock\Ock\Formula\Iface\Formula_IfaceInterface;
+use Ock\Ock\Plugin\Map\PluginMapInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 #[Adapter]
 class Summarizer_Iface implements SummarizerInterface {
@@ -31,9 +31,9 @@ class Summarizer_Iface implements SummarizerInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Iface\Formula_IfaceInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
-   * @param \Donquixote\Ock\Plugin\Map\PluginMapInterface $pluginMap
+   * @param \Ock\Ock\Formula\Iface\Formula_IfaceInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Plugin\Map\PluginMapInterface $pluginMap
    */
   public function __construct(
     #[Adaptee]

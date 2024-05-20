@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Select_MergeMultiple implements Formula_SelectInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Select\Formula_SelectInterface[] $formulas
+   * @param \Ock\Ock\Formula\Select\Formula_SelectInterface[] $formulas
    */
   public function __construct(
     private readonly array $formulas,

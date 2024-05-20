@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Boolean;
+namespace Ock\Ock\Formula\Boolean;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\DefaultConf\Formula_DefaultConf;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\DefaultConf\Formula_DefaultConf;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Boolean_YesNo implements Formula_BooleanInterface {
 
   /**
    * @param bool $enabledByDefault
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public static function create(bool $enabledByDefault = FALSE): FormulaInterface {
 

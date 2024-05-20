@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\String;
+namespace Ock\Ock\V2V\String;
 
 interface V2V_StringInterface {
 
@@ -11,7 +11,7 @@ interface V2V_StringInterface {
    *
    * @return string
    *
-   * @throws \Donquixote\Ock\Exception\GeneratorException
+   * @throws \Ock\Ock\Exception\GeneratorException
    *   String value is incompatible or not supported.
    */
   public function stringGetPhp(string $string): string;

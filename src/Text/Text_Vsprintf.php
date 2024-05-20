@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
-use Donquixote\Ock\Translator\TranslatorInterface;
+use Ock\Ock\Translator\TranslatorInterface;
 
 class Text_Vsprintf extends TextBase {
 
@@ -12,7 +12,7 @@ class Text_Vsprintf extends TextBase {
    * Constructor.
    *
    * @param string $source
-   * @param \Donquixote\Ock\Text\TextInterface[] $replacements
+   * @param \Ock\Ock\Text\TextInterface[] $replacements
    */
   public function __construct(
     private readonly string $source,

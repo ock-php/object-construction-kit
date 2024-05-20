@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Generator;
+namespace Ock\Ock\Generator;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\ValueToValue\Formula_ValueToValueInterface;
-use Donquixote\Ock\V2V\Value\V2V_ValueInterface;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\ValueToValue\Formula_ValueToValueInterface;
+use Ock\Ock\V2V\Value\V2V_ValueInterface;
 
 class Generator_ValueToValue implements GeneratorInterface {
 
   /**
-   * @param \Donquixote\Ock\Formula\ValueToValue\Formula_ValueToValueInterface $valueToValueFormula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\ValueToValue\Formula_ValueToValueInterface $valueToValueFormula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return self
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    *   No generator found for the decorated formula.
    */
   #[Adapter]
@@ -37,8 +37,8 @@ class Generator_ValueToValue implements GeneratorInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Generator\GeneratorInterface $decorated
-   * @param \Donquixote\Ock\V2V\Value\V2V_ValueInterface $v2v
+   * @param \Ock\Ock\Generator\GeneratorInterface $decorated
+   * @param \Ock\Ock\V2V\Value\V2V_ValueInterface $v2v
    */
   public function __construct(
     private readonly GeneratorInterface $decorated,

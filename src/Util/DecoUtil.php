@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Util;
+namespace Ock\Ock\Util;
 
 /**
- * @see \Donquixote\Ock\Todo\DecoTodo
+ * @see \Ock\Ock\Todo\DecoTodo
  */
 class DecoUtil extends UtilBase {
 

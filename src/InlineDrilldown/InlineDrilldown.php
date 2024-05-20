@@ -2,27 +2,27 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\InlineDrilldown;
+namespace Ock\Ock\InlineDrilldown;
 
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\FormulaAdapter;
-use Donquixote\Ock\Util\UtilBase;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\FormulaAdapter;
+use Ock\Ock\Util\UtilBase;
 
 final class InlineDrilldown extends UtilBase {
 
   /**
    * Materializes an InlineDrilldown object from a formula.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
    *   Formula.
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *   Service that can materialize other objects from formulas.
    *
-   * @return \Donquixote\Ock\InlineDrilldown\InlineDrilldownInterface
+   * @return \Ock\Ock\InlineDrilldown\InlineDrilldownInterface
    *   Materialized PluginList.
    *
-   * @throws \Donquixote\Adaptism\Exception\AdapterException
+   * @throws \Ock\Adaptism\Exception\AdapterException
    *   Cannot build a PluginList for the given formula.
    */
   public static function fromFormula(

@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\Plant;
+namespace Ock\Ock\Tests\Fixture\Plant;
 
-use Donquixote\Ock\Attribute\Parameter\OckFormulaFromClass;
-use Donquixote\Ock\Attribute\Parameter\OckOption;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Validator\Formula_ConstrainedValue_IntegerInRange;
-use Donquixote\Ock\Text\Text_Translatable;
+use Ock\Ock\Attribute\Parameter\OckFormulaFromClass;
+use Ock\Ock\Attribute\Parameter\OckOption;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Validator\Formula_ConstrainedValue_IntegerInRange;
+use Ock\Ock\Text\Text_Translatable;
 
 class Plant_OakTree implements PlantInterface {
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    * @throws \ReflectionException
    */
   public static function formula(): FormulaInterface {

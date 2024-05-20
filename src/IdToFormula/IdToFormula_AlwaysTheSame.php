@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\IdToFormula;
+namespace Ock\Ock\IdToFormula;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 class IdToFormula_AlwaysTheSame implements IdToFormulaInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $sameFormula
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $sameFormula
    */
   public function __construct(
     private readonly FormulaInterface $sameFormula,

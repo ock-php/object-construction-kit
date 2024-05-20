@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests;
+namespace Ock\Ock\Tests;
 
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Optionlessness\Optionlessness;
-use Donquixote\Ock\Tests\Util\TestingServices;
-use Donquixote\Ock\Tests\Util\TestUtil;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Optionlessness\Optionlessness;
+use Ock\Ock\Tests\Util\TestingServices;
+use Ock\Ock\Tests\Util\TestUtil;
 use Symfony\Component\Yaml\Yaml;
 
 /**

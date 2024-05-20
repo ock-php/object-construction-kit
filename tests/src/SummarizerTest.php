@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests;
+namespace Ock\Ock\Tests;
 
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Summarizer\Summarizer;
-use Donquixote\Ock\Tests\Fixture\IntOp\IntOpInterface;
-use Donquixote\Ock\Tests\Translator\Translator_Test;
-use Donquixote\Ock\Tests\Util\TestingServices;
-use Donquixote\Ock\Tests\Util\XmlTestUtil;
-use Donquixote\Ock\Translator\Translator_Passthru;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Summarizer\Summarizer;
+use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
+use Ock\Ock\Tests\Translator\Translator_Test;
+use Ock\Ock\Tests\Util\TestingServices;
+use Ock\Ock\Tests\Util\XmlTestUtil;
+use Ock\Ock\Translator\Translator_Passthru;
 use Symfony\Component\Yaml\Yaml;
 
 class SummarizerTest extends FormulaTestBase {

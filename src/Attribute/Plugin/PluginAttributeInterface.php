@@ -6,20 +6,20 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Plugin;
+namespace Ock\Ock\Attribute\Plugin;
 
-use Donquixote\Ock\Plugin\PluginDeclaration;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Plugin\PluginDeclaration;
+use Ock\Ock\Text\TextInterface;
 
 interface PluginAttributeInterface {
 
   /**
    * @param \ReflectionClass $reflectionClass
    *
-   * @return \Donquixote\Ock\Plugin\PluginDeclaration
+   * @return \Ock\Ock\Plugin\PluginDeclaration
    *
-   * @throws \Donquixote\ClassDiscovery\Exception\MalformedDeclarationException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\ClassDiscovery\Exception\MalformedDeclarationException
+   * @throws \Ock\Ock\Exception\FormulaException
    * @throws \ReflectionException
    */
   public function onClass(\ReflectionClass $reflectionClass): PluginDeclaration;
@@ -27,10 +27,10 @@ interface PluginAttributeInterface {
   /**
    * @param \ReflectionMethod $reflectionMethod
    *
-   * @return \Donquixote\Ock\Plugin\PluginDeclaration
+   * @return \Ock\Ock\Plugin\PluginDeclaration
    *
-   * @throws \Donquixote\ClassDiscovery\Exception\MalformedDeclarationException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\ClassDiscovery\Exception\MalformedDeclarationException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function onMethod(\ReflectionMethod $reflectionMethod): PluginDeclaration;
 

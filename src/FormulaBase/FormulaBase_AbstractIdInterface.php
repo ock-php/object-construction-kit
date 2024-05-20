@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\FormulaBase;
+namespace Ock\Ock\FormulaBase;
 
 interface FormulaBase_AbstractIdInterface {
 

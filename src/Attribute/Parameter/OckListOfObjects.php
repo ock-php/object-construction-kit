@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Parameter;
+namespace Ock\Ock\Attribute\Parameter;
 
-use Donquixote\Ock\Contract\FormulaHavingInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Sequence\Formula_Sequence;
-use Donquixote\Ock\Formula\Sequence\Formula_Sequence_ItemLabelT;
-use Donquixote\Ock\Text\Text;
+use Ock\Ock\Contract\FormulaHavingInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Sequence\Formula_Sequence;
+use Ock\Ock\Formula\Sequence\Formula_Sequence_ItemLabelT;
+use Ock\Ock\Text\Text;
 
 #[\Attribute(\Attribute::TARGET_PARAMETER|\Attribute::TARGET_PROPERTY)]
 class OckListOfObjects implements FormulaHavingInterface {
@@ -20,7 +20,7 @@ class OckListOfObjects implements FormulaHavingInterface {
   ) {}
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getFormula(): FormulaInterface {
     $itemFormula = Formula::iface($this->interface);

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\DrilldownKeysHelper;
+namespace Ock\Ock\DrilldownKeysHelper;
 
-use Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface;
-use Donquixote\Ock\Util\UtilBase;
+use Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface;
+use Ock\Ock\Util\UtilBase;
 
 /**
  * Static methods related to DrilldownKeysHelperInterface.
@@ -13,9 +13,9 @@ use Donquixote\Ock\Util\UtilBase;
 final class DrilldownKeysHelper extends UtilBase {
 
   /**
-   * @param \Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface $drilldown
+   * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $drilldown
    *
-   * @return \Donquixote\Ock\DrilldownKeysHelper\DrilldownKeysHelperInterface
+   * @return \Ock\Ock\DrilldownKeysHelper\DrilldownKeysHelperInterface
    */
   public static function fromFormula(Formula_DrilldownInterface $drilldown): DrilldownKeysHelperInterface {
     return self::fromKeys(
@@ -27,7 +27,7 @@ final class DrilldownKeysHelper extends UtilBase {
    * @param array-key|null $idKey
    * @param array-key|null $optionsKey
    *
-   * @return \Donquixote\Ock\DrilldownKeysHelper\DrilldownKeysHelperInterface
+   * @return \Ock\Ock\DrilldownKeysHelper\DrilldownKeysHelperInterface
    */
   public static function fromKeys(string|int|null $idKey, string|int|null $optionsKey): DrilldownKeysHelperInterface {
 

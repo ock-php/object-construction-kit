@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture;
+namespace Ock\Ock\Tests\Fixture;
 
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 

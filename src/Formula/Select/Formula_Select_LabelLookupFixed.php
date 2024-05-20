@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\TextLookup\TextLookupInterface;
+use Ock\Ock\TextLookup\TextLookupInterface;
 
 /**
  * Select formula using TextLookup* objects for option labels and group labels.
@@ -16,8 +16,8 @@ class Formula_Select_LabelLookupFixed extends Formula_Select_LabelLookupBase {
    *
    * @param array<string, string> $optionsMap
    *   Format: $[$id] = $groupId.
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface $labelLookup
-   * @param \Donquixote\Ock\TextLookup\TextLookupInterface $groupLabelLookup
+   * @param \Ock\Ock\TextLookup\TextLookupInterface $labelLookup
+   * @param \Ock\Ock\TextLookup\TextLookupInterface $groupLabelLookup
    */
   public function __construct(
     private readonly array $optionsMap,

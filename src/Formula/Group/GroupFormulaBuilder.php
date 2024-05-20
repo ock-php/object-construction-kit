@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group;
+namespace Ock\Ock\Formula\Group;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\Exception\GroupFormulaDuplicateKeyException;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Group\Item\GroupFormulaItem;
-use Donquixote\Ock\Formula\Group\Item\GroupFormulaItem_Callback;
-use Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface;
-use Donquixote\Ock\Formula\Optionless\Formula_OptionlessInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
-use Donquixote\Ock\V2V\Group\V2V_GroupInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Exception\GroupFormulaDuplicateKeyException;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Group\Item\GroupFormulaItem;
+use Ock\Ock\Formula\Group\Item\GroupFormulaItem_Callback;
+use Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface;
+use Ock\Ock\Formula\Optionless\Formula_OptionlessInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
+use Ock\Ock\V2V\Group\V2V_GroupInterface;
 
 class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
 
   /**
-   * @var \Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
+   * @var \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
    */
   private array $items = [];
 
@@ -27,12 +27,12 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    * Adds another group option.
    *
    * @param string $key
-   * @param \Donquixote\Ock\Text\TextInterface $label
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $formula
+   * @param \Ock\Ock\Text\TextInterface $label
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
    *
    * @return $this
    *
-   * @throws \Donquixote\Ock\Exception\GroupFormulaDuplicateKeyException
+   * @throws \Ock\Ock\Exception\GroupFormulaDuplicateKeyException
    */
   public function add(string $key, TextInterface $label, FormulaInterface $formula): static {
     return $this->addItem($key, new GroupFormulaItem($label, $formula));
@@ -40,11 +40,11 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
 
   /**
    * @param string|int $key
-   * @param \Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface $item
+   * @param \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface $item
    *
    * @return $this
    *
-   * @throws \Donquixote\Ock\Exception\GroupFormulaDuplicateKeyException
+   * @throws \Ock\Ock\Exception\GroupFormulaDuplicateKeyException
    *   A key already exists.
    */
   private function addItem(string|int $key, GroupFormulaItemInterface $item): static {
@@ -59,11 +59,11 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    * Adds an optionless group option.
    *
    * @param string $key
-   * @param \Donquixote\Ock\Formula\Optionless\Formula_OptionlessInterface $formula
+   * @param \Ock\Ock\Formula\Optionless\Formula_OptionlessInterface $formula
    *
    * @return $this
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addOptionless(string $key, Formula_OptionlessInterface $formula): static {
     // @todo Option to not add a label for optionless options?
@@ -72,13 +72,13 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
 
   /**
    * @param string $key
-   * @param \Donquixote\Ock\Text\TextInterface|(callable(mixed...): TextInterface) $label
+   * @param \Ock\Ock\Text\TextInterface|(callable(mixed...): TextInterface) $label
    * @param list<string> $sourceKeys
-   * @param callable(mixed...): \Donquixote\Ock\Core\Formula\FormulaInterface $callback
+   * @param callable(mixed...): \Ock\Ock\Core\Formula\FormulaInterface $callback
    *
    * @return $this
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addDynamicFormula(string $key, TextInterface|callable $label, array $sourceKeys, callable $callback): static {
     return $this->addItem($key, new GroupFormulaItem_Callback(
@@ -94,7 +94,7 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    * @param callable(mixed...): mixed $valueCallback
    *
    * @return $this
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addDynamicValue(string $key, array $sourceKeys, callable $valueCallback): static {
     return $this->addItem($key, new GroupFormulaItem_Callback(
@@ -110,7 +110,7 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    * @param callable(mixed...): array $multipleValueCallback
    *
    * @return $this
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addDynamicValues(array $keys, array $sourceKeys, callable $multipleValueCallback): static {
     foreach ($keys as $i => $key) {
@@ -124,7 +124,7 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
   }
 
   /**
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addStringParts(array $keys, string $glue, string $sourceKey): static {
     foreach ($keys as $i => $key) {
@@ -151,7 +151,7 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    *
    * @return $this
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    *   Item cannot be added, possibly due to a key collision.
    *
    * @noinspection PhpVoidFunctionResultUsedInspection
@@ -172,7 +172,7 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
   }
 
   /**
-   * @return \Donquixote\Ock\Formula\Group\Formula_Group
+   * @return \Ock\Ock\Formula\Group\Formula_Group
    */
   public function buildGroupFormula(): Formula_Group {
     return new Formula_Group($this->items);
@@ -205,7 +205,7 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    *
    * @return never
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private static function fail(string $message): never {
     throw new FormulaException($message);

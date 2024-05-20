@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute;
+namespace Ock\Ock\Attribute;
 
 /**
  * Annotates a method that returns an object construction formula.
  *
- * @see \Donquixote\Ock\Core\Formula\FormulaInterface
+ * @see \Ock\Ock\Core\Formula\FormulaInterface
  */
 #[\Attribute(\Attribute::TARGET_METHOD)]
 class Formula {

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\FixedConf;
+namespace Ock\Ock\Formula\FixedConf;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Optionless\Formula_OptionlessInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Optionless\Formula_OptionlessInterface;
 
 interface Formula_FixedConfInterface extends Formula_OptionlessInterface {
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getDecorated(): FormulaInterface;
 

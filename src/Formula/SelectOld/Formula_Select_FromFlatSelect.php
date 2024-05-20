@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\SelectOld;
+namespace Ock\Ock\Formula\SelectOld;
 
-use Donquixote\Ock\Formula\SelectOld\Flat\Formula_FlatSelectInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Formula\SelectOld\Flat\Formula_FlatSelectInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Select_FromFlatSelect implements Formula_SelectInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\SelectOld\Flat\Formula_FlatSelectInterface $decorated
+   * @param \Ock\Ock\Formula\SelectOld\Flat\Formula_FlatSelectInterface $decorated
    */
   public function __construct(
     private readonly Formula_FlatSelectInterface $decorated,

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Attribute\Parameter;
+namespace Ock\Ock\Attribute\Parameter;
 
-use Donquixote\Ock\Contract\FormulaHavingInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Neutral\Formula_Neutral_FormulaClass;
+use Ock\Ock\Contract\FormulaHavingInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Neutral\Formula_Neutral_FormulaClass;
 
 #[\Attribute(\Attribute::TARGET_PARAMETER|\Attribute::TARGET_PROPERTY)]
 class OckFormulaFromClass implements FormulaHavingInterface {
@@ -23,7 +23,7 @@ class OckFormulaFromClass implements FormulaHavingInterface {
   ) {}
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getFormula(): FormulaInterface {
     return new Formula_Neutral_FormulaClass($this->formulaClass, $this->args);

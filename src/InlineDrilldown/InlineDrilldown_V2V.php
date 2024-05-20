@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\InlineDrilldown;
+namespace Ock\Ock\InlineDrilldown;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Id\Formula_IdInterface;
-use Donquixote\Ock\Formula\ValueToValue\Formula_ValueToValue;
-use Donquixote\Ock\V2V\Value\V2V_ValueInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Id\Formula_IdInterface;
+use Ock\Ock\Formula\ValueToValue\Formula_ValueToValue;
+use Ock\Ock\V2V\Value\V2V_ValueInterface;
 
 class InlineDrilldown_V2V implements InlineDrilldownInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\InlineDrilldown\InlineDrilldownInterface $decorated
-   * @param \Donquixote\Ock\V2V\Value\V2V_ValueInterface $v2v
+   * @param \Ock\Ock\InlineDrilldown\InlineDrilldownInterface $decorated
+   * @param \Ock\Ock\V2V\Value\V2V_ValueInterface $v2v
    */
   public function __construct(
     private readonly InlineDrilldownInterface $decorated,

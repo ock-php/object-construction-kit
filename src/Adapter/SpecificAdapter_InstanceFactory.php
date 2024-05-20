@@ -2,34 +2,34 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Adapter;
+namespace Ock\Ock\Adapter;
 
-use Donquixote\Adaptism\Attribute\Adapter;
-use Donquixote\Adaptism\Attribute\Parameter\Adaptee;
-use Donquixote\Adaptism\Attribute\Parameter\UniversalAdapter;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\ClassDiscovery\Util\AttributesUtil;
-use Donquixote\ClassDiscovery\Util\ReflectionTypeUtil;
-use Donquixote\Ock\Contract\FormulaHavingInterface;
-use Donquixote\Ock\Contract\LabelHavingInterface;
-use Donquixote\Ock\Contract\NameHavingInterface;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Group\GroupFormulaBuilder;
-use Donquixote\Ock\Formula\Iface\Formula_Iface;
-use Donquixote\Ock\Formula\InstanceFactory\Formula_InstanceFactoryInterface;
-use Donquixote\Ock\Util\IdentifierLabelUtil;
+use Ock\Adaptism\Attribute\Adapter;
+use Ock\Adaptism\Attribute\Parameter\Adaptee;
+use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\ClassDiscovery\Util\AttributesUtil;
+use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\Ock\Contract\FormulaHavingInterface;
+use Ock\Ock\Contract\LabelHavingInterface;
+use Ock\Ock\Contract\NameHavingInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Group\GroupFormulaBuilder;
+use Ock\Ock\Formula\Iface\Formula_Iface;
+use Ock\Ock\Formula\InstanceFactory\Formula_InstanceFactoryInterface;
+use Ock\Ock\Util\IdentifierLabelUtil;
 
 class SpecificAdapter_InstanceFactory {
 
   /**
-   * @param \Donquixote\Ock\Formula\InstanceFactory\Formula_InstanceFactoryInterface $formula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\InstanceFactory\Formula_InstanceFactoryInterface $formula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface|null
+   * @return \Ock\Ock\Core\Formula\FormulaInterface|null
    *
-   * @throws \Donquixote\ClassDiscovery\Exception\MalformedDeclarationException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\ClassDiscovery\Exception\MalformedDeclarationException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   #[Adapter]
   public function adapt(
@@ -44,10 +44,10 @@ class SpecificAdapter_InstanceFactory {
   /**
    * @param \ReflectionParameter[] $parameters
    *
-   * @return \Donquixote\Ock\Formula\Group\GroupFormulaBuilder
+   * @return \Ock\Ock\Formula\Group\GroupFormulaBuilder
    *
-   * @throws \Donquixote\ClassDiscovery\Exception\MalformedDeclarationException
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\ClassDiscovery\Exception\MalformedDeclarationException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function buildGroupFormula(array $parameters): GroupFormulaBuilder {
     $builder = Formula::group();

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\FreeParameters;
+namespace Ock\Ock\Formula\FreeParameters;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Util\ReflectionUtil;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Util\ReflectionUtil;
 
 class Formula_FreeParameters extends Formula_FreeParametersBase {
 
   /**
-   * @param class-string<\Donquixote\Ock\Core\Formula\FormulaInterface> $class
+   * @param class-string<\Ock\Ock\Core\Formula\FormulaInterface> $class
    * @param mixed[] $knownArgs
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
    * @throws \ReflectionException
    *   Class does not exist.
@@ -28,10 +28,10 @@ class Formula_FreeParameters extends Formula_FreeParametersBase {
   }
 
   /**
-   * @param callable(mixed...): \Donquixote\Ock\Core\Formula\FormulaInterface $callback
+   * @param callable(mixed...): \Ock\Ock\Core\Formula\FormulaInterface $callback
    * @param mixed[] $knownArgs
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
    * @throws \ReflectionException
    *   Callable does not exist, or is not reflectable.
@@ -50,7 +50,7 @@ class Formula_FreeParameters extends Formula_FreeParametersBase {
    * @param \ReflectionParameter[] $allParameters
    * @param mixed[] $knownArgs
    *
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public static function create(
     callable $callback,

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Drilldown\Option;
+namespace Ock\Ock\Formula\Drilldown\Option;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Select\Option\SelectOptionInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Select\Option\SelectOptionInterface;
 
 /**
  * Object representation of a plugin definition.
@@ -17,7 +17,7 @@ use Donquixote\Ock\Formula\Select\Option\SelectOptionInterface;
 interface DrilldownOptionInterface extends SelectOptionInterface {
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getFormula(): FormulaInterface;
 

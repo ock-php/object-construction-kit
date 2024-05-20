@@ -2,33 +2,33 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Group;
+namespace Ock\Ock\Formula\Group;
 
-use Donquixote\Ock\Exception\FormulaException;
-use Donquixote\Ock\V2V\Group\V2V_Group_ExtraExpressions;
-use Donquixote\Ock\V2V\Group\V2V_Group_Trivial;
-use Donquixote\Ock\V2V\Group\V2V_GroupInterface;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\V2V\Group\V2V_Group_ExtraExpressions;
+use Ock\Ock\V2V\Group\V2V_Group_Trivial;
+use Ock\Ock\V2V\Group\V2V_GroupInterface;
 
 class GroupValFormulaBuilder extends GroupValFormulaBuilderBase {
 
   /**
-   * @var \Donquixote\Ock\V2V\Group\V2V_GroupInterface[]
+   * @var \Ock\Ock\V2V\Group\V2V_GroupInterface[]
    */
   private array $expressions = [];
 
   /**
    * Group items. Only here for collision detection.
    *
-   * @var \Donquixote\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
+   * @var \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
    */
   private array $items;
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Group\Formula_Group $groupFormula
+   * @param \Ock\Ock\Formula\Group\Formula_Group $groupFormula
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   public function __construct(
     private readonly Formula_Group $groupFormula,

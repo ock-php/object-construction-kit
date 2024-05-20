@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\IntCondition;
+namespace Ock\Ock\Tests\Fixture\IntCondition;
 
-use Donquixote\Ock\Attribute\Plugin\OckPluginFormula;
-use Donquixote\Ock\Attribute\Plugin\OckPluginInstance;
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\Formula\Formula;
-use Donquixote\Ock\Formula\Primitive\Formula_Int;
-use Donquixote\Ock\Text\Text;
+use Ock\Ock\Attribute\Plugin\OckPluginFormula;
+use Ock\Ock\Attribute\Plugin\OckPluginInstance;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Formula\Formula;
+use Ock\Ock\Formula\Primitive\Formula_Int;
+use Ock\Ock\Text\Text;
 
 /**
  * Compares the number to a defined operand.
@@ -42,9 +42,9 @@ class IntCondition_GreaterThan implements IntConditionInterface {
   }
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    *
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   #[OckPluginFormula(self::class, 'greater_than', 'Greater than')]
   public static function formula(): FormulaInterface {

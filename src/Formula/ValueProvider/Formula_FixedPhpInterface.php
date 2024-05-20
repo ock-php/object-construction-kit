@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\ValueProvider;
+namespace Ock\Ock\Formula\ValueProvider;
 
-use Donquixote\Ock\Formula\Optionless\Formula_OptionlessInterface;
+use Ock\Ock\Formula\Optionless\Formula_OptionlessInterface;
 
 interface Formula_FixedPhpInterface extends Formula_OptionlessInterface {
 

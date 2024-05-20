@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
-use Donquixote\Ock\Translator\TranslatorInterface;
+use Ock\Ock\Translator\TranslatorInterface;
 
 class Text_Translatable extends TextBuilderBase {
 
@@ -18,7 +18,7 @@ class Text_Translatable extends TextBuilderBase {
   ) {}
 
   /**
-   * @param \Donquixote\Ock\Translator\TranslatorInterface $translator
+   * @param \Ock\Ock\Translator\TranslatorInterface $translator
    *
    * @return string
    */

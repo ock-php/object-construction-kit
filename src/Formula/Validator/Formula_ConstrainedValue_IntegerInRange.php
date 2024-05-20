@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Validator;
+namespace Ock\Ock\Formula\Validator;
 
-use Donquixote\Helpers\Util\MessageUtil;
-use Donquixote\Ock\Formula\Description\Formula_DescriptionInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Helpers\Util\MessageUtil;
+use Ock\Ock\Formula\Description\Formula_DescriptionInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 final class Formula_ConstrainedValue_IntegerInRange implements Formula_ConstrainedValueInterface, Formula_DescriptionInterface {
 

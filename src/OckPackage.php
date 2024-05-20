@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock;
+namespace Ock\Ock;
 
-use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIA;
-use Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface;
-use Donquixote\ClassDiscovery\Discovery\DiscoveryInterface;
-use Donquixote\ClassDiscovery\Discovery\FactoryDiscovery;
-use Donquixote\ClassDiscovery\Inspector\FactoryInspector_Concat;
-use Donquixote\ClassDiscovery\Inspector\FactoryInspectorInterface;
-use Donquixote\ClassDiscovery\ReflectionClassesIA\ReflectionClassesIA_Concat;
-use Donquixote\ClassDiscovery\ReflectionClassesIA\ReflectionClassesIAInterface;
+use Ock\ClassDiscovery\ClassFilesIA\ClassFilesIA;
+use Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface;
+use Ock\ClassDiscovery\Discovery\DiscoveryInterface;
+use Ock\ClassDiscovery\Discovery\FactoryDiscovery;
+use Ock\ClassDiscovery\Inspector\FactoryInspector_Concat;
+use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
+use Ock\ClassDiscovery\ReflectionClassesIA\ReflectionClassesIA_Concat;
+use Ock\ClassDiscovery\ReflectionClassesIA\ReflectionClassesIAInterface;
 use Ock\Egg\ClassToEgg\ClassToEgg_Construct;
 use Ock\Egg\ClassToEgg\ClassToEggInterface;
 use Ock\Egg\ParamToEgg\ParamToEgg_Chain;
@@ -68,7 +68,7 @@ class OckPackage {
   }
 
   /**
-   * @return \Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
+   * @return \Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
    * @throws \ReflectionException
    */
   public function getServiceDiscoveryNamespaces(): ClassFilesIAInterface {
@@ -76,7 +76,7 @@ class OckPackage {
   }
 
   /**
-   * @return \Donquixote\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
+   * @return \Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
    * @throws \ReflectionException
    */
   public function getAdapterDiscoveryNamespaces(): ClassFilesIAInterface {

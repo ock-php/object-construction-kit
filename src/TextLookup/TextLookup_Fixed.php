@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\TextLookup;
+namespace Ock\Ock\TextLookup;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 /**
  * Helper object to provide labels in bulk.
@@ -14,7 +14,7 @@ class TextLookup_Fixed implements TextLookupInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Text\TextInterface[] $labels
+   * @param \Ock\Ock\Text\TextInterface[] $labels
    */
   public function __construct(
     private readonly array $labels,

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Select_DecoratorBase implements Formula_SelectInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Select\Formula_SelectInterface $decorated
+   * @param \Ock\Ock\Formula\Select\Formula_SelectInterface $decorated
    */
   public function __construct(
     private readonly Formula_SelectInterface $decorated,

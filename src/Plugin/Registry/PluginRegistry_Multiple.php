@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Plugin\Registry;
+namespace Ock\Ock\Plugin\Registry;
 
 /**
  * Combines multiple registries.
@@ -12,7 +12,7 @@ class PluginRegistry_Multiple implements PluginRegistryInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Plugin\Registry\PluginRegistryInterface[] $registries
+   * @param \Ock\Ock\Plugin\Registry\PluginRegistryInterface[] $registries
    */
   public function __construct(
     private readonly array $registries,

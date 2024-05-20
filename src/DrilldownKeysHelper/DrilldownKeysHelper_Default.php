@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\DrilldownKeysHelper;
+namespace Ock\Ock\DrilldownKeysHelper;
 
 class DrilldownKeysHelper_Default implements DrilldownKeysHelperInterface {
 

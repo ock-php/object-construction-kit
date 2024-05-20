@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Text;
+namespace Ock\Ock\Text;
 
 class TextBuilder {
 
   /**
-   * @var \Donquixote\Ock\Text\TextInterface[]
+   * @var \Ock\Ock\Text\TextInterface[]
    */
   private array $replacements = [];
 
@@ -19,7 +19,7 @@ class TextBuilder {
 
   /**
    * @param string $token
-   * @param \Donquixote\Ock\Text\TextInterface $replacement
+   * @param \Ock\Ock\Text\TextInterface $replacement
    *
    * @return $this
    */
@@ -52,7 +52,7 @@ class TextBuilder {
 
   /**
    * @param string $token
-   * @param \Donquixote\Ock\Text\TextInterface $wrapper
+   * @param \Ock\Ock\Text\TextInterface $wrapper
    *
    * @return $this
    */
@@ -78,7 +78,7 @@ class TextBuilder {
   /**
    * @param string $source
    *
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    */
   public function s(string $source): TextInterface {
     return $this->build(new Text_Raw($source));
@@ -87,16 +87,16 @@ class TextBuilder {
   /**
    * @param string $source
    *
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    */
   public function t(string $source): TextInterface {
     return $this->build(new Text_Translatable($source));
   }
 
   /**
-   * @param \Donquixote\Ock\Text\TextInterface $text
+   * @param \Ock\Ock\Text\TextInterface $text
    *
-   * @return \Donquixote\Ock\Text\TextInterface
+   * @return \Ock\Ock\Text\TextInterface
    */
   public function build(TextInterface $text): TextInterface {
     if ($this->replacements) {

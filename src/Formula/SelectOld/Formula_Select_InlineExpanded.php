@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\SelectOld;
+namespace Ock\Ock\Formula\SelectOld;
 
-use Donquixote\Adaptism\Exception\AdapterException;
-use Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Donquixote\Ock\Formula\Id\Formula_IdInterface;
-use Donquixote\Ock\IdToFormula\IdToFormulaInterface;
-use Donquixote\Ock\InlineDrilldown\InlineDrilldownInterface;
-use Donquixote\Ock\Text\Text;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Adaptism\Exception\AdapterException;
+use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
+use Ock\Ock\Formula\Id\Formula_IdInterface;
+use Ock\Ock\IdToFormula\IdToFormulaInterface;
+use Ock\Ock\InlineDrilldown\InlineDrilldownInterface;
+use Ock\Ock\Text\Text;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Select_InlineExpanded extends Formula_Select_BufferedBase {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\SelectOld\Formula_SelectInterface $decorated
-   * @param \Donquixote\Ock\IdToFormula\IdToFormulaInterface $idToFormula
-   * @param \Donquixote\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Ock\Formula\SelectOld\Formula_SelectInterface $decorated
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    */
   public function __construct(
     private readonly Formula_SelectInterface $decorated,
@@ -94,8 +94,8 @@ class Formula_Select_InlineExpanded extends Formula_Select_BufferedBase {
   /**
    * @param string|int $id
    *
-   * @return \Donquixote\Ock\Formula\SelectOld\Formula_SelectInterface|null
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @return \Ock\Ock\Formula\SelectOld\Formula_SelectInterface|null
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function idGetSelectFormula(string|int $id): ?Formula_SelectInterface {
 
@@ -113,8 +113,8 @@ class Formula_Select_InlineExpanded extends Formula_Select_BufferedBase {
   /**
    * @param string|int $id
    *
-   * @return \Donquixote\Ock\Formula\Id\Formula_IdInterface|null
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @return \Ock\Ock\Formula\Id\Formula_IdInterface|null
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function idGetIdFormula(string|int $id): ?Formula_IdInterface {
     if (NULL === $nestedFormula = $this->idToFormula->idGetFormula($id)) {

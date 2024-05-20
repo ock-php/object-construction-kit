@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Drilldown;
+namespace Ock\Ock\V2V\Drilldown;
 
 class V2V_Drilldown_Arrify implements V2V_DrilldownInterface {
 

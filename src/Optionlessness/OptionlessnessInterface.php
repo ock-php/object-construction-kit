@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Optionlessness;
+namespace Ock\Ock\Optionlessness;
 
-use Donquixote\Ock\Core\Formula\Base\FormulaBaseInterface;
-use Donquixote\Ock\Form\Common\FormatorCommonInterface;
+use Ock\Ock\Core\Formula\Base\FormulaBaseInterface;
+use Ock\Ock\Form\Common\FormatorCommonInterface;
 
 interface OptionlessnessInterface extends FormatorCommonInterface, FormulaBaseInterface {
 

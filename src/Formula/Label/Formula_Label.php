@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Label;
+namespace Ock\Ock\Formula\Label;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
-use Donquixote\Ock\FormulaBase\Decorator\Formula_DecoratorBase;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\FormulaBase\Decorator\Formula_DecoratorBase;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Label extends Formula_DecoratorBase implements Formula_LabelInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Core\Formula\FormulaInterface $decorated
-   * @param \Donquixote\Ock\Text\TextInterface|null $label
+   * @param \Ock\Ock\Core\Formula\FormulaInterface $decorated
+   * @param \Ock\Ock\Text\TextInterface|null $label
    */
   public function __construct(
     FormulaInterface $decorated,

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\V2V\Group;
+namespace Ock\Ock\V2V\Group;
 
 class V2V_Group_ExtraExpressions implements V2V_GroupInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface $decorated
-   * @param \Donquixote\Ock\V2V\Group\V2V_GroupInterface[] $extraExpressions
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface $decorated
+   * @param \Ock\Ock\V2V\Group\V2V_GroupInterface[] $extraExpressions
    */
   public function __construct(
     private readonly V2V_GroupInterface $decorated,

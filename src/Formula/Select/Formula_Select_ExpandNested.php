@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\Select;
+namespace Ock\Ock\Formula\Select;
 
-use Donquixote\Ock\Formula\Drilldown\Formula_DrilldownInterface;
-use Donquixote\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface;
-use Donquixote\Ock\Formula\Id\Formula_IdInterface;
-use Donquixote\Ock\IdToFormula\IdToFormulaInterface;
-use Donquixote\Ock\Text\TextInterface;
+use Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface;
+use Ock\Ock\Formula\DrilldownVal\Formula_DrilldownValInterface;
+use Ock\Ock\Formula\Id\Formula_IdInterface;
+use Ock\Ock\IdToFormula\IdToFormulaInterface;
+use Ock\Ock\Text\TextInterface;
 
 class Formula_Select_ExpandNested implements Formula_SelectInterface {
 
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Formula\Select\Formula_SelectInterface $decorated
-   * @param \Donquixote\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\Formula\Select\Formula_SelectInterface $decorated
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
    */
   public function __construct(
     private readonly Formula_SelectInterface $decorated,
@@ -87,8 +87,8 @@ class Formula_Select_ExpandNested implements Formula_SelectInterface {
   /**
    * @param string|int $id
    *
-   * @return \Donquixote\Ock\Formula\Select\Formula_SelectInterface|null
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @return \Ock\Ock\Formula\Select\Formula_SelectInterface|null
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function idGetSelectFormula(string|int $id): ?Formula_SelectInterface {
 
@@ -106,8 +106,8 @@ class Formula_Select_ExpandNested implements Formula_SelectInterface {
   /**
    * @param string|int $id
    *
-   * @return \Donquixote\Ock\Formula\Id\Formula_IdInterface|null
-   * @throws \Donquixote\Ock\Exception\FormulaException
+   * @return \Ock\Ock\Formula\Id\Formula_IdInterface|null
+   * @throws \Ock\Ock\Exception\FormulaException
    */
   private function idGetIdFormula(string|int $id): ?Formula_IdInterface {
 

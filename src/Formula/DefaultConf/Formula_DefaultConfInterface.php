@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Formula\DefaultConf;
+namespace Ock\Ock\Formula\DefaultConf;
 
-use Donquixote\Ock\Core\Formula\FormulaInterface;
+use Ock\Ock\Core\Formula\FormulaInterface;
 
 interface Formula_DefaultConfInterface extends FormulaInterface {
 
@@ -14,7 +14,7 @@ interface Formula_DefaultConfInterface extends FormulaInterface {
   public function getDefaultConf(): mixed;
 
   /**
-   * @return \Donquixote\Ock\Core\Formula\FormulaInterface
+   * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
   public function getDecorated(): FormulaInterface;
 

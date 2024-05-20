@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Donquixote\Ock\Tests\Fixture\NumberFormat;
+namespace Ock\Ock\Tests\Fixture\NumberFormat;
 
-use Donquixote\Ock\Attribute\Parameter\OckOption;
-use Donquixote\Ock\Attribute\Plugin\OckPluginInstance;
-use Donquixote\Ock\Tests\Fixture\IntFormat\IntFormatInterface;
+use Ock\Ock\Attribute\Parameter\OckOption;
+use Ock\Ock\Attribute\Plugin\OckPluginInstance;
+use Ock\Ock\Tests\Fixture\IntFormat\IntFormatInterface;
 
 #[OckPluginInstance("intRounded", "Rounded as integer")]
 // @todo Mark as adapter.
@@ -15,7 +15,7 @@ class NumberFormat_IntRounded implements NumberFormatInterface {
   /**
    * Constructor.
    *
-   * @param \Donquixote\Ock\Tests\Fixture\IntFormat\IntFormatInterface|null $intFormat
+   * @param \Ock\Ock\Tests\Fixture\IntFormat\IntFormatInterface|null $intFormat
    *   Integer format for the rounded number, or NULL for trivial format.
    */
   public function __construct(
