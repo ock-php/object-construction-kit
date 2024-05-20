@@ -153,8 +153,6 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    *
    * @throws \Ock\Ock\Exception\FormulaException
    *   Item cannot be added, possibly due to a key collision.
-   *
-   * @noinspection PhpVoidFunctionResultUsedInspection
    */
   public function addRegexMatch(array $keys, string $regex, string $sourceKey): static {
     foreach ($keys as $i => $key) {
@@ -164,7 +162,12 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
         fn (string $source) => Formula::value(
           preg_match($regex, $source, $m)
             ? $m[$i]
-            : self::fail(sprintf("String '%s' does not match '%s'.", $source, $regex)),
+            : throw new FormulaException(sprintf(
+              "String '%s' does not match '%s'.",
+              $source,
+              $regex,
+            )
+          ),
         ),
       ));
     }
@@ -198,17 +201,6 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    */
   protected function getGroupFormula(): Formula_Group {
     return $this->buildGroupFormula();
-  }
-
-  /**
-   * @param string $message
-   *
-   * @return never
-   *
-   * @throws \Ock\Ock\Exception\FormulaException
-   */
-  private static function fail(string $message): never {
-    throw new FormulaException($message);
   }
 
 }
