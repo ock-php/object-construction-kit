@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Ock\Ock;
 
-use Ock\ClassDiscovery\ClassFilesIA\ClassFilesIA;
-use Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface;
 use Ock\ClassDiscovery\Discovery\DiscoveryInterface;
 use Ock\ClassDiscovery\Discovery\FactoryDiscovery;
 use Ock\ClassDiscovery\Inspector\FactoryInspector_Concat;
@@ -55,22 +53,6 @@ class OckPackage {
       ->class(FactoryDiscovery::class)
       ->arg(0, new Reference($discoveryClassesServiceId))
       ->arg(1, new Reference($discoveryInspectorServiceId));
-  }
-
-  /**
-   * @return \Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
-   * @throws \ReflectionException
-   */
-  public function getServiceDiscoveryNamespaces(): ClassFilesIAInterface {
-    return ClassFilesIA::psr4FromClass(self::class);
-  }
-
-  /**
-   * @return \Ock\ClassDiscovery\ClassFilesIA\ClassFilesIAInterface
-   * @throws \ReflectionException
-   */
-  public function getAdapterDiscoveryNamespaces(): ClassFilesIAInterface {
-    return ClassFilesIA::psr4FromClass(self::class);
   }
 
 }
