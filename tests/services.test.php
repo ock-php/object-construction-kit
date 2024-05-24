@@ -6,9 +6,20 @@
 
 declare(strict_types=1);
 
-use Ock\Ock\Tests\Fixture\OckTestPackage;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return function (ContainerConfigurator $container): void {
-  OckTestPackage::configureServices($container);
+  $services = $container->services();
+
+  $services->defaults()
+    ->autowire()
+    ->autoconfigure();
+
+  // The path is relative to the directory where 'services.php' is located.
+  $services->load('Ock\\Ock\\Tests\\Fixture\\', 'src/Fixture/');
+
+  $services->set(\DateTimeZone::class)
+    ->class(\DateTimeZone::class)
+    ->public()
+    ->arg(0, 'America/New_York');
 };
