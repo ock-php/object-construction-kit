@@ -84,7 +84,8 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
       return;
     }
 
-    $plugin = new Plugin($attribute->getLabel(), null, $formula, []);
+    $label = Text::tIf($attribute->label, $attribute->translate);
+    $plugin = new Plugin($label, null, $formula, []);
 
     yield new PluginDeclaration($attribute->id, $types, $plugin);
   }

@@ -16,6 +16,7 @@ use Ock\Ock\Formula\Neutral\Formula_Passthru_FormulaFactory;
 use Ock\Ock\OckPackage;
 use Ock\Ock\Plugin\Plugin;
 use Ock\Ock\Plugin\PluginDeclaration;
+use Ock\Ock\Text\Text;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 #[AutoconfigureTag(OckPackage::DISCOVERY_TAG_NAME)]
@@ -53,7 +54,8 @@ class FactoryInspector_OckFormulaAttribute implements FactoryInspectorInterface 
       $reflector->name,
     ]);
 
-    $plugin = new Plugin($attribute->getLabel(), null, $formula, []);
+    $label = Text::tIf($attribute->label, $attribute->translate);
+    $plugin = new Plugin($label, null, $formula, []);
 
     try {
       $rclass = new \ReflectionClass($attribute->type);
