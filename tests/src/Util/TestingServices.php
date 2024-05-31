@@ -43,7 +43,8 @@ class TestingServices {
     static::loadPackageServicesPhp($container, dirname(AdaptismPackage::DIR));
     static::loadPackageServicesPhp($container, dirname(OckPackage::DIR));
     static::loadPackageServicesPhp($container, dirname(__DIR__, 2), 'services.test.php');
-    $container->setAlias(ContainerInterface::class, 'service_container');
+    $container->setAlias(ContainerInterface::class, 'service_container')
+      ->setPublic(true);
 
     $container->compile();
 
