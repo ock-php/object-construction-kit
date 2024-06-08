@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ock\Ock\Plugin\Registry;
 
-use Ock\ClassDiscovery\Discovery\DiscoveryInterface;
+use Ock\ClassDiscovery\FactsIA\FactsIAInterface;
 use Ock\Helpers\Util\MessageUtil;
 use Ock\Ock\OckPackage;
 use Ock\Ock\Plugin\PluginDeclaration;
@@ -20,12 +20,12 @@ class PluginRegistry_Discovery implements PluginRegistryInterface {
   /**
    * Constructor.
    *
-   * @param \Ock\ClassDiscovery\Discovery\DiscoveryInterface $discovery
+   * @param \Ock\ClassDiscovery\FactsIA\FactsIAInterface $discovery
    *   Discovery that returns plugin declarations.
    */
   public function __construct(
     #[Target(OckPackage::DISCOVERY_TARGET)]
-    private readonly DiscoveryInterface $discovery,
+    private readonly FactsIAInterface $discovery,
   ) {}
 
   /**

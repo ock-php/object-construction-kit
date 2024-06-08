@@ -2,8 +2,8 @@
 
 declare(strict_types = 1);
 
-use Ock\ClassDiscovery\Discovery\DiscoveryInterface;
-use Ock\ClassDiscovery\Discovery\FactoryDiscovery;
+use Ock\ClassDiscovery\FactsIA\FactsIAInterface;
+use Ock\ClassDiscovery\FactsIA\FactsIA_InspectFactories;
 use Ock\ClassDiscovery\Inspector\FactoryInspector_Concat;
 use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
 use Ock\ClassDiscovery\ReflectionClassesIA\ReflectionClassesIA_Concat;
@@ -34,8 +34,8 @@ return function (ContainerConfigurator $container): void {
     ->factory([FactoryInspector_Concat::class, 'fromCandidateObjects'])
     ->arg(0, tagged_iterator(OckPackage::DISCOVERY_TAG_NAME));
 
-  $services->set(DiscoveryInterface::class . ' $' . OckPackage::DISCOVERY_TARGET)
-    ->class(FactoryDiscovery::class)
+  $services->set(FactsIAInterface::class . ' $' . OckPackage::DISCOVERY_TARGET)
+    ->class(FactsIA_InspectFactories::class)
     ->arg(0, new Reference($discoveryClassesServiceId))
     ->arg(1, new Reference($discoveryInspectorServiceId));
 };
