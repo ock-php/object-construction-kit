@@ -182,6 +182,15 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
   }
 
   /**
+   * Gets the formula items.
+   *
+   * @return \Ock\Ock\Formula\Group\Item\GroupFormulaItemInterface[]
+   */
+  public function getItems(): array {
+    return $this->items;
+  }
+
+  /**
    * {@inheritdoc}
    */
   protected function doAddExpression(string $key, V2V_GroupInterface $v2v): GroupValFormulaBuilder {
