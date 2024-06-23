@@ -1,0 +1,24 @@
+test: 'Ock\Ock\Tests\OckServicesTest::testServices()'
+values:
+  -
+    services:
+      DateTimeZone: null
+      Ock\Adaptism\AdapterDefinitionList\AdapterDefinitionListInterface: null
+      Ock\Adaptism\Inspector\FactoryInspector_AdapterAttribute: null
+      Ock\Adaptism\Inspector\FactoryInspector_SelfAdapterAttribute: null
+      Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface: null
+      Ock\DID\ParamToEgg\ParamToEgg_Attribute_CallService: null
+      Ock\DID\ParamToEgg\ParamToEgg_Attribute_CallServiceMethod: null
+      Ock\DID\ParamToEgg\ParamToEgg_Attribute_GetContainer: null
+      Ock\DID\ParamToEgg\ParamToEgg_Attribute_GetParametricService: null
+      Ock\DID\ParamToEgg\ParamToEgg_Attribute_GetService: null
+      Ock\Egg\ParamToEgg\ParamToEggInterface: null
+      Ock\Egg\ParamToEgg\ParamToEgg_ParamTypeAsServiceId: null
+      Ock\Ock\Inspector\FactoryInspector_OckFormulaAttribute: null
+      Ock\Ock\Inspector\FactoryInspector_OckInstanceAttribute: null
+      Ock\Ock\OckNamespace: null
+      Ock\Ock\Plugin\Map\PluginMapInterface: null
+      Ock\Ock\Plugin\Registry\PluginRegistryInterface: null
+      Ock\Ock\Tests\Fixture\OckTestNamespace: null
+      Psr\Container\ContainerInterface: null
+      service_container: null
