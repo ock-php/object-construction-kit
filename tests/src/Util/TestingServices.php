@@ -40,7 +40,7 @@ class TestingServices {
     $container = new ContainerBuilder();
     static::loadPackageServicesPhp($container, dirname(DidNamespace::DIR));
     static::loadPackageServicesPhp($container, dirname(EggNamespace::DIR));
-    static::loadPackageServicesPhp($container, dirname(AdaptismPackage::DIR));
+    (new AdaptismPackage())->register($container);
     static::loadPackageServicesPhp($container, dirname(OckPackage::DIR));
     static::loadPackageServicesPhp($container, dirname(__DIR__, 2), 'services.test.php');
     $container->setAlias(ContainerInterface::class, 'service_container')
