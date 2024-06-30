@@ -46,7 +46,7 @@ class Evaluator {
   }
 
   /**
-   * @template T
+   * @template T of object
    *
    * @param class-string<T> $interface
    * @param mixed $conf
