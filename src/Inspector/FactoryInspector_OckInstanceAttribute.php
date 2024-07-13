@@ -10,6 +10,7 @@ use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
 use Ock\ClassDiscovery\Reflection\ClassReflection;
 use Ock\ClassDiscovery\Reflection\FactoryReflectionInterface;
 use Ock\ClassDiscovery\Reflection\MethodReflection;
+use Ock\ClassDiscovery\Reflection\ParameterReflection;
 use Ock\ClassDiscovery\Util\AttributesUtil;
 use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
 use Ock\Helpers\Util\MessageUtil;
@@ -18,7 +19,6 @@ use Ock\Ock\Contract\FormulaHavingInterface;
 use Ock\Ock\Contract\LabelHavingInterface;
 use Ock\Ock\Contract\NameHavingInterface;
 use Ock\Ock\Exception\FormulaException;
-use Ock\Ock\Exception\GroupFormulaDuplicateKeyException;
 use Ock\Ock\Formula\Formula;
 use Ock\Ock\Formula\Group\GroupFormulaBuilder;
 use Ock\Ock\Formula\Iface\Formula_Iface;
@@ -27,6 +27,7 @@ use Ock\Ock\Plugin\Plugin;
 use Ock\Ock\Plugin\PluginDeclaration;
 use Ock\Ock\Text\Text;
 use Ock\Ock\Util\IdentifierLabelUtil;
+use Psr\Container\ContainerInterface;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 /**
@@ -34,6 +35,10 @@ use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
  */
 #[AutoconfigureTag(OckPackage::DISCOVERY_TAG_NAME)]
 class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface {
+
+  public function __construct(
+    private readonly ContainerInterface $container,
+  ) {}
 
   /**
    * {@inheritdoc}
@@ -90,7 +95,7 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
   }
 
   /**
-   * @param \ReflectionParameter[] $parameters
+   * @param \Ock\ClassDiscovery\Reflection\ParameterReflection[] $parameters
    *
    * @return \Ock\Ock\Formula\Group\GroupFormulaBuilder
    *
@@ -99,29 +104,17 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
   private function buildGroupFormula(array $parameters): GroupFormulaBuilder {
     $builder = Formula::group();
     foreach ($parameters as $i => $parameter) {
-      $attribute = AttributesUtil::getSingle($parameter, GetServiceInterface::class);
-      if ($attribute !== NULL) {
-        $serviceId = $attribute->paramGetServiceId($parameter);
-        try {
-          $builder->add(
-            'service.' . $i,
-            Text::i($i),
-            Formula::serviceExpression($serviceId),
-          );
-        }
-        catch (GroupFormulaDuplicateKeyException $e) {
-          // Convert to unhandled exception, because this would be a programming
-          // error within this package.
-          throw new \RuntimeException(sprintf(
-            'Unreachable code: Duplicate group formula key %s for parameter %s.',
-            'service.' . $i,
-            MessageUtil::formatReflector($parameter),
-          ), 0, $e);
-        }
+      $name = AttributesUtil::getSingle($parameter, NameHavingInterface::class)
+        ?->getName();
+      if ($name === NULL) {
+        $serviceId = $this->paramGetServiceId($parameter);
+        $builder->add(
+          'service.' . $i,
+          Text::i($i),
+          Formula::serviceExpression($serviceId),
+        );
         continue;
       }
-      $name = AttributesUtil::requireSingle($parameter, NameHavingInterface::class)
-        ->getName();
       $label = AttributesUtil::getSingle($parameter, LabelHavingInterface::class)
         ?->getLabel()
         ?? IdentifierLabelUtil::fromInterface($name);
@@ -148,5 +141,29 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
     }
     return $builder;
   }
+
+  /**
+   * @param \Ock\ClassDiscovery\Reflection\ParameterReflection $parameter
+   *
+   * @return string
+   */
+  private function paramGetServiceId(ParameterReflection $parameter): string {
+    $class = $parameter->getParamClassName();
+    if ($class !== null) {
+      $id = $class . ' $' . $parameter->name;
+      if ($this->container->has($id)) {
+        return $id;
+      }
+    }
+    $id = $parameter->name;
+    if ($this->container->has($id)) {
+      return $id;
+    }
+    throw new \RuntimeException(sprintf(
+      'Cannot find service id for %s.',
+      $parameter->getDebugName(),
+    ));
+  }
+
 
 }
