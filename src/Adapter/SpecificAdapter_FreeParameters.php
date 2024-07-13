@@ -101,8 +101,8 @@ class SpecificAdapter_FreeParameters {
   #[Adapter]
   public static function adapt(
     #[Adaptee] Formula_FreeParametersInterface $formula,
-    #[GetService] ContainerInterface $container,
-    #[GetService] ParamToEggInterface $paramToEgg,
+    ContainerInterface $container,
+    ParamToEggInterface $paramToEgg,
   ): ?FormulaInterface {
     $args = [];
     $parameters = $formula->getFreeParameters();

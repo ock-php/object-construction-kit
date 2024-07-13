@@ -23,7 +23,7 @@ interface Formula_ContainerProxyInterface extends FormulaInterface {
    */
   #[SelfAdapter]
   public function containerGetFormula(
-    #[GetService] ContainerInterface $container,
+    ContainerInterface $container,
   ): FormulaInterface;
 
 }

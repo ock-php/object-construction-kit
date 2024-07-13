@@ -39,7 +39,6 @@ class Summarizer_Iface implements SummarizerInterface {
     Formula_IfaceInterface $formula,
     #[UniversalAdapter]
     private readonly UniversalAdapterInterface $universalAdapter,
-    #[GetService]
     private readonly PluginMapInterface $pluginMap,
   ) {
     $this->type = $formula->getInterface();
