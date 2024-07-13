@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Ock\Ock\Formula\ServiceProxy;
 
 use Ock\Adaptism\Attribute\SelfAdapter;
-use Ock\DID\Attribute\Parameter\GetService;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Psr\Container\ContainerInterface;
 

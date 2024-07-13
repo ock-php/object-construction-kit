@@ -8,7 +8,6 @@ use Ock\Adaptism\Attribute\Adapter;
 use Ock\Adaptism\Attribute\Parameter\Adaptee;
 use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
 use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Ock\DID\Attribute\Parameter\GetService;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Exception\EvaluatorException;
 use Ock\Ock\Exception\GeneratorException;
@@ -30,7 +29,7 @@ class Evaluator_GeneratorEval implements EvaluatorInterface {
   public static function create(
     #[Adaptee] FormulaInterface $formula,
     #[UniversalAdapter] UniversalAdapterInterface $universalAdapter,
-    #[GetService] ContainerInterface $container,
+    ContainerInterface $container,
   ): EvaluatorInterface {
     $generator = Generator::fromFormula($formula, $universalAdapter);
     return new self($generator, $container);

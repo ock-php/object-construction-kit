@@ -7,7 +7,6 @@ namespace Ock\Ock\Adapter;
 use Ock\Adaptism\Attribute\Adapter;
 use Ock\Adaptism\Attribute\Parameter\Adaptee;
 use Ock\Adaptism\Exception\AdapterException;
-use Ock\DID\Attribute\Parameter\GetService;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Exception\PluginListException;
 use Ock\Ock\Formula\Drilldown\Formula_Drilldown;
@@ -24,7 +23,7 @@ class SpecificAdapter_IfacePluginMap {
   #[Adapter]
   public static function formulaGetReplacement(
     #[Adaptee] Formula_IfaceInterface $formula,
-    #[GetService] PluginMapInterface $pluginMap,
+    PluginMapInterface $pluginMap,
   ): ?FormulaInterface {
     try {
       $plugins = $pluginMap->typeGetPlugins($formula->getInterface());

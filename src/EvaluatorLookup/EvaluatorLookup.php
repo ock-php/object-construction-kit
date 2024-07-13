@@ -6,7 +6,6 @@ namespace Ock\Ock\EvaluatorLookup;
 
 use Ock\Adaptism\Exception\AdapterException;
 use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Ock\DID\Attribute\Parameter\GetService;
 use Ock\Helpers\Util\MessageUtil;
 use Ock\Ock\Evaluator\EvaluatorInterface;
 use Ock\Ock\Formula\Formula;
@@ -24,7 +23,6 @@ class EvaluatorLookup implements EvaluatorLookupInterface {
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
    */
   public function __construct(
-    #[GetService]
     private readonly UniversalAdapterInterface $adapter,
   ) {}
 

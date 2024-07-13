@@ -9,7 +9,6 @@ use Ock\Adaptism\Attribute\Parameter\Adaptee;
 use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
 use Ock\Adaptism\Exception\AdapterException;
 use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Ock\DID\Attribute\Parameter\GetService;
 use Ock\Ock\Formula\Iface\Formula_IfaceInterface;
 use Ock\Ock\Plugin\Map\PluginMapInterface;
 use Ock\Ock\Text\Text;

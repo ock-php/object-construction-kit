@@ -10,7 +10,6 @@ use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
 use Ock\Adaptism\Exception\AdapterException;
 use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
 use Ock\CodegenTools\Util\PhpUtil;
-use Ock\DID\Attribute\Parameter\GetService;
 use Ock\Ock\Exception\GeneratorException;
 use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
 use Ock\Ock\Exception\PluginListException;
@@ -42,7 +41,6 @@ class Generator_Iface implements GeneratorInterface {
     Formula_IfaceInterface $formula,
     #[UniversalAdapter]
     private readonly UniversalAdapterInterface $universalAdapter,
-    #[GetService]
     private readonly PluginMapInterface $pluginMap,
   ) {
     $this->type = $formula->getInterface();

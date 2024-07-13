@@ -10,7 +10,6 @@ use Ock\Adaptism\Attribute\Parameter\AdapterTargetType;
 use Ock\Adaptism\Attribute\Parameter\UniversalAdapter;
 use Ock\Adaptism\Exception\AdapterException;
 use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Ock\DID\Attribute\Parameter\GetService;
 use Ock\Egg\Exception\ToEggException;
 use Ock\Egg\ParamToEgg\ParamToEggInterface;
 use Ock\Helpers\Util\MessageUtil;
@@ -41,8 +40,8 @@ class SpecificAdapter_FreeParameters {
     #[Adaptee] Formula_FreeParametersInterface $formula,
     #[AdapterTargetType] string $targetType,
     #[UniversalAdapter] UniversalAdapterInterface $universalAdapter,
-    #[GetService] ContainerInterface $container,
-    #[GetService] ParamToEggInterface $paramToEgg,
+    ContainerInterface $container,
+    ParamToEggInterface $paramToEgg,
   ): ?object {
     $resultFormula = static::adapt(
       $formula,

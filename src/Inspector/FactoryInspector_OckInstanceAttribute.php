@@ -12,7 +12,6 @@ use Ock\ClassDiscovery\Reflection\FactoryReflectionInterface;
 use Ock\ClassDiscovery\Reflection\MethodReflection;
 use Ock\ClassDiscovery\Util\AttributesUtil;
 use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
-use Ock\DID\Attribute\Parameter\GetServiceInterface;
 use Ock\Helpers\Util\MessageUtil;
 use Ock\Ock\Attribute\Plugin\OckPluginInstance;
 use Ock\Ock\Contract\FormulaHavingInterface;
