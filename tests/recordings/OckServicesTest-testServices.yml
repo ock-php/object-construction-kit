@@ -6,11 +6,6 @@ values:
       Ock\Adaptism\Inspector\FactoryInspector_AdapterAttribute: null
       Ock\Adaptism\Inspector\FactoryInspector_SelfAdapterAttribute: null
       Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface: null
-      Ock\DID\ParamToEgg\ParamToEgg_Attribute_CallService: null
-      Ock\DID\ParamToEgg\ParamToEgg_Attribute_CallServiceMethod: null
-      Ock\DID\ParamToEgg\ParamToEgg_Attribute_GetContainer: null
-      Ock\DID\ParamToEgg\ParamToEgg_Attribute_GetParametricService: null
-      Ock\DID\ParamToEgg\ParamToEgg_Attribute_GetService: null
       Ock\Egg\ParamToEgg\ParamToEggInterface: null
       Ock\Egg\ParamToEgg\ParamToEgg_ParamTypeAsServiceId: null
       'Ock\Ock\Inspector\FactoryInspector_ModifierDecorator::createDecoratorCallback()': null
