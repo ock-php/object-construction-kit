@@ -4,17 +4,12 @@ declare(strict_types=1);
 
 namespace Ock\Ock\Attribute\Parameter;
 
-use Ock\DID\Attribute\Parameter\ServiceArgumentAttributeInterface;
-
 /**
- * Marks a parameter to expect a service from the container.
+ * Marks a parameter to expect a context that narrows the formula.
+ *
+ * @todo Further design the context feature.
  */
 #[\Attribute(\Attribute::TARGET_PARAMETER|\Attribute::TARGET_PROPERTY)]
-class GetContext implements ServiceArgumentAttributeInterface {
-
-  public function getArgumentDefinition(\ReflectionParameter $parameter): mixed {
-    // @todo Be smarter!
-    return NULL;
-  }
+class GetContext {
 
 }
