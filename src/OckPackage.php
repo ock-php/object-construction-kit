@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Ock\Ock;
 
-class OckPackage {
+use Ock\DependencyInjection\Provider\PackageServiceProviderBase;
+
+class OckPackage extends PackageServiceProviderBase {
 
   const NAMESPACE = __NAMESPACE__;
 

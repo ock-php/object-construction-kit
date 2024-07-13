@@ -20,8 +20,6 @@ return function (ContainerConfigurator $container): void {
     ->autowire()
     ->autoconfigure();
 
-  $services->load('Ock\\Ock\\', 'src/');
-
   $discoveryClassesServiceId = ReflectionClassesIAInterface::class . ' $' . OckPackage::DISCOVERY_TARGET;
   $services->set($discoveryClassesServiceId)
     ->class(ReflectionClassesIA_Concat::class)

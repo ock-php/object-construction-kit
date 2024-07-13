@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Ock\Ock\Tests\Util;
 
 use Ock\Adaptism\AdaptismPackage;
+use Ock\DependencyInjection\Provider\CommonServiceProvider;
 use Ock\DID\DidNamespace;
 use Ock\Egg\EggNamespace;
 use Ock\Ock\OckPackage;
@@ -39,9 +40,11 @@ class TestingServices {
   private static function buildContainer(): ContainerInterface {
     $container = new ContainerBuilder();
     static::loadPackageServicesPhp($container, dirname(DidNamespace::DIR));
+    (new CommonServiceProvider())->register($container);
     static::loadPackageServicesPhp($container, dirname(EggNamespace::DIR));
     (new AdaptismPackage())->register($container);
     static::loadPackageServicesPhp($container, dirname(OckPackage::DIR));
+    (new OckPackage())->register($container);
     static::loadPackageServicesPhp($container, dirname(__DIR__, 2), 'services.test.php');
     $container->setAlias(ContainerInterface::class, 'service_container')
       ->setPublic(true);
