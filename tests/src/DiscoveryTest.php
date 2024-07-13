@@ -45,7 +45,6 @@ class DiscoveryTest extends FormulaTestBase {
    * @throws \Ock\Ock\Exception\GeneratorException
    * @throws \Ock\Adaptism\Exception\AdapterException
    * @throws \Ock\Ock\Exception\PluginListException
-   * @throws \Ock\DID\Exception\ContainerToValueException
    */
   public function testPluginDiscovery(): void {
     $container = TestingServices::getContainer();

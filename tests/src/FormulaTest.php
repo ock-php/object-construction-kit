@@ -19,7 +19,6 @@ class FormulaTest extends FormulaTestBase {
 
   /**
    * @throws \Ock\Adaptism\Exception\AdapterException
-   * @throws \Ock\DID\Exception\ContainerToValueException
    */
   public function testFormula(): void {
     $formula = Formula::iface(IntOpInterface::class);
