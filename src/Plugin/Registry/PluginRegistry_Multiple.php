@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Ock\Ock\Plugin\Registry;
 
+use function Ock\Helpers\array_filter_instanceof;
+
 /**
  * Combines multiple registries.
  */
@@ -17,6 +19,17 @@ class PluginRegistry_Multiple implements PluginRegistryInterface {
   public function __construct(
     private readonly array $registries,
   ) {}
+
+  /**
+   * @param iterable $objects
+   *
+   * @return self
+   */
+  public static function fromCandidateObjects(iterable $objects): self {
+    $objects = \iterator_to_array($objects, false);
+    $registries = array_filter_instanceof($objects, PluginRegistryInterface::class);
+    return new self($registries);
+  }
 
   /**
    * {@inheritdoc}

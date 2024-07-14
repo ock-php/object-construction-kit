@@ -44,7 +44,6 @@ class TestingServices {
     (new CommonServiceProvider())->register($container);
     static::loadPackageServicesPhp($container, dirname(EggNamespace::DIR));
     (new AdaptismPackage())->register($container);
-    static::loadPackageServicesPhp($container, dirname(OckPackage::DIR));
     (new OckPackage())->register($container);
     (new OckTestPackage())->register($container);
     $container->setAlias(ContainerInterface::class, 'service_container')

@@ -7,16 +7,22 @@ namespace Ock\Ock\Inspector;
 use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
 use Ock\ClassDiscovery\Reflection\FactoryReflectionInterface;
 use Ock\ClassDiscovery\Util\AttributesUtil;
+use Ock\DependencyInjection\Attribute\Service;
+use Ock\DependencyInjection\Attribute\ServiceTag;
 use Ock\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Ock\Ock\OckPackage;
-use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
 
-#[AsDecorator(FactoryInspectorInterface::class . ' $' . OckPackage::DISCOVERY_TARGET)]
 class FactoryInspector_ModifierDecorator implements FactoryInspectorInterface {
 
   public function __construct(
     private readonly FactoryInspectorInterface $decorated,
   ) {}
+
+  #[Service]
+  #[ServiceTag(OckPackage::DISCOVERY_TAG_NAME)]
+  public static function createDecoratorCallback(): \Closure {
+    return fn (FactoryInspectorInterface $inspector): self => new self($inspector);
+  }
 
   public function findInFactory(FactoryReflectionInterface $reflector): \Iterator {
     foreach ($this->decorated->findInFactory($reflector) as $key => $declaration) {

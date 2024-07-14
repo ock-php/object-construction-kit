@@ -13,6 +13,7 @@ values:
       Ock\DID\ParamToEgg\ParamToEgg_Attribute_GetService: null
       Ock\Egg\ParamToEgg\ParamToEggInterface: null
       Ock\Egg\ParamToEgg\ParamToEgg_ParamTypeAsServiceId: null
+      'Ock\Ock\Inspector\FactoryInspector_ModifierDecorator::createDecoratorCallback()': null
       Ock\Ock\Inspector\FactoryInspector_OckFormulaAttribute: null
       Ock\Ock\Inspector\FactoryInspector_OckInstanceAttribute: null
       Ock\Ock\OckNamespace: null

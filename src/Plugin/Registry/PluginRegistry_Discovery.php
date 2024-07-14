@@ -6,15 +6,11 @@ namespace Ock\Ock\Plugin\Registry;
 
 use Ock\ClassDiscovery\FactsIA\FactsIAInterface;
 use Ock\Helpers\Util\MessageUtil;
-use Ock\Ock\OckPackage;
 use Ock\Ock\Plugin\PluginDeclaration;
-use Symfony\Component\DependencyInjection\Attribute\AsAlias;
-use Symfony\Component\DependencyInjection\Attribute\Target;
 
 /**
  * The service is an empty instance.
  */
-#[AsAlias(public: true)]
 class PluginRegistry_Discovery implements PluginRegistryInterface {
 
   /**
@@ -24,7 +20,6 @@ class PluginRegistry_Discovery implements PluginRegistryInterface {
    *   Discovery that returns plugin declarations.
    */
   public function __construct(
-    #[Target(OckPackage::DISCOVERY_TARGET)]
     private readonly FactsIAInterface $discovery,
   ) {}
 
