@@ -9,6 +9,7 @@ use Ock\DependencyInjection\Provider\CommonServiceProvider;
 use Ock\DID\DidNamespace;
 use Ock\Egg\EggNamespace;
 use Ock\Ock\OckPackage;
+use Ock\Ock\Tests\Fixture\OckTestPackage;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -45,7 +46,7 @@ class TestingServices {
     (new AdaptismPackage())->register($container);
     static::loadPackageServicesPhp($container, dirname(OckPackage::DIR));
     (new OckPackage())->register($container);
-    static::loadPackageServicesPhp($container, dirname(__DIR__, 2), 'services.test.php');
+    (new OckTestPackage())->register($container);
     $container->setAlias(ContainerInterface::class, 'service_container')
       ->setPublic(true);
 
