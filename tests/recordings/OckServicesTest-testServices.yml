@@ -2,7 +2,6 @@ test: 'Ock\Ock\Tests\OckServicesTest::testServices()'
 values:
   -
     services:
-      DateTimeZone: null
       Ock\Adaptism\AdapterDefinitionList\AdapterDefinitionListInterface: null
       Ock\Adaptism\Inspector\FactoryInspector_AdapterAttribute: null
       Ock\Adaptism\Inspector\FactoryInspector_SelfAdapterAttribute: null

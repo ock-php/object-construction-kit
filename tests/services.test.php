@@ -17,9 +17,4 @@ return function (ContainerConfigurator $container): void {
 
   // The path is relative to the directory where 'services.php' is located.
   $services->load('Ock\\Ock\\Tests\\Fixture\\', 'src/Fixture/');
-
-  $services->set(\DateTimeZone::class)
-    ->class(\DateTimeZone::class)
-    ->public()
-    ->arg(0, 'America/New_York');
 };
