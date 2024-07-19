@@ -44,8 +44,6 @@ class TestingServices {
     (new AdaptismPackage())->register($container);
     (new OckPackage())->register($container);
     (new OckTestPackage())->register($container);
-    $container->setAlias(ContainerInterface::class, 'service_container')
-      ->setPublic(true);
 
     $container->compile();
 
