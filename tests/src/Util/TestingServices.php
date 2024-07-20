@@ -6,7 +6,7 @@ namespace Ock\Ock\Tests\Util;
 
 use Ock\Adaptism\AdaptismPackage;
 use Ock\DependencyInjection\Provider\CommonServiceProvider;
-use Ock\Egg\EggNamespace;
+use Ock\Egg\EggPackage;
 use Ock\Ock\OckPackage;
 use Ock\Ock\Tests\Fixture\OckTestPackage;
 use Psr\Container\ContainerInterface;
@@ -40,7 +40,7 @@ class TestingServices {
   private static function buildContainer(): ContainerInterface {
     $container = new ContainerBuilder();
     (new CommonServiceProvider())->register($container);
-    static::loadPackageServicesPhp($container, dirname(EggNamespace::DIR));
+    (new EggPackage())->register($container);
     (new AdaptismPackage())->register($container);
     (new OckPackage())->register($container);
     (new OckTestPackage())->register($container);
