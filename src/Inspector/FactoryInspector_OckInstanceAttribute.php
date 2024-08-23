@@ -157,6 +157,10 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
       if ($this->container->has($id)) {
         return $id;
       }
+      $id = $class;
+      if ($this->container->has($id)) {
+        return $id;
+      }
     }
     $id = $parameter->name;
     if ($this->container->has($id)) {
