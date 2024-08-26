@@ -109,7 +109,7 @@ final class StringUtil extends UtilBase {
    *   If $glue is FALSE, it will just return an array.
    *
    * @return string|string[]
-   * @psalm-return ($glue is false ? string[] : string)
+   * @phpstan-return ($glue is false ? string[] : string)
    */
   public static function camelCaseExplode(string $string, bool $lowercase = true, string $example_string = 'AA Bc', bool|string $glue = false): array|string {
     static $regexp_by_example = [];
