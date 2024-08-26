@@ -17,7 +17,7 @@ use Ock\Ock\Tests\Util\TestUtil;
 use Symfony\Component\Yaml\Yaml;
 
 /**
- * @psalm-suppress PropertyNotSetInConstructor
+ * @phpstan-suppress PropertyNotSetInConstructor
  */
 class GeneratorTest extends FormulaTestBase {
 
@@ -31,7 +31,7 @@ class GeneratorTest extends FormulaTestBase {
    */
   public function testFormula(string $base, string $case): void {
     $dir = dirname(__DIR__) . '/fixtures/formula';
-    /** @psalm-suppress UnresolvableInclude */
+    /** @phpstan-suppress UnresolvableInclude */
     $formula = include "$dir/$base.php";
     if (!$formula instanceof FormulaInterface) {
       self::fail('Formula must implement FormulaInterface.');

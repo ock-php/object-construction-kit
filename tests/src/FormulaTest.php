@@ -13,7 +13,7 @@ use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
 use Ock\Ock\Tests\Util\TestingServices;
 
 /**
- * @psalm-suppress PropertyNotSetInConstructor
+ * @phpstan-suppress PropertyNotSetInConstructor
  */
 class FormulaTest extends FormulaTestBase {
 

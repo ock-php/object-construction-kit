@@ -12,7 +12,7 @@ use Ock\Ock\Tests\Util\TestUtil;
 use Symfony\Component\Yaml\Yaml;
 
 /**
- * @psalm-suppress PropertyNotSetInConstructor
+ * @phpstan-suppress PropertyNotSetInConstructor
  */
 class OptionlessnessTest extends FormulaTestBase {
 
@@ -25,7 +25,7 @@ class OptionlessnessTest extends FormulaTestBase {
    */
   public function testFormula(string $base): void {
     $dir = dirname(__DIR__) . '/fixtures/formula';
-    /** @psalm-suppress UnresolvableInclude */
+    /** @phpstan-suppress UnresolvableInclude */
     $formula = include "$dir/$base.php";
     self::assertInstanceOf(FormulaInterface::class, $formula);
 

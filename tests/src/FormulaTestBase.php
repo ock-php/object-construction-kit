@@ -7,7 +7,7 @@ namespace Ock\Ock\Tests;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @psalm-suppress PropertyNotSetInConstructor
+ * @phpstan-suppress PropertyNotSetInConstructor
  */
 class FormulaTestBase extends TestCase {
 
@@ -45,10 +45,10 @@ class FormulaTestBase extends TestCase {
       }
     }
     foreach ($comboss_map as $base => $cases_map) {
-      /** @psalm-suppress RedundantCast */
+      /** @phpstan-suppress RedundantCast */
       $base = (string) $base;
       foreach ($cases_map as $case => $_) {
-        /** @psalm-suppress RedundantCast */
+        /** @phpstan-suppress RedundantCast */
         yield [$base, (string) $case];
       }
     }

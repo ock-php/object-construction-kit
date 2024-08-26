@@ -24,7 +24,7 @@ class Formula_Select_FromOptions extends Formula_Select_BufferedBase {
   /**
    * @param \Ock\Ock\Formula\SelectOld\Option\SelectOptionInterface ...$options
    *
-   * @psalm-suppress UnusedParam
+   * @phpstan-suppress UnusedParam
    */
   private static function validateOptions(SelectOptionInterface ...$options): void {}
 
