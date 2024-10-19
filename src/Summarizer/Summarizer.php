@@ -20,7 +20,7 @@ final class Summarizer extends UtilBase {
    *
    * @param class-string $interface
    *   Interface.
-   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
    *   The universal adapter.
    *
    * @return \Ock\Ock\Summarizer\SummarizerInterface
@@ -31,16 +31,15 @@ final class Summarizer extends UtilBase {
    */
   public static function fromIface(
     string $interface,
-    UniversalAdapterInterface $universalAdapter
+    UniversalAdapterInterface $adapter
   ): SummarizerInterface {
-    return self::fromFormula(
-      Formula::iface($interface),
-      $universalAdapter);
+    $formula = Formula::iface($interface);
+    return self::fromFormula($formula, $adapter);
   }
 
   /**
    * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
-   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter
    *
    * @return \Ock\Ock\Summarizer\SummarizerInterface
    *
@@ -49,12 +48,12 @@ final class Summarizer extends UtilBase {
    */
   public static function fromFormula(
     FormulaInterface $formula,
-    UniversalAdapterInterface $universalAdapter
+    UniversalAdapterInterface $adapter
   ): SummarizerInterface {
     return FormulaAdapter::requireObject(
       $formula,
       SummarizerInterface::class,
-      $universalAdapter,
+      $adapter,
     );
   }
 
