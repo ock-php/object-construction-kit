@@ -7,7 +7,7 @@ namespace Ock\Ock\Util;
 class ReflectionUtil {
 
   /**
-   * @param mixed|callable $callable
+   * @param callable $callable
    *
    * @return \ReflectionFunctionAbstract
    *

@@ -187,7 +187,7 @@ abstract class GroupValFormulaBuilderBase {
    * Adds an optionless group option.
    *
    * @param string $key
-   * @param mixed $value
+   * @param string|int|bool|float $value
    *
    * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
