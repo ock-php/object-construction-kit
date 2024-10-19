@@ -95,6 +95,8 @@ class V2V_Group_Call implements V2V_GroupInterface {
    */
   public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
     $itemsPhp = array_values($itemsPhp);
+    // @todo Write tests, investigate why the code block is suppressed.
+    // @phpstan-ignore booleanAnd.rightAlwaysFalse
     if ($this->argNames !== NULL && false) {
       foreach ($itemsPhp as $i => &$argPhp) {
         $argPhp = $this->argNames[$i] . ': ' . $argPhp;
