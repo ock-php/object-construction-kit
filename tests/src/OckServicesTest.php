@@ -22,19 +22,9 @@ class OckServicesTest extends TestCase {
     static::assertInstanceOf(ContainerBuilder::class, $container);
     $ids = $container->getServiceIds();
     \sort($ids);
-    $export = [];
-    foreach ($ids as $id) {
-      if (!$container->has($id)) {
-        $export[$id] = null;
-        continue;
-      }
-      try {
-        $export[$id] = null;
-      }
-      catch (ServiceNotFoundException $e) {
-        $export[$id] = $e;
-      }
-    }
+    // Originally the idea was to populate the array with something other than
+    // just null. For now, it is just that.
+    $export = array_fill_keys($ids, null);
     $this->assertAsRecorded($export, 'services', 8);
   }
 
