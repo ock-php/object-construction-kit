@@ -8,7 +8,10 @@ use Ock\Adaptism\Attribute\Adapter;
 use Ock\Adaptism\Exception\AdapterException;
 use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
 use Ock\Ock\DrilldownKeysHelper\DrilldownKeysHelper;
+use Ock\Ock\Exception\FormulaException;
+use Ock\Ock\Exception\SummarizerException;
 use Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface;
+use Ock\Ock\Formula\IdToLabel\Formula_IdToLabelInterface;
 use Ock\Ock\Text\Text;
 use Ock\Ock\Text\TextInterface;
 
@@ -34,33 +37,50 @@ class Summarizer_Drilldown implements SummarizerInterface {
     [$id, $subConf] = DrilldownKeysHelper::fromFormula($this->formula)
       ->unpack($conf);
 
-    if (NULL === $id) {
+    if ($id === null) {
+      // The configuration is empty / no plugin is chosen.
       return Text::t('None')
         ->wrapSprintf('- %s -');
     }
 
-    if (NULL === $subFormula = $this->formula->getIdToFormula()->idGetFormula($id)) {
-      return Text::s($id)
-        ->wrapT('@id', 'Unknown id "@id"')
-        ->wrapSprintf('- %s -');
-    }
-
     $idFormula = $this->formula->getIdFormula();
-    if (NULL === $idLabel = $idFormula->idGetLabel($id)) {
-      return Text::s($id)
-        ->wrapT('@id', 'Unnamed id "@id"')
-        ->wrapSprintf('- %s -');
-    }
 
     try {
+      if (!$idFormula->idIsKnown($id)) {
+        return Text::s($id)
+          ->wrapT('@id', 'Unknown id "@id"')
+          ->wrapSprintf('- %s -');
+      }
+      $idToLabel = $this->universalAdapter->adapt($idFormula, Formula_IdToLabelInterface::class);
+      if ($idToLabel === null) {
+        $idLabel = Text::s($id)
+          ->wrapT('@id', 'Id "@id"')
+          ->wrapSprintf('- %s -');
+      }
+      else {
+        $idLabel = $idToLabel->idGetLabel($id);
+        if ($idLabel === null) {
+          $idLabel = Text::s($id)
+            ->wrapT('@id', 'Unnamed id "@id"')
+            ->wrapSprintf('- %s -');
+        }
+      }
+      $subFormula = $this->formula->getIdToFormula()->idGetFormula($id);
+      if ($subFormula === null) {
+        // This is unexpected: The id is known for the id formula, but not when
+        // requesting the sub-formula.
+        return Text::s($id)
+          // For now just make sure the text is different.
+          ->wrapT('@id', 'Unavailable id "@id"')
+          ->wrapSprintf('- %s -');
+      }
       $subSummarizer = Summarizer::fromFormula(
         $subFormula,
-        $this->universalAdapter);
+        $this->universalAdapter,
+      );
     }
-    catch (AdapterException) {
-      return Text::s((string) $id)
-        ->wrapT('@id', 'Undocumented id "@id"')
-        ->wrapSprintf('- %s -');
+    catch (AdapterException|FormulaException $e) {
+      throw new SummarizerException(sprintf('Formula or adapter malfunction for id %s.', $id), previous: $e);
     }
 
     $subSummary = $subSummarizer->confGetSummary($subConf);
