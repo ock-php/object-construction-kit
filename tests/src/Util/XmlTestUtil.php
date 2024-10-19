@@ -115,9 +115,7 @@ class XmlTestUtil {
     }
     $clone = $node->cloneNode();
     $clone->appendChild(new \DOMText('#'));
-    $xml = ($clone instanceof \DOMDocument)
-      ? $clone->saveXML()
-      : $clone->ownerDocument->saveXML($clone);
+    $xml = $clone->ownerDocument->saveXML($clone);
     $pos = strrpos($xml, '#');
     $xml = substr_replace($xml, $content, $pos, 1);
     return $xml;
