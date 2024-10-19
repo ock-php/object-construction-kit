@@ -45,7 +45,8 @@ class Summarizer_Drilldown implements SummarizerInterface {
         ->wrapSprintf('- %s -');
     }
 
-    if (NULL === $idLabel = $this->formula->getIdFormula()->idGetLabel($id)) {
+    $idFormula = $this->formula->getIdFormula();
+    if (NULL === $idLabel = $idFormula->idGetLabel($id)) {
       return Text::s($id)
         ->wrapT('@id', 'Unnamed id "@id"')
         ->wrapSprintf('- %s -');
