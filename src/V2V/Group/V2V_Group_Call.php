@@ -23,7 +23,7 @@ class V2V_Group_Call implements V2V_GroupInterface {
    * @param string $fqn
    * @param \ReflectionParameter[] $parameters
    *
-   * @return static
+   * @return self
    */
   private static function fromFqn(string $fqn, array $parameters): self {
     return new self($fqn, array_map(
