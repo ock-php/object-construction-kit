@@ -33,7 +33,7 @@ abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_Sele
     $options = [];
     foreach ($subFormula->getOptions() as $sub_id => $sub_label) {
       $combinedId = $this->combineIds($group_id, $sub_id);
-      $options[$group_id][$combinedId] = $this->combineLabels($group_label, $sub_label);
+      $options[$combinedId] = $this->combineLabels($group_label, $sub_label);
     }
     return $options;
   }
