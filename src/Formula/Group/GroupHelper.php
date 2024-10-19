@@ -143,7 +143,7 @@ class GroupHelper {
   }
 
   /**
-   * @template T
+   * @template T of object
    *
    * @param string|int $key
    * @param class-string<T> $interface
