@@ -39,15 +39,25 @@ final class FormulaAdapter extends UtilBase {
   }
 
   /**
+   * Adapts a formula, returning NULL if not possible.
+   *
    * @template T as object
    *
    * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
+   *   Formula to adapt.
    * @param class-string<T> $interface
+   *   Expected result type.
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   *   Adapter.
    *
-   * @return T|null
+   * @return object|null
+   *   An instance of the result type.
+   *
+   * @phpstan-return T|null
    *
    * @throws \Ock\Adaptism\Exception\AdapterException
+   *   No adapter can be found.
+   *   This points to a misconfiguration.
    */
   public static function getObject(
     FormulaInterface $formula,
@@ -58,15 +68,24 @@ final class FormulaAdapter extends UtilBase {
   }
 
   /**
+   * Adapts a formula, or throws if not possible.
+   *
    * @template T of object
    *
    * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
+   *   Formula to adapt.
    * @param class-string<T> $interface
+   *   Expected result type.
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   *   Adapter.
    *
-   * @return T&object
+   * @return object
+   *   An instance of the result type.
+   *
+   * @phpstan-return T&object
    *
    * @throws \Ock\Adaptism\Exception\AdapterException
+   *   The formula cannot be adapted to the given result type.
    */
   public static function requireObject(
     FormulaInterface $formula,

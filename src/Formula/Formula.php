@@ -16,6 +16,9 @@ use Ock\Ock\Formula\Sequence\Formula_Sequence;
 use Ock\Ock\Formula\ValueProvider\Formula_FixedPhp;
 use Ock\Ock\Util\UtilBase;
 
+/**
+ * Static methods to get FormulaInterface objects.
+ */
 final class Formula extends UtilBase {
 
   /**

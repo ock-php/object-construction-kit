@@ -14,9 +14,13 @@ use Ock\Ock\Translator\TranslatorInterface;
 interface TextInterface {
 
   /**
+   * Gets translated html.
+   *
    * @param \Ock\Ock\Translator\TranslatorInterface $translator
+   *   Translator to look up strings in another language.
    *
    * @return string
+   *   Translated text, safe for html.
    */
   public function convert(TranslatorInterface $translator): string;
 

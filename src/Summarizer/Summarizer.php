@@ -10,15 +10,24 @@ use Ock\Ock\Formula\Formula;
 use Ock\Ock\FormulaAdapter;
 use Ock\Ock\Util\UtilBase;
 
+/**
+ * Shortcut methods to get SummarizerInterface objects.
+ */
 final class Summarizer extends UtilBase {
 
   /**
+   * Gets a summarizer for an interface.
+   *
    * @param class-string $interface
+   *   Interface.
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
+   *   The universal adapter.
    *
    * @return \Ock\Ock\Summarizer\SummarizerInterface
+   *   Summarizer for the given interface.
    *
    * @throws \Ock\Adaptism\Exception\AdapterException
+   *   Cannot build a summarizer for the given interface.
    */
   public static function fromIface(
     string $interface,
@@ -36,7 +45,7 @@ final class Summarizer extends UtilBase {
    * @return \Ock\Ock\Summarizer\SummarizerInterface
    *
    * @throws \Ock\Adaptism\Exception\AdapterException
-   *   Cannot build a generator for the given formula.
+   *   Cannot build a summarizer for the given formula.
    */
   public static function fromFormula(
     FormulaInterface $formula,
