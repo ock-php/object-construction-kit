@@ -28,8 +28,6 @@ class Formula_Select_FromOptions implements Formula_SelectInterface {
 
   /**
    * @param \Ock\Ock\Formula\Select\Option\SelectOptionInterface ...$options
-   *
-   * @phpstan-suppress UnusedParam
    */
   private static function validateOptions(SelectOptionInterface ...$options): void {}
 

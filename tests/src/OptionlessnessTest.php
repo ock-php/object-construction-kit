@@ -11,9 +11,6 @@ use Ock\Ock\Tests\Util\TestingServices;
 use Ock\Ock\Tests\Util\TestUtil;
 use Symfony\Component\Yaml\Yaml;
 
-/**
- * @phpstan-suppress PropertyNotSetInConstructor
- */
 class OptionlessnessTest extends FormulaTestBase {
 
   /**
@@ -25,7 +22,6 @@ class OptionlessnessTest extends FormulaTestBase {
    */
   public function testFormula(string $base): void {
     $dir = dirname(__DIR__) . '/fixtures/formula';
-    /** @phpstan-suppress UnresolvableInclude */
     $formula = include "$dir/$base.php";
     self::assertInstanceOf(FormulaInterface::class, $formula);
 

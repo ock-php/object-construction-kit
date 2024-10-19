@@ -12,9 +12,6 @@ use Ock\Ock\Generator\GeneratorInterface;
 use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
 use Ock\Ock\Tests\Util\TestingServices;
 
-/**
- * @phpstan-suppress PropertyNotSetInConstructor
- */
 class FormulaTest extends FormulaTestBase {
 
   /**
