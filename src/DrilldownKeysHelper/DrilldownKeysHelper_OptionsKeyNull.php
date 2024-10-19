@@ -43,7 +43,7 @@ class DrilldownKeysHelper_OptionsKeyNull implements DrilldownKeysHelperInterface
   /**
    * {@inheritdoc}
    */
-  public function pack(string|int $id, mixed $options): array {
+  public function pack(string|int|null $id, mixed $options): array {
 
     $conf = \is_array($options)
       ? $options

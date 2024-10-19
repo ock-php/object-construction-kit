@@ -21,7 +21,7 @@ class DrilldownKeysHelper_IdKeyNull implements DrilldownKeysHelperInterface {
   /**
    * {@inheritdoc}
    */
-  public function pack(string|int $id, mixed $options): string|int {
+  public function pack(string|int|null $id, mixed $options): string|int|null {
     return $id;
   }
 
