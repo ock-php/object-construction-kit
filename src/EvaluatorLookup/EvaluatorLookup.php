@@ -36,6 +36,7 @@ class EvaluatorLookup implements EvaluatorLookupInterface {
    * @throws \Ock\Adaptism\Exception\AdapterException
    */
   public function interfaceGetEvaluator(string $interface): EvaluatorInterface {
+    // @phpstan-ignore return.type
     return $this->evaluators[$interface]
       ??= $this->createEvaluator($interface);
   }
