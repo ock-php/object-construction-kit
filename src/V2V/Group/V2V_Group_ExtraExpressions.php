@@ -19,7 +19,6 @@ class V2V_Group_ExtraExpressions implements V2V_GroupInterface {
 
   /**
    * {@inheritdoc}
-   * @param array $conf
    */
   public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
     foreach ($this->extraExpressions as $key => $v2v) {

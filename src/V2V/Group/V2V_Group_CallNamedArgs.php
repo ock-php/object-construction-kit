@@ -80,7 +80,6 @@ class V2V_Group_CallNamedArgs implements V2V_GroupInterface {
 
   /**
    * {@inheritdoc}
-   * @param array $conf
    */
   public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
     return CodeGen::phpCallFqn($this->fqn, $itemsPhp);

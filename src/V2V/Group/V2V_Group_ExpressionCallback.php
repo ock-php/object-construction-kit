@@ -17,7 +17,6 @@ class V2V_Group_ExpressionCallback implements V2V_GroupInterface {
 
   /**
    * {@inheritdoc}
-   * @param array $conf
    */
   public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
     return ($this->expressionCallback)($itemsPhp, $conf);

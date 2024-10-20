@@ -19,7 +19,6 @@ class V2V_Group_Rekey implements V2V_GroupInterface {
 
   /**
    * {@inheritdoc}
-   * @param array $conf
    */
   public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
     $itemsPhpRekeyed = [];

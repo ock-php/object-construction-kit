@@ -23,7 +23,6 @@ class V2V_Group_ObjectMethodCall implements V2V_GroupInterface {
 
   /**
    * {@inheritdoc}
-   * @param array $conf
    */
   public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
     $paramsPhp = [];

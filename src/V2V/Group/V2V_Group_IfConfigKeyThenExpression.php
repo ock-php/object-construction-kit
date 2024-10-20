@@ -21,7 +21,6 @@ class V2V_Group_IfConfigKeyThenExpression implements V2V_GroupInterface {
 
   /**
    * {@inheritdoc}
-   * @param array $conf
    */
   public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
     if ($conf[$this->conditionConfigKey]) {
