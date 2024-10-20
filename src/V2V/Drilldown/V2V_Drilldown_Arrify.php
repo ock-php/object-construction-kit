@@ -18,6 +18,30 @@ class V2V_Drilldown_Arrify implements V2V_DrilldownInterface {
   ) {}
 
   /**
+   * Creates a new instance, but allows for $optionsKey to be NULL.
+   *
+   * @param string $idKey
+   *   Array key for the id in the value expression.
+   * @param string|null $optionsKey
+   *   Array key for the value expression from the sub-formula.
+   *   If this is NULL, the sub-expression will be placed at the top level.
+   *   This assumes that the sub-expression produces an array, otherwise it
+   *   won't work.
+   *
+   * @return \Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface
+   *   New instance.
+   */
+  public static function create(
+    string $idKey = 'id',
+    ?string $optionsKey = 'options',
+  ): V2V_DrilldownInterface {
+    if ($optionsKey === null) {
+      return new V2V_Drilldown_Merge($idKey);
+    }
+    return new self($idKey, $optionsKey);
+  }
+
+  /**
    * {@inheritdoc}
    */
   final public function idPhpGetPhp(int|string $id, string $php): string {
