@@ -129,11 +129,15 @@ final class Formula extends UtilBase {
   }
 
   /**
-   * @param mixed $php
+   * @param string $php
+   *   Value expression in php.
    *
    * @return \Ock\Ock\Formula\Optionless\Formula_OptionlessInterface
+   *   Formula with the fixed value.
+   *   This formula is optionless, which means it defines a value independent of
+   *   any configuration.
    */
-  public static function valuePhp(mixed $php): Formula_OptionlessInterface {
+  public static function valuePhp(string $php): Formula_OptionlessInterface {
     return new Formula_FixedPhp($php);
   }
 
