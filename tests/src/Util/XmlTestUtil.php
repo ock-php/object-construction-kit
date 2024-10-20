@@ -97,14 +97,18 @@ class XmlTestUtil {
    */
   public static function formatNode(\DOMNode $node, string $indent): string {
     if (!$node instanceof \DOMElement) {
-      return $node->ownerDocument->saveXML($node);
+      $xml = $node->ownerDocument->saveXML($node);
+      assert($xml !== false);
+      return $xml;
     }
     if (!count($node->childNodes)) {
-      return $node->ownerDocument->saveXML(
+      $xml = $node->ownerDocument->saveXML(
         $node,
         in_array($node->tagName, self::EMPTY_TAGS)
           ? NULL
           : LIBXML_NOEMPTYTAG);
+      assert($xml !== false);
+      return $xml;
     }
     if (!self::nodeHasInlineContent($node)) {
       $content = "\n  " . $indent
@@ -117,7 +121,9 @@ class XmlTestUtil {
     $clone = $node->cloneNode();
     $clone->appendChild(new \DOMText('#'));
     $xml = $clone->ownerDocument->saveXML($clone);
+    assert($xml !== false);
     $pos = strrpos($xml, '#');
+    assert($pos !== false);
     $xml = substr_replace($xml, $content, $pos, 1);
     return $xml;
   }
