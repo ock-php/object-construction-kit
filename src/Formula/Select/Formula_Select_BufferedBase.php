@@ -40,12 +40,19 @@ abstract class Formula_Select_BufferedBase implements Formula_SelectInterface {
     if ($this->map !== NULL) {
       return;
     }
-    $this->map = [];
-    $this->initialize($this->map, $this->labels, $this->groupLabels);
+    // Use local variables, instead of writing directly to object properties.
+    // This is easier to follow for static analysis (PhpStan).
+    $map = [];
+    $labels = [];
+    $group_labels = [];
+    $this->initialize($map, $labels, $group_labels);
     // Validate.
-    (static fn (string ...$args) => null)(...$this->map);
-    (static fn (TextInterface ...$args) => null)(...$this->labels);
-    (static fn (TextInterface ...$args) => null)(...$this->groupLabels);
+    (static fn (string ...$args) => null)(...$map);
+    (static fn (TextInterface ...$args) => null)(...$labels);
+    (static fn (TextInterface ...$args) => null)(...$group_labels);
+    $this->map = $map;
+    $this->labels = $labels;
+    $this->groupLabels = $group_labels;
   }
 
   /**

@@ -51,11 +51,16 @@ abstract class Formula_Select_BufferedBase implements Formula_SelectInterface {
     if ($this->groupedOptions !== NULL) {
       return;
     }
-    $this->groupedOptions = ['' => []];
-    $this->initialize($this->groupedOptions, $this->groups);
-    $this->groupedOptions = array_filter($this->groupedOptions);
-    Text::validateNested($this->groupedOptions);
-    Text::validateMultiple($this->groups);
+    // Use local variables, instead of writing directly to object properties.
+    // This is easier to follow for static analysis (PhpStan).
+    $groups = [];
+    $grouped_options = ['' => []];
+    $this->initialize($grouped_options, $groups);
+    $grouped_options = array_filter($grouped_options);
+    Text::validateNested($grouped_options);
+    Text::validateMultiple($groups);
+    $this->groups = $groups;
+    $this->groupedOptions = $grouped_options;
   }
 
   /**
