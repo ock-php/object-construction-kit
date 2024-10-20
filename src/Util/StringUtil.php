@@ -85,7 +85,7 @@ final class StringUtil extends UtilBase {
    * @return callable(string): list<string>
    */
   public function fnExplode(string $glue): callable {
-    return static fn(string $string) => explode($glue, $string);
+    return static fn (string $string) => explode($glue, $string);
   }
 
   /**
