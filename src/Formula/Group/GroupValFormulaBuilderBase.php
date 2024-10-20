@@ -102,11 +102,11 @@ abstract class GroupValFormulaBuilderBase {
    * @param non-empty-string $glue
    * @param string $sourceConfKey
    *
-   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return self
    *
    * @throws \Ock\Ock\Exception\FormulaException
    */
-  public function addStringPartExpressions(array $keys, string $glue, string $sourceConfKey): GroupValFormulaBuilder {
+  public function addStringPartExpressions(array $keys, string $glue, string $sourceConfKey): self {
     assert($glue !== '');
     $instance = $this;
     foreach ($keys as $i => $key) {
@@ -139,11 +139,11 @@ abstract class GroupValFormulaBuilderBase {
    * @param string[] $keys
    * @param callable(string[], mixed[]): (string[]) $multiExpressionCallback
    *
-   * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
+   * @return self
    *
    * @throws \Ock\Ock\Exception\FormulaException
    */
-  public function addMultiExpressionCallback(array $keys, callable $multiExpressionCallback): GroupValFormulaBuilder {
+  public function addMultiExpressionCallback(array $keys, callable $multiExpressionCallback): self {
     $instance = $this;
     foreach ($keys as $i => $key) {
       $v2v = new V2V_Group_ExpressionCallback(
