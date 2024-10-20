@@ -9,6 +9,7 @@ use Ock\Ock\Tests\Util\XmlTestUtil;
 use Ock\Ock\Text\TextInterface;
 use Ock\Ock\Translator\Translator_Passthru;
 use PHPUnit\Framework\TestCase;
+use function Ock\Helpers\scandir_known;
 
 class TextTest extends TestCase {
 
@@ -47,7 +48,7 @@ class TextTest extends TestCase {
   public function providerText(): \Iterator {
     $dir = dirname(__DIR__) . '/fixtures/text';
     $names_map = [];
-    foreach (scandir($dir) as $candidate) {
+    foreach (scandir_known($dir) as $candidate) {
       if (preg_match('@^(\w+)\.\w+$@', $candidate, $m)) {
         $names_map[$m[1]] = TRUE;
       }
