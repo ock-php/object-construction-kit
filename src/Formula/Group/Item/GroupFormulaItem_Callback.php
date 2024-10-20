@@ -12,7 +12,7 @@ use Ock\Ock\Text\TextInterface;
 class GroupFormulaItem_Callback implements GroupFormulaItemInterface {
 
   /**
-   * @var callable
+   * @var callable|TextInterface
    */
   private readonly mixed $labelOrCallback;
 
