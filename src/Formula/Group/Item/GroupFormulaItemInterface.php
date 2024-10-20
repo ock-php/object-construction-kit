@@ -16,7 +16,7 @@ interface GroupFormulaItemInterface {
   public function dependsOnKeys(): array;
 
   /**
-   * @param array $args
+   * @param mixed[] $args
    *
    * @return \Ock\Ock\Text\TextInterface
    */

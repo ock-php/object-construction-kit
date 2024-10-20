@@ -15,7 +15,7 @@ class OckFormulaFromClass implements FormulaHavingInterface {
    * Constructor.
    *
    * @param class-string<FormulaInterface> $formulaClass
-   * @param array $args
+   * @param mixed[] $args
    */
   public function __construct(
     private readonly string $formulaClass,

@@ -14,7 +14,7 @@ class Formula_Neutral_FormulaClass extends Formula_Passthru_ProxyBase {
    * Constructor.
    *
    * @param class-string<FormulaInterface> $class
-   * @param array $args
+   * @param mixed[] $args
    */
   public function __construct(
     private readonly string $class,

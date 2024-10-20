@@ -153,7 +153,7 @@ final class Formula extends UtilBase {
   /**
    * @param string $serviceId
    * @param string $method
-   * @param array $args
+   * @param mixed[] $args
    *
    * @return \Ock\Ock\Formula\ValueProvider\Formula_FixedPhp
    */

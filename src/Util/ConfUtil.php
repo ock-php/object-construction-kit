@@ -72,10 +72,10 @@ final class ConfUtil extends UtilBase {
   }
 
   /**
-   * @param array $conf
+   * @param mixed[] $conf
    * @param string[] $parents
    *   Trail of keys indicating an array position within $conf.
-   * @param array $value
+   * @param mixed[] $value
    *
    * @return bool
    *   TRUE on success, FALSE on failure.

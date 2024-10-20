@@ -8,7 +8,7 @@ interface V2V_GroupInterface {
 
   /**
    * @param string[] $itemsPhp
-   * @param array $conf
+   * @param mixed[] $conf
    *
    * @return string
    *

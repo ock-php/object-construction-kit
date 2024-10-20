@@ -11,6 +11,13 @@ use Psr\Container\ContainerInterface;
 
 class Formula_ContainerProxy_ServiceMethodCall implements Formula_ContainerProxyInterface {
 
+  /**
+   * Constructor.
+   *
+   * @param string $serviceId
+   * @param string $method
+   * @param mixed[] $args
+   */
   public function __construct(
     private readonly string $serviceId,
     private readonly string $method,

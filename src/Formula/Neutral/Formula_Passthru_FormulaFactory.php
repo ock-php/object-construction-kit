@@ -14,7 +14,7 @@ class Formula_Passthru_FormulaFactory extends Formula_Passthru_ProxyBase {
    * Constructor.
    *
    * @param callable(mixed...): FormulaInterface $factory
-   * @param array $args
+   * @param mixed[] $args
    */
   public function __construct(
     private readonly mixed $factory,

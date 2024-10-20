@@ -47,6 +47,8 @@ class DrilldownKeysHelper_Default implements DrilldownKeysHelperInterface {
 
   /**
    * {@inheritdoc}
+   *
+   * @return mixed[]
    */
   public function pack($id, $options): array {
 

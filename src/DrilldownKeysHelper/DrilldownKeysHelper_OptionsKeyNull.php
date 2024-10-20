@@ -42,6 +42,8 @@ class DrilldownKeysHelper_OptionsKeyNull implements DrilldownKeysHelperInterface
 
   /**
    * {@inheritdoc}
+   *
+   * @return mixed[]
    */
   public function pack(string|int|null $id, mixed $options): array {
 

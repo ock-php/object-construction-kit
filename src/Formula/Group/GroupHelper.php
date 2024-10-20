@@ -32,7 +32,7 @@ class GroupHelper {
   private array $itemPositions;
 
   /**
-   * @var array
+   * @var mixed[]
    */
   private array $groupConf = [];
 
@@ -52,7 +52,7 @@ class GroupHelper {
   private array $formulas = [];
 
   /**
-   * @var array[]
+   * @var mixed[][]
    */
   private array $argss;
 
@@ -82,7 +82,7 @@ class GroupHelper {
   }
 
   /**
-   * @param array $groupConf
+   * @param mixed[] $groupConf
    *
    * @return static
    */
@@ -201,7 +201,7 @@ class GroupHelper {
   /**
    * @param string|int $key
    *
-   * @return array
+   * @return mixed[]
    *
    * @throws \Ock\Ock\Exception\FormulaException
    */

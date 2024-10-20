@@ -15,7 +15,7 @@ class Plugin {
    * @param \Ock\Ock\Text\TextInterface $label
    * @param \Ock\Ock\Text\TextInterface|null $description
    * @param \Ock\Ock\Core\Formula\FormulaInterface $formula
-   * @param array $info
+   * @param mixed[] $info
    */
   public function __construct(
     private readonly TextInterface $label,
@@ -75,7 +75,7 @@ class Plugin {
   /**
    * Gets the (reduced) annotation data.
    *
-   * @return array
+   * @return mixed[]
    */
   public function getInfo(): array {
     return $this->info;

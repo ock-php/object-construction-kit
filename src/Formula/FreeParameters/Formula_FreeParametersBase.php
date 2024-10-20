@@ -62,7 +62,7 @@ abstract class Formula_FreeParametersBase implements Formula_FreeParametersInter
   }
 
   /**
-   * @param array $args
+   * @param mixed[] $args
    *
    * @return \Ock\Ock\Core\Formula\FormulaInterface
    */

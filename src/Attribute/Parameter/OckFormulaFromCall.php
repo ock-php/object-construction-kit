@@ -15,7 +15,7 @@ class OckFormulaFromCall implements FormulaHavingInterface {
    * Constructor.
    *
    * @param callable(): FormulaInterface $formulaCallback
-   * @param array $args
+   * @param mixed[] $args
    */
   public function __construct(
     private readonly mixed $formulaCallback,
