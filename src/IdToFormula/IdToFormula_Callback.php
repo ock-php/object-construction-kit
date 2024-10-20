@@ -6,17 +6,22 @@ namespace Ock\Ock\IdToFormula;
 
 use Ock\Ock\Core\Formula\FormulaInterface;
 
+/**
+ * @template T of FormulaInterface
+ *
+ * @template-implements \Ock\Ock\IdToFormula\IdToFormulaInterface<T>
+ */
 class IdToFormula_Callback implements IdToFormulaInterface {
 
   /**
-   * @var callable
+   * @var callable(string|int): T
    */
-  private $callback;
+  private mixed $callback;
 
   /**
    * Constructor.
    *
-   * @param callable $callback
+   * @param callable(string|int): T $callback
    */
   public function __construct(callable $callback) {
     $this->callback = $callback;

@@ -9,12 +9,17 @@ use Ock\Ock\Formula\Id\Formula_IdInterface;
 use Ock\Ock\Formula\ValueToValue\Formula_ValueToValue;
 use Ock\Ock\V2V\Value\V2V_ValueInterface;
 
+/**
+ * @template T of \Ock\Ock\Core\Formula\FormulaInterface
+ *
+ * @template-implements \Ock\Ock\InlineDrilldown\InlineDrilldownInterface<T>
+ */
 class InlineDrilldown_V2V implements InlineDrilldownInterface {
 
   /**
    * Constructor.
    *
-   * @param \Ock\Ock\InlineDrilldown\InlineDrilldownInterface $decorated
+   * @param \Ock\Ock\InlineDrilldown\InlineDrilldownInterface<T> $decorated
    * @param \Ock\Ock\V2V\Value\V2V_ValueInterface $v2v
    */
   public function __construct(

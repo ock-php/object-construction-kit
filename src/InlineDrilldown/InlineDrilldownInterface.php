@@ -7,6 +7,11 @@ namespace Ock\Ock\InlineDrilldown;
 use Ock\Ock\Formula\Id\Formula_IdInterface;
 use Ock\Ock\IdToFormula\IdToFormulaInterface;
 
+/**
+ * @template T of \Ock\Ock\Core\Formula\FormulaInterface
+ *
+ * @template-extends IdToFormulaInterface<T>
+ */
 interface InlineDrilldownInterface extends IdToFormulaInterface {
 
   /**

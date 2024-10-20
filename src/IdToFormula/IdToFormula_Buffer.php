@@ -6,17 +6,22 @@ namespace Ock\Ock\IdToFormula;
 
 use Ock\Ock\Core\Formula\FormulaInterface;
 
+/**
+ * @template T of FormulaInterface
+ *
+ * @template-implements \Ock\Ock\IdToFormula\IdToFormulaInterface<T>
+ */
 class IdToFormula_Buffer implements IdToFormulaInterface {
 
   /**
-   * @var \Ock\Ock\Core\Formula\FormulaInterface[]
+   * @var array<string|int, T&FormulaInterface>
    */
   private array $buffer = [];
 
   /**
    * Constructor.
    *
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $decorated
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<T> $decorated
    */
   public function __construct(
     private readonly IdToFormulaInterface $decorated,

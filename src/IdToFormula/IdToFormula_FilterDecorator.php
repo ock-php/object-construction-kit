@@ -7,12 +7,17 @@ namespace Ock\Ock\IdToFormula;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Formula\Id\Formula_IdInterface;
 
+/**
+ * @template T of FormulaInterface
+ *
+ * @template-implements \Ock\Ock\IdToFormula\IdToFormulaInterface<T>
+ */
 class IdToFormula_FilterDecorator implements IdToFormulaInterface {
 
   /**
    * Constructor.
    *
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $decorated
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<T> $decorated
    * @param \Ock\Ock\Formula\Id\Formula_IdInterface $condition
    *
    * @todo There should be a narrower interface for $condition parameter.
