@@ -6,6 +6,9 @@ namespace Ock\Ock\Formula\SelectOld;
 
 use Ock\Ock\Text\Text;
 
+/**
+ * @phpstan-ignore class.implementsDeprecatedInterface
+ */
 abstract class Formula_Select_BufferedBase implements Formula_SelectInterface {
 
   /**

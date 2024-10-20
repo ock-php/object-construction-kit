@@ -8,6 +8,9 @@ use Ock\Ock\Formula\SelectOld\Flat\Formula_FlatSelectInterface;
 use Ock\Ock\Text\Text;
 use Ock\Ock\Text\TextInterface;
 
+/**
+ * @phpstan-ignore class.implementsDeprecatedInterface
+ */
 abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_SelectInterface {
 
   /**

@@ -12,6 +12,8 @@ class Formula_Select_MergeMultiple extends Formula_Select_BufferedBase {
    * Constructor.
    *
    * @param \Ock\Ock\Formula\SelectOld\Formula_SelectInterface[] $formulas
+   *
+   * @phpstan-ignore parameter.deprecatedInterface
    */
   public function __construct(
     private readonly array $formulas,

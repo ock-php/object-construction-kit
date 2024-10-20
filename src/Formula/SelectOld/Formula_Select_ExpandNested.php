@@ -18,6 +18,8 @@ class Formula_Select_ExpandNested extends Formula_Select_BufferedBase {
    *
    * @param \Ock\Ock\Formula\SelectOld\Formula_SelectInterface $decorated
    * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   *
+   * @phpstan-ignore parameter.deprecatedInterface
    */
   public function __construct(
     private readonly Formula_SelectInterface $decorated,
@@ -92,6 +94,8 @@ class Formula_Select_ExpandNested extends Formula_Select_BufferedBase {
    *
    * @return \Ock\Ock\Formula\SelectOld\Formula_SelectInterface|null
    * @throws \Ock\Ock\Exception\FormulaException
+   *
+   * @phpstan-ignore return.deprecatedInterface
    */
   private function idGetSelectFormula(int|string $id): ?Formula_SelectInterface {
 

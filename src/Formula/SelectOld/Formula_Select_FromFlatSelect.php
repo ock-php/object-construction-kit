@@ -7,6 +7,9 @@ namespace Ock\Ock\Formula\SelectOld;
 use Ock\Ock\Formula\SelectOld\Flat\Formula_FlatSelectInterface;
 use Ock\Ock\Text\TextInterface;
 
+/**
+ * @phpstan-ignore class.implementsDeprecatedInterface
+ */
 class Formula_Select_FromFlatSelect implements Formula_SelectInterface {
 
   /**
