@@ -133,9 +133,11 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
         new GroupFormulaItem_Callback(
           [$sourceKey],
           Text::s($key),
-          fn (string $source) => Formula::value(
-            explode($glue, $source)[$i],
-          ),
+          function (string $source) use ($glue, $i) {
+            return Formula::value(
+              explode($glue, $source)[$i],
+            );
+          },
         ),
       );
     }
@@ -164,16 +166,17 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
         new GroupFormulaItem_Callback(
           [$sourceKey],
           Text::s($key),
-          fn (string $source) => Formula::value(
-            preg_match($regex, $source, $m)
-              ? $m[$i]
-              : throw new FormulaException(sprintf(
-                "String '%s' does not match '%s'.",
-                $source,
-                $regex,
-              )
-            ),
-          ),
+          function (string $source) use ($regex, $i) {
+            return Formula::value(
+              preg_match($regex, $source, $m)
+                ? $m[$i]
+                : throw new FormulaException(sprintf(
+                  "String '%s' does not match '%s'.",
+                  $source,
+                  $regex,
+                )),
+            );
+          },
         ),
       );
     }
