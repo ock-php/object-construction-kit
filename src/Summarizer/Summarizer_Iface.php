@@ -49,6 +49,16 @@ class Summarizer_Iface implements SummarizerInterface {
    * {@inheritdoc}
    */
   public function confGetSummary(mixed $conf): TextInterface {
+    if ($conf === NULL) {
+      // The configuration is completely empty.
+      // Treat this case the same as if 'id' is NULL.
+      $conf = [];
+    }
+    elseif (!is_array($conf)) {
+      return Text::t('Invalid configuration')
+        ->wrapSprintf('- %s -');
+    }
+
     $id = $conf['id'] ?? NULL;
     $subConf = $conf['options'] ?? NULL;
     $decoratorsConf = $conf['decorators'] ?? [];
@@ -62,11 +72,16 @@ class Summarizer_Iface implements SummarizerInterface {
         ->wrapSprintf('- %s -');
     }
 
+    if (!is_string($id) && !is_int($id)) {
+      return Text::t('Invalid configuration for id')
+        ->wrapSprintf('- %s -');
+    }
+
     $plugins = $this->pluginMap->typeGetPlugins($this->type);
     $plugin = $plugins[$id] ?? NULL;
 
     if ($plugin === NULL) {
-      return Text::s($id)
+      return Text::s((string) $id)
         ->wrapT('@id', 'Unknown id "@id"')
         ->wrapSprintf('- %s -');
     }
@@ -93,7 +108,7 @@ class Summarizer_Iface implements SummarizerInterface {
       $summary = Text::label($summary, $subSummary);
     }
 
-    if (!$decoratorsConf) {
+    if (!$decoratorsConf || !is_array($decoratorsConf)) {
       return $summary;
     }
 
