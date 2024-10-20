@@ -32,6 +32,9 @@ class IntFormat_IntOpDecorator implements IntFormatInterface {
    */
   public function format(int $number): string {
     $number = $this->intOp->transform($number);
+    if ($this->decorated === null) {
+      return (string) $number;
+    }
     return $this->decorated->format($number);
   }
 
