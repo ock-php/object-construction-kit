@@ -125,7 +125,7 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
 
   /**
    * @param list<string> $keys
-   * @param string $glue
+   * @param non-empty-string $glue
    * @param string $sourceKey
    *
    * @return $this
@@ -133,6 +133,7 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addStringParts(array $keys, string $glue, string $sourceKey): static {
+    assert($glue !== '');
     foreach ($keys as $i => $key) {
       $this->addItem(
         $key,

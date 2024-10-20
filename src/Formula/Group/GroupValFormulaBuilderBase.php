@@ -99,7 +99,7 @@ abstract class GroupValFormulaBuilderBase {
 
   /**
    * @param list<string> $keys
-   * @param string $glue
+   * @param non-empty-string $glue
    * @param string $sourceConfKey
    *
    * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
@@ -107,6 +107,7 @@ abstract class GroupValFormulaBuilderBase {
    * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addStringPartExpressions(array $keys, string $glue, string $sourceConfKey): GroupValFormulaBuilder {
+    assert($glue !== '');
     $instance = $this;
     foreach ($keys as $i => $key) {
       $instance = $instance->doAddExpression(

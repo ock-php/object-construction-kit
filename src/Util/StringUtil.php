@@ -86,11 +86,12 @@ final class StringUtil extends UtilBase {
   }
 
   /**
-   * @param string $glue
+   * @param non-empty-string $glue
    *
    * @return callable(string): list<string>
    */
   public function fnExplode(string $glue): callable {
+    assert($glue !== '');
     return static fn (string $string) => explode($glue, $string);
   }
 
