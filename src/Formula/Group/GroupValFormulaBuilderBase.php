@@ -224,7 +224,7 @@ abstract class GroupValFormulaBuilderBase {
   /**
    * Constructs a class with group options as parameters.
    *
-   * @param string $class
+   * @param class-string $class
    * @param string[]|null $keys
    *
    * @return \Ock\Ock\Core\Formula\FormulaInterface

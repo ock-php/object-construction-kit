@@ -9,6 +9,11 @@ use Ock\Ock\V2V\Group\V2V_GroupInterface;
 
 class Formula_InstanceFactory_Class implements Formula_InstanceFactoryInterface {
 
+  /**
+   * Constructor.
+   *
+   * @param class-string $class
+   */
   public function __construct(
     private readonly string $class,
   ) {}

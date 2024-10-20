@@ -33,7 +33,7 @@ class V2V_Group_Call implements V2V_GroupInterface {
   }
 
   /**
-   * @param string|class-string $class
+   * @param class-string $class
    *   Class name which may or may not be verified to exist.
    *
    * @return self

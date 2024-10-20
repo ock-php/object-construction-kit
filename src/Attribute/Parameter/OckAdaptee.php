@@ -60,6 +60,7 @@ class OckAdaptee implements NameHavingInterface, LabelHavingInterface, FormulaHa
     if ($t === 'static' || $t === 'self') {
       $t = $reflector->getDeclaringClass()->getName();
     }
+    /** @var class-string $t */
     $this->type = $t;
   }
 

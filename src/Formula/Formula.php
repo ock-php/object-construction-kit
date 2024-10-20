@@ -50,7 +50,7 @@ final class Formula extends UtilBase {
   /**
    * Creates a formula where the value is an interface instance.
    *
-   * @param string $interface
+   * @param class-string $interface
    *
    * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
@@ -61,7 +61,7 @@ final class Formula extends UtilBase {
   /**
    * Creates a formula where the value is an interface instance or NULL.
    *
-   * @param string $interface
+   * @param class-string $interface
    *
    * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
@@ -72,7 +72,7 @@ final class Formula extends UtilBase {
   /**
    * Creates a formula where the value is an array of interface instances.
    *
-   * @param string $interface
+   * @param class-string $interface
    *
    * @return \Ock\Ock\Formula\Sequence\Formula_Sequence
    */
