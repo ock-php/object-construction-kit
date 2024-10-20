@@ -25,7 +25,15 @@ class Formula_ContainerProxy_ServiceId implements Formula_ContainerProxyInterfac
    */
   public function containerGetFormula(ContainerInterface $container): FormulaInterface {
     try {
-      return $container->get($this->serviceId);
+      $formula = $container->get($this->serviceId);
+      if (!$formula instanceof FormulaInterface) {
+        throw new FormulaException(sprintf(
+          "Expected a formula for service id '%s', found %s",
+          $this->serviceId,
+          get_debug_type($formula),
+        ));
+      }
+      return $formula;
     }
     catch (ContainerExceptionInterface $e) {
       throw new FormulaException($e->getMessage(), 0, $e);
