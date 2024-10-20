@@ -96,6 +96,7 @@ class XmlTestUtil {
    *   The node formatted as XML snippet.
    */
   public static function formatNode(\DOMNode $node, string $indent): string {
+    assert($node->ownerDocument !== null);
     if (!$node instanceof \DOMElement) {
       $xml = $node->ownerDocument->saveXML($node);
       assert($xml !== false);
@@ -119,6 +120,7 @@ class XmlTestUtil {
       $content = self::formatChildren($node, $indent);
     }
     $clone = $node->cloneNode();
+    assert($clone->ownerDocument !== null);
     $clone->appendChild(new \DOMText('#'));
     $xml = $clone->ownerDocument->saveXML($clone);
     assert($xml !== false);
