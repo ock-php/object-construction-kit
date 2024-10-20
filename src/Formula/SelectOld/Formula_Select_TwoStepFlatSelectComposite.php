@@ -13,7 +13,9 @@ class Formula_Select_TwoStepFlatSelectComposite extends Formula_Select_TwoStepFl
    * Constructor.
    *
    * @param \Ock\Ock\Formula\SelectOld\Flat\Formula_FlatSelectInterface $idFormula
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToSubFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<\Ock\Ock\Core\Formula\FormulaInterface> $idToSubFormula
+   *   Ideally the sub-formulas should implement Formula_FlatSelectInterface.
+   *   Otherwise they are ignored.
    */
   public function __construct(
     Formula_FlatSelectInterface $idFormula,

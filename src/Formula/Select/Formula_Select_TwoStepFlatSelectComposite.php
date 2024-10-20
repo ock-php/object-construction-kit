@@ -13,7 +13,7 @@ class Formula_Select_TwoStepFlatSelectComposite extends Formula_Select_TwoStepFl
    * Constructor.
    *
    * @param \Ock\Ock\Formula\Select\Flat\Formula_FlatSelectInterface $idFormula
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToSubFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<\Ock\Ock\Core\Formula\FormulaInterface> $idToSubFormula
    */
   public function __construct(
     private readonly Formula_FlatSelectInterface $idFormula,

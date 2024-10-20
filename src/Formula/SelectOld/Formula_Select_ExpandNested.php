@@ -17,7 +17,7 @@ class Formula_Select_ExpandNested extends Formula_Select_BufferedBase {
    * Constructor.
    *
    * @param \Ock\Ock\Formula\SelectOld\Formula_SelectInterface $decorated
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<\Ock\Ock\Core\Formula\FormulaInterface> $idToFormula
    *
    * @phpstan-ignore parameter.deprecatedInterface
    */

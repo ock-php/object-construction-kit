@@ -19,7 +19,7 @@ final class InlineDrilldown extends UtilBase {
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *   Service that can materialize other objects from formulas.
    *
-   * @return \Ock\Ock\InlineDrilldown\InlineDrilldownInterface
+   * @return \Ock\Ock\InlineDrilldown\InlineDrilldownInterface<\Ock\Ock\Core\Formula\FormulaInterface>
    *   Materialized PluginList.
    *
    * @throws \Ock\Adaptism\Exception\AdapterException

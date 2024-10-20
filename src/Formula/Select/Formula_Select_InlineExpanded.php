@@ -18,7 +18,7 @@ class Formula_Select_InlineExpanded implements Formula_SelectInterface {
    * Constructor.
    *
    * @param \Ock\Ock\Formula\Select\Formula_SelectInterface $decorated
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<\Ock\Ock\Core\Formula\FormulaInterface> $idToFormula
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    */
   public function __construct(

@@ -13,7 +13,7 @@ class Formula_Drilldown extends Formula_Drilldown_CustomKeysBase {
 
   /**
    * @param \Ock\Ock\Formula\Id\Formula_IdInterface $idFormula
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<\Ock\Ock\Core\Formula\FormulaInterface> $idToFormula
    * @param bool $orNull
    *
    * @return self
@@ -39,7 +39,7 @@ class Formula_Drilldown extends Formula_Drilldown_CustomKeysBase {
    * Constructor.
    *
    * @param \Ock\Ock\Formula\Id\Formula_IdInterface $idFormula
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<\Ock\Ock\Core\Formula\FormulaInterface> $idToFormula
    * @param bool $orNull
    */
   public function __construct(

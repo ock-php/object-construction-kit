@@ -6,6 +6,9 @@ namespace Ock\Ock\IdToFormula;
 
 use Ock\Ock\Core\Formula\FormulaInterface;
 
+/**
+ * @template-implements IdToFormulaInterface<FormulaInterface>
+ */
 class IdToFormula_Fixed implements IdToFormulaInterface {
 
   /**

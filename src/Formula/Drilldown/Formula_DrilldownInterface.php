@@ -16,7 +16,7 @@ interface Formula_DrilldownInterface extends FormulaInterface {
   public function getIdFormula(): Formula_IdInterface;
 
   /**
-   * @return \Ock\Ock\IdToFormula\IdToFormulaInterface
+   * @return \Ock\Ock\IdToFormula\IdToFormulaInterface<FormulaInterface>
    */
   public function getIdToFormula(): IdToFormulaInterface;
 

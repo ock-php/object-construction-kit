@@ -9,12 +9,15 @@ use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\InlineDrilldown\InlineDrilldown;
 
+/**
+ * @template-implements \Ock\Ock\IdToFormula\IdToFormulaInterface<FormulaInterface>
+ */
 class IdToFormula_InlineExpanded implements IdToFormulaInterface {
 
   /**
    * Constructor.
    *
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $decorated
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<FormulaInterface> $decorated
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    */
   public function __construct(

@@ -16,7 +16,7 @@ class Formula_Select_ExpandNested implements Formula_SelectInterface {
    * Constructor.
    *
    * @param \Ock\Ock\Formula\Select\Formula_SelectInterface $decorated
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<\Ock\Ock\Core\Formula\FormulaInterface> $idToFormula
    */
   public function __construct(
     private readonly Formula_SelectInterface $decorated,

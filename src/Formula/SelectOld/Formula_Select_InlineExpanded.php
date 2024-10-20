@@ -18,7 +18,7 @@ class Formula_Select_InlineExpanded extends Formula_Select_BufferedBase {
    * Constructor.
    *
    * @param \Ock\Ock\Formula\SelectOld\Formula_SelectInterface $decorated
-   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface $idToFormula
+   * @param \Ock\Ock\IdToFormula\IdToFormulaInterface<\Ock\Ock\Core\Formula\FormulaInterface> $idToFormula
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @phpstan-ignore parameter.deprecatedInterface

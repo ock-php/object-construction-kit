@@ -12,6 +12,9 @@ use Ock\Ock\Formula\Select\Formula_Select_FromFlatSelect;
 use Ock\Ock\Formula\Select\Formula_SelectInterface;
 use Ock\Ock\Formula\ValueProvider\Formula_FixedPhp;
 
+/**
+ * @template-implements \Ock\Ock\InlineDrilldown\InlineDrilldownInterface<\Ock\Ock\Core\Formula\FormulaInterface>
+ */
 class InlineDrilldown_Select implements InlineDrilldownInterface {
 
   /**

@@ -7,6 +7,9 @@ namespace Ock\Ock\IdToFormula;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Plugin\Plugin;
 
+/**
+ * @template-implements IdToFormulaInterface<FormulaInterface>
+ */
 class IdToFormula_FromPlugins implements IdToFormulaInterface {
 
   /**

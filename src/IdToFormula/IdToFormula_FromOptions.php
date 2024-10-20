@@ -7,6 +7,9 @@ namespace Ock\Ock\IdToFormula;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Formula\Drilldown\Option\DrilldownOptionInterface;
 
+/**
+ * @template-implements IdToFormulaInterface<FormulaInterface>
+ */
 class IdToFormula_FromOptions implements IdToFormulaInterface {
 
   /**
