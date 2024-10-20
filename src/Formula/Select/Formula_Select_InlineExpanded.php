@@ -54,7 +54,7 @@ class Formula_Select_InlineExpanded implements Formula_SelectInterface {
    * {@inheritdoc}
    */
   public function idGetLabel(string|int $id): ?TextInterface {
-    if (!str_contains((string) $id, '/')) {
+    if (!is_string($id) || !str_contains($id, '/')) {
       return $this->decorated->idGetLabel($id);
     }
     [$decoratedId, $inlineId] = explode('/', $id, 2);

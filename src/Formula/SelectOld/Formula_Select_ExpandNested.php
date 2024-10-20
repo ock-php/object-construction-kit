@@ -58,7 +58,7 @@ class Formula_Select_ExpandNested extends Formula_Select_BufferedBase {
    */
   public function idGetLabel(string|int $id): ?TextInterface {
 
-    if (!str_contains((string) $id, '/')) {
+    if (!is_string($id) || !str_contains($id, '/')) {
       return $this->decorated->idGetLabel($id);
     }
 

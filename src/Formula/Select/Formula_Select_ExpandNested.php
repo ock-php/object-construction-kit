@@ -46,7 +46,7 @@ class Formula_Select_ExpandNested implements Formula_SelectInterface {
    * {@inheritdoc}
    */
   public function groupIdGetLabel(int|string $groupId): ?TextInterface {
-    if (!str_contains((string) $groupId, '/')) {
+    if (!is_string($groupId) || !str_contains($groupId, '/')) {
       return $this->decorated->groupIdGetLabel($groupId);
     }
     [$decoratedId, $inlineGroupId] = explode('/', $groupId, 2);
@@ -60,7 +60,7 @@ class Formula_Select_ExpandNested implements Formula_SelectInterface {
    * {@inheritdoc}
    */
   public function idGetLabel(string|int $id): ?TextInterface {
-    if (!str_contains((string) $id, '/')) {
+    if (!is_string($id) || !str_contains($id, '/')) {
       return $this->decorated->idGetLabel($id);
     }
     [$prefix, $suffix] = explode('/', $id, 2);
