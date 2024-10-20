@@ -36,6 +36,7 @@ class SummarizerTest extends FormulaTestBase {
     $conf = Yaml::parseFile("$dir/$base.$case.yml");
 
     $container = TestingServices::getContainer();
+    /** @var \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter */
     $adapter = $container->get(UniversalAdapterInterface::class);
 
     $summarizer = Summarizer::fromFormula($formula, $adapter);
@@ -72,6 +73,7 @@ class SummarizerTest extends FormulaTestBase {
     $conf = Yaml::parseFile($filebase . '.yml');
 
     $container = TestingServices::getContainer();
+    /** @var \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter */
     $adapter = $container->get(UniversalAdapterInterface::class);
 
     $summarizer = Summarizer::fromIface($interface, $adapter);

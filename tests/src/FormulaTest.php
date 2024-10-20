@@ -20,6 +20,7 @@ class FormulaTest extends FormulaTestBase {
   public function testFormula(): void {
     $formula = Formula::iface(IntOpInterface::class);
     self::assertInstanceOf(Formula_Iface::class, $formula);
+    /** @var \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter */
     $adapter = TestingServices::getContainer()->get(UniversalAdapterInterface::class);
     $generator = $adapter->adapt($formula, GeneratorInterface::class);
     self::assertInstanceOf(Generator_Iface::class, $generator);

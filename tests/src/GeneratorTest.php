@@ -35,6 +35,7 @@ class GeneratorTest extends FormulaTestBase {
     $conf = Yaml::parseFile("$dir/$base.$case.yml");
 
     $container = TestingServices::getContainer();
+    /** @var \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter */
     $adapter = $container->get(UniversalAdapterInterface::class);
 
     $generator = Generator::fromFormula($formula, $adapter);
@@ -63,6 +64,7 @@ class GeneratorTest extends FormulaTestBase {
     $conf = Yaml::parseFile($filebase . '.yml');
 
     $container = TestingServices::getContainer();
+    /** @var \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter */
     $adapter = $container->get(UniversalAdapterInterface::class);
 
     $generator = Generator::fromIface($interface, $adapter);

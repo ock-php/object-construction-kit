@@ -52,6 +52,7 @@ class DiscoveryTest extends FormulaTestBase {
     $registry = $container->get(PluginRegistryInterface::class);
     $pluginss = $registry->getPluginsByType();
 
+    /** @var \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter */
     $adapter = $container->get(UniversalAdapterInterface::class);
 
     $pluginss_by_id = [];

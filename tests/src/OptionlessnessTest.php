@@ -26,6 +26,7 @@ class OptionlessnessTest extends FormulaTestBase {
     self::assertInstanceOf(FormulaInterface::class, $formula);
 
     $container = TestingServices::getContainer();
+    /** @var \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $adapter */
     $adapter = $container->get(UniversalAdapterInterface::class);
 
     $optionless = Optionlessness::checkFormula($formula, $adapter);
