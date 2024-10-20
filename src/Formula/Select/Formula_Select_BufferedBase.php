@@ -80,7 +80,7 @@ abstract class Formula_Select_BufferedBase implements Formula_SelectInterface {
     if (!isset($this->map[$id])) {
       return NULL;
     }
-    return $this->labels[$id] ?? Text::s($id);
+    return $this->labels[$id] ?? Text::s((string) $id);
   }
 
   /**

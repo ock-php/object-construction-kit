@@ -47,20 +47,20 @@ class Summarizer_Drilldown implements SummarizerInterface {
 
     try {
       if (!$idFormula->idIsKnown($id)) {
-        return Text::s($id)
+        return Text::s((string) $id)
           ->wrapT('@id', 'Unknown id "@id"')
           ->wrapSprintf('- %s -');
       }
       $idToLabel = $this->universalAdapter->adapt($idFormula, Formula_IdToLabelInterface::class);
       if ($idToLabel === null) {
-        $idLabel = Text::s($id)
+        $idLabel = Text::s((string) $id)
           ->wrapT('@id', 'Id "@id"')
           ->wrapSprintf('- %s -');
       }
       else {
         $idLabel = $idToLabel->idGetLabel($id);
         if ($idLabel === null) {
-          $idLabel = Text::s($id)
+          $idLabel = Text::s((string) $id)
             ->wrapT('@id', 'Unnamed id "@id"')
             ->wrapSprintf('- %s -');
         }
@@ -69,7 +69,7 @@ class Summarizer_Drilldown implements SummarizerInterface {
       if ($subFormula === null) {
         // This is unexpected: The id is known for the id formula, but not when
         // requesting the sub-formula.
-        return Text::s($id)
+        return Text::s((string) $id)
           // For now just make sure the text is different.
           ->wrapT('@id', 'Unavailable id "@id"')
           ->wrapSprintf('- %s -');
