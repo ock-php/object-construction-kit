@@ -36,10 +36,10 @@ final class DrilldownKeysHelper extends UtilBase {
     }
 
     if (NULL === $optionsKey) {
-      return new DrilldownKeysHelper_OptionsKeyNull($idKey);
+      return new DrilldownKeysHelper_OptionsKeyNull((string) $idKey);
     }
 
-    return new DrilldownKeysHelper_Default($idKey, $optionsKey);
+    return new DrilldownKeysHelper_Default((string) $idKey, (string) $optionsKey);
   }
 
 }
