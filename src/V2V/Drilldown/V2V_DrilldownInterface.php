@@ -17,9 +17,9 @@ interface V2V_DrilldownInterface {
    * @param string $php
    *   Value expression from the sub-formula with the sub-configuration.
    *
-   * @return mixed
+   * @return string
    *   Transformed value expression.
    */
-  public function idPhpGetPhp(int|string $id, string $php): mixed;
+  public function idPhpGetPhp(int|string $id, string $php): string;
 
 }
