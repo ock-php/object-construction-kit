@@ -10,7 +10,7 @@ use Ock\Ock\Util\UtilBase;
 final class IdToFormula_Null extends UtilBase {
 
   /**
-   * @return \Ock\Ock\IdToFormula\IdToFormulaInterface
+   * @return \Ock\Ock\IdToFormula\IdToFormulaInterface<Formula_FixedPhp_Null>
    */
   public static function create(): IdToFormulaInterface {
     return new IdToFormula_AlwaysTheSame(

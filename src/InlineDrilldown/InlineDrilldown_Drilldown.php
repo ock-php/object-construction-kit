@@ -17,6 +17,9 @@ use Ock\Ock\V2V\Drilldown\V2V_Drilldown_Trivial;
 use Ock\Ock\V2V\Drilldown\V2V_DrilldownInterface;
 use Ock\Ock\V2V\Value\V2V_Value_DrilldownFixedId;
 
+/**
+ * @template-implements \Ock\Ock\InlineDrilldown\InlineDrilldownInterface<\Ock\Ock\Formula\ValueToValue\Formula_ValueToValueInterface>
+ */
 class InlineDrilldown_Drilldown implements InlineDrilldownInterface {
 
   /**
