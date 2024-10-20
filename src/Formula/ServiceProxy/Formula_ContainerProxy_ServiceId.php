@@ -36,7 +36,7 @@ class Formula_ContainerProxy_ServiceId implements Formula_ContainerProxyInterfac
       return $formula;
     }
     catch (ContainerExceptionInterface $e) {
-      throw new FormulaException($e->getMessage(), 0, $e);
+      throw new FormulaException("Failed to get service '$this->serviceId'.", 0, $e);
     }
   }
 
