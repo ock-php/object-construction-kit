@@ -20,11 +20,10 @@ class Summarizer_Label implements SummarizerInterface {
    * @param \Ock\Ock\Formula\Label\Formula_LabelInterface $formula
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
-   * @return self|null
+   * @return \Ock\Ock\Summarizer\SummarizerInterface|null
    */
   #[Adapter]
-  public static function create(Formula_LabelInterface $formula, UniversalAdapterInterface $universalAdapter): ?Summarizer_Label {
-
+  public static function create(Formula_LabelInterface $formula, UniversalAdapterInterface $universalAdapter): ?SummarizerInterface {
     try {
       $decorated = Summarizer::fromFormula(
         $formula->getDecorated(),
@@ -33,8 +32,11 @@ class Summarizer_Label implements SummarizerInterface {
     catch (AdapterException) {
       return NULL;
     }
-
-    return new self($decorated, $formula->getLabel());
+    $label = $formula->getLabel();
+    if ($label === null) {
+      return $decorated;
+    }
+    return new self($decorated, $label);
   }
 
   /**
