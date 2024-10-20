@@ -133,7 +133,10 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
         new GroupFormulaItem_Callback(
           [$sourceKey],
           Text::s($key),
-          function (string $source) use ($glue, $i) {
+          // The signature requires a generic callback, but we know that the
+          // argument will be a string.
+          function (mixed $source = NULL) use ($glue, $i) {
+            assert(is_string($source));
             $parts = explode($glue, $source);
             return Formula::value($parts[$i]);
           },
@@ -165,7 +168,10 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
         new GroupFormulaItem_Callback(
           [$sourceKey],
           Text::s($key),
-          function (string $source) use ($regex, $i) {
+          // The signature requires a generic callback, but we know that the
+          // argument will be a string.
+          function (mixed $source = NULL) use ($regex, $i) {
+            assert(is_string($source));
             if (!preg_match($regex, $source, $matches)) {
               throw new FormulaException(sprintf(
                 "String '%s' does not match '%s'.",
