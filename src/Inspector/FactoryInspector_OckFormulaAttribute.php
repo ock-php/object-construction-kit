@@ -60,6 +60,9 @@ class FactoryInspector_OckFormulaAttribute implements FactoryInspectorInterface 
     try {
       $rclass = new \ReflectionClass($attribute->type);
     }
+    // The $attribute->type is annotated as class-string, but we don't want to
+    // rely on it.
+    // @phpstan-ignore catch.neverThrown
     catch (\ReflectionException $e) {
       throw new MalformedDeclarationException(sprintf(
         "Unknown type '%s' in attribute %s on %s.",
