@@ -92,9 +92,10 @@ class XmlTestUtil {
    * @param \DOMNode $node
    * @param string $indent
    *
-   * @return array|false|string|string[]
+   * @return string
+   *   The node formatted as XML snippet.
    */
-  public static function formatNode(\DOMNode $node, string $indent): array|bool|string {
+  public static function formatNode(\DOMNode $node, string $indent): string {
     if (!$node instanceof \DOMElement) {
       return $node->ownerDocument->saveXML($node);
     }
