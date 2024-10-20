@@ -124,6 +124,12 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
   }
 
   /**
+   * @param list<string> $keys
+   * @param string $glue
+   * @param string $sourceKey
+   *
+   * @return $this
+   *
    * @throws \Ock\Ock\Exception\FormulaException
    */
   public function addStringParts(array $keys, string $glue, string $sourceKey): static {

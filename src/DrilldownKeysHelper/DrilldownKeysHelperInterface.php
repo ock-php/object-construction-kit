@@ -23,7 +23,7 @@ interface DrilldownKeysHelperInterface {
   public function pack(string|int|null $id, mixed $options): array|string|int|null;
 
   /**
-   * @return array
+   * @return array{string|null, string|null}
    *   Format: [$idKey, $optionsKey]
    */
   public function getKeys(): array;

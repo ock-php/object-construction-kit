@@ -57,7 +57,7 @@ final class DrilldownUtil extends UtilBase {
    * @param \Ock\Ock\Formula\Drilldown\Formula_DrilldownInterface $formula
    * @param mixed $conf
    *
-   * @return array
+   * @return array{int|string|null, mixed}
    */
   public static function drilldownConfGetIdOptions(Formula_DrilldownInterface $formula, mixed $conf): array {
     return self::confGetIdOptions(
@@ -72,7 +72,7 @@ final class DrilldownUtil extends UtilBase {
    * @param string $k0
    * @param string|null $k1
    *
-   * @return array
+   * @return array{int|string|null, mixed}
    *   Format: array($id, $options)
    */
   public static function confGetIdOptions(mixed $conf, string $k0 = 'id', ?string $k1 = 'options'): array {

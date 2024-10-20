@@ -68,7 +68,7 @@ abstract class GroupValFormulaBuilderBase {
    * @param string $key
    * @param string $objectKey
    * @param string $method
-   * @param array $paramKeys
+   * @param list<string> $paramKeys
    *
    * @return \Ock\Ock\Formula\Group\GroupValFormulaBuilder
    *
@@ -98,7 +98,7 @@ abstract class GroupValFormulaBuilderBase {
   }
 
   /**
-   * @param string[] $keys
+   * @param list<string> $keys
    * @param string $glue
    * @param string $sourceConfKey
    *
@@ -253,7 +253,7 @@ abstract class GroupValFormulaBuilderBase {
    *
    * @param string $objectKey
    * @param string $method
-   * @param array $paramKeys
+   * @param list<string> $paramKeys
    *
    * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
@@ -288,7 +288,7 @@ abstract class GroupValFormulaBuilderBase {
 
   /**
    * @param class-string $class
-   * @param array $phpArgsWithPlaceholders
+   * @param string[] $phpArgsWithPlaceholders
    *
    * @return \Ock\Ock\Core\Formula\FormulaInterface
    */
@@ -301,7 +301,7 @@ abstract class GroupValFormulaBuilderBase {
 
   /**
    * @param callable $callback
-   * @param array $phpArgsWithPlaceholders
+   * @param string[] $phpArgsWithPlaceholders
    *
    * @return \Ock\Ock\Core\Formula\FormulaInterface
    */

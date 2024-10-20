@@ -51,7 +51,7 @@ class Text {
    *
    * @param string|null $string
    *   String to be translated, or NULL.
-   * @param array $replacements
+   * @param \Ock\Ock\Text\TextInterface[] $replacements
    *
    * @return \Ock\Ock\Text\TextBuilderBase|null
    *   Text object, or NULL if the original string was NULL.
@@ -104,6 +104,20 @@ class Text {
     return new Text_Vsprintf($string, $replacements);
   }
 
+  /**
+   * Conditionally creates a translatable or non-translatable text.
+   *
+   * This is a convenience method.
+   *
+   * @param string $string
+   *   Original string, possibly with placeholders.
+   * @param bool $translate
+   *   TRUE if the original string should be translated, FALSE if not.
+   * @param \Ock\Ock\Text\TextInterface[] $replacements
+   *   Placeholder replacements.
+   *
+   * @return \Ock\Ock\Text\TextBuilderBase
+   */
   public static function tIf(string $string, bool $translate, array $replacements = []): TextBuilderBase {
     return $translate
       ? static::t($string, $replacements)

@@ -10,7 +10,7 @@ class Formula_FixedPhp implements Formula_FixedPhpInterface {
 
   /**
    * @param class-string $class
-   * @param array $argsPhp
+   * @param list<string> $argsPhp
    *
    * @return self
    */
@@ -21,7 +21,7 @@ class Formula_FixedPhp implements Formula_FixedPhpInterface {
 
   /**
    * @param callable $method
-   * @param array $argsPhp
+   * @param list<string> $argsPhp
    *
    * @return self
    */
@@ -32,7 +32,7 @@ class Formula_FixedPhp implements Formula_FixedPhpInterface {
 
   /**
    * @param callable-string $function
-   * @param array $argsPhp
+   * @param list<string> $argsPhp
    *
    * @return self
    */
