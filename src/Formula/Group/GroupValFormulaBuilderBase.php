@@ -351,7 +351,7 @@ abstract class GroupValFormulaBuilderBase {
   public function generate(callable $getPhp, array $keys = NULL): Formula_GroupVal {
     return $this->buildGroupValFormula(
       new class ($getPhp) implements V2V_GroupInterface {
-        public function __construct(private $getPhp) {}
+        public function __construct(private mixed $getPhp) {}
         public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
           return ($this->getPhp)($itemsPhp, $conf);
         }
