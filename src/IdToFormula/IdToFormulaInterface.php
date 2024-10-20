@@ -7,7 +7,7 @@ namespace Ock\Ock\IdToFormula;
 use Ock\Ock\Core\Formula\FormulaInterface;
 
 /**
- * @template T of \Ock\Ock\Core\Formula\FormulaInterface
+ * @template-covariant T of \Ock\Ock\Core\Formula\FormulaInterface
  */
 interface IdToFormulaInterface {
 
