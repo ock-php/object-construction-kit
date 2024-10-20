@@ -24,6 +24,9 @@ class FactoryInspector_ModifierDecorator implements FactoryInspectorInterface {
     return fn (FactoryInspectorInterface $inspector): self => new self($inspector);
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function findInFactory(FactoryReflectionInterface $reflector): \Iterator {
     foreach ($this->decorated->findInFactory($reflector) as $key => $declaration) {
       $modifierAttributes ??= AttributesUtil::getAll($reflector, PluginModifierAttributeInterface::class);
