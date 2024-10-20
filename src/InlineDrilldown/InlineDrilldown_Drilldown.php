@@ -111,11 +111,10 @@ class InlineDrilldown_Drilldown implements InlineDrilldownInterface {
     if ($formula === NULL) {
       return NULL;
     }
-    if ($this->v2v) {
-      $formula = new Formula_ValueToValue(
-        $formula,
-        new V2V_Value_DrilldownFixedId($this->v2v, $id));
-    }
+    $formula = new Formula_ValueToValue(
+      $formula,
+      new V2V_Value_DrilldownFixedId($this->v2v, $id),
+    );
     return $formula;
   }
 
