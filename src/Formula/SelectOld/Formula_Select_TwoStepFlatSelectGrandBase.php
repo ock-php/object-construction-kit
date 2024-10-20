@@ -24,6 +24,10 @@ abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_Sele
    * {@inheritdoc}
    */
   public function getOptions(?string $group_id): array {
+    if ($group_id === null) {
+      // There is no top-level group.
+      return [];
+    }
     $subFormula = $this->idGetSubFormula($group_id);
     if ($subFormula === NULL) {
       return [];
