@@ -51,6 +51,18 @@ class Generator_Iface implements GeneratorInterface {
    * {@inheritdoc}
    */
   public function confGetPhp(mixed $conf): string {
+    if ($conf === NULL) {
+      // The configuration is completely empty.
+      // Treat this case the same as if 'id' is NULL.
+      $conf = [];
+    }
+    elseif (!is_array($conf)) {
+      // The configuration is invalid.
+      throw new GeneratorException_IncompatibleConfiguration(sprintf(
+        'Expected an array, found %s in configuration.',
+        var_export($conf, true),
+      ));
+    }
     $id = $conf['id'] ?? NULL;
     $subConf = $conf['options'] ?? NULL;
     $decoratorsConf = $conf['decorators'] ?? [];
