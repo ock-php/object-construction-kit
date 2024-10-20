@@ -52,10 +52,7 @@ class FactoryInspector_OckFormulaAttribute implements FactoryInspectorInterface 
         $reflector->getDebugName(),
       ));
     }
-    $formula = new Formula_Passthru_FormulaFactory([
-      $reflector->class,
-      $reflector->name,
-    ]);
+    $formula = new Formula_Passthru_FormulaFactory($reflector->getStaticCallableArray());
 
     $label = Text::tIf($attribute->label, $attribute->translate);
     $plugin = new Plugin($label, null, $formula, []);
