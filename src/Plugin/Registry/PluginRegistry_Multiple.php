@@ -21,7 +21,7 @@ class PluginRegistry_Multiple implements PluginRegistryInterface {
   ) {}
 
   /**
-   * @param iterable $objects
+   * @param iterable<object> $objects
    *
    * @return self
    */

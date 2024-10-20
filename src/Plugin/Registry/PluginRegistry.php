@@ -14,6 +14,11 @@ use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
  */
 class PluginRegistry {
 
+  /**
+   * @param iterable<object> $objects
+   *
+   * @return \Ock\Ock\Plugin\Registry\PluginRegistryInterface
+   */
   #[Service]
   public static function fromCandidateObjects(
     #[TaggedIterator(OckPackage::DISCOVERY_TAG_NAME)]
