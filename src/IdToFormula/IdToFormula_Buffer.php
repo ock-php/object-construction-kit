@@ -14,7 +14,7 @@ use Ock\Ock\Core\Formula\FormulaInterface;
 class IdToFormula_Buffer implements IdToFormulaInterface {
 
   /**
-   * @var array<string|int, T&FormulaInterface>
+   * @var array<string|int, (T&FormulaInterface)|null>
    */
   private array $buffer = [];
 
