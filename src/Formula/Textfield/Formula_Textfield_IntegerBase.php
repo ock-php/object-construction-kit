@@ -7,6 +7,7 @@ namespace Ock\Ock\Formula\Textfield;
 use Ock\Ock\Exception\GeneratorException_IncompatibleConfiguration;
 use Ock\Ock\Formula\StringVal\Formula_StringVal;
 use Ock\Ock\Text\Text;
+use Ock\Ock\Translator\Translator;
 use Ock\Ock\V2V\String\V2V_StringInterface;
 
 abstract class Formula_Textfield_IntegerBase extends Formula_TextfieldBase implements V2V_StringInterface {
@@ -48,7 +49,10 @@ abstract class Formula_Textfield_IntegerBase extends Formula_TextfieldBase imple
   public function stringGetPhp(string $string): string {
 
     if ([] !== $errors = $this->textGetValidationErrors($string)) {
-      throw new GeneratorException_IncompatibleConfiguration(reset($errors));
+      $error_text = reset($errors);
+      // Exception messages don't need to be translated.
+      $error_str = $error_text->convert(Translator::passthru());
+      throw new GeneratorException_IncompatibleConfiguration($error_str);
     }
 
     return var_export((int) $string, TRUE);
