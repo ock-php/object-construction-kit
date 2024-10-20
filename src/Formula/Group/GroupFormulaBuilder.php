@@ -128,13 +128,16 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    */
   public function addStringParts(array $keys, string $glue, string $sourceKey): static {
     foreach ($keys as $i => $key) {
-      $this->addItem($key, new GroupFormulaItem_Callback(
-        [$sourceKey],
-        Text::s($key),
-        fn (string $source) => Formula::value(
-          explode($glue, $source)[$i],
+      $this->addItem(
+        $key,
+        new GroupFormulaItem_Callback(
+          [$sourceKey],
+          Text::s($key),
+          fn (string $source) => Formula::value(
+            explode($glue, $source)[$i],
+          ),
         ),
-      ));
+      );
     }
     return $this;
   }
@@ -156,20 +159,23 @@ class GroupFormulaBuilder extends GroupValFormulaBuilderBase {
    */
   public function addRegexMatch(array $keys, string $regex, string $sourceKey): static {
     foreach ($keys as $i => $key) {
-      $this->addItem($key, new GroupFormulaItem_Callback(
-        [$sourceKey],
-        Text::s($key),
-        fn (string $source) => Formula::value(
-          preg_match($regex, $source, $m)
-            ? $m[$i]
-            : throw new FormulaException(sprintf(
-              "String '%s' does not match '%s'.",
-              $source,
-              $regex,
-            )
+      $this->addItem(
+        $key,
+        new GroupFormulaItem_Callback(
+          [$sourceKey],
+          Text::s($key),
+          fn (string $source) => Formula::value(
+            preg_match($regex, $source, $m)
+              ? $m[$i]
+              : throw new FormulaException(sprintf(
+                "String '%s' does not match '%s'.",
+                $source,
+                $regex,
+              )
+            ),
           ),
         ),
-      ));
+      );
     }
     return $this;
   }
