@@ -54,7 +54,7 @@ class Text {
    * @param array $replacements
    *
    * @return \Ock\Ock\Text\TextBuilderBase|null
-   *   Text object, or NULL.
+   *   Text object, or NULL if the original string was NULL.
    */
   public static function tOrNull(?string $string, array $replacements = []): ?TextBuilderBase {
     return ($string !== NULL)
