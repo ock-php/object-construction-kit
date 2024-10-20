@@ -350,15 +350,26 @@ abstract class GroupValFormulaBuilderBase {
    * @return \Ock\Ock\Formula\GroupVal\Formula_GroupVal|\Ock\Ock\Formula\Group\Formula_Group
    */
   public function generate(callable $getPhp, array $keys = NULL): Formula_GroupVal|Formula_Group {
-    return $this->buildGroupValFormula(
-      new class ($getPhp) implements V2V_GroupInterface {
-        public function __construct(private mixed $getPhp) {}
-        public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
-          return ($this->getPhp)($itemsPhp, $conf);
-        }
-      },
-      $keys,
-    );
+    $v2v = new class ($getPhp) implements V2V_GroupInterface {
+
+      /**
+       * Constructor.
+       *
+       * @param callable $getPhp
+       */
+      public function __construct(
+        private mixed $getPhp
+      ) {}
+
+      /**
+       * {@inheritdoc}
+       */
+      public function itemsPhpGetPhp(array $itemsPhp, array $conf): string {
+        return ($this->getPhp)($itemsPhp, $conf);
+      }
+    };
+
+    return $this->buildGroupValFormula($v2v, $keys);
   }
 
   /**
