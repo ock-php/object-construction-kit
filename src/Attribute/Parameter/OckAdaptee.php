@@ -58,7 +58,10 @@ class OckAdaptee implements NameHavingInterface, LabelHavingInterface, FormulaHa
     }
     $t = $rt->getName();
     if ($t === 'static' || $t === 'self') {
-      $t = $reflector->getDeclaringClass()->getName();
+      $declaring_class = $reflector->getDeclaringClass();
+      // These must be method parameters, if the type has 'static' or 'self'.
+      assert($declaring_class !== null);
+      $t = $declaring_class->getName();
     }
     /** @var class-string $t */
     $this->type = $t;
