@@ -71,12 +71,18 @@ final class StringUtil extends UtilBase {
    * @return callable(string): list<string>
    */
   private static function fnCamelExplodeByRegex(string $regex): callable {
-    return static fn (string $string) => preg_split(
-      $regex,
-      $string,
-      -1,
-      PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE,
-    );
+    return static function (string $string) use ($regex) {
+      $parts = preg_split(
+        $regex,
+        $string,
+        -1,
+        PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE,
+      );
+      if ($parts === false) {
+        throw new \RuntimeException("Failed to split '$string' using '$regex'.");
+      }
+      return $parts;
+    };
   }
 
   /**
@@ -130,7 +136,11 @@ final class StringUtil extends UtilBase {
    * @return string[]
    */
   public static function camelCaseExplodeWithRegex(string $regexp, string $string): array {
-    return preg_split($regexp, $string, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+    $parts = preg_split($regexp, $string, -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+    if ($parts === false) {
+      throw new \RuntimeException("Failed to split '$string' with '$regexp'.");
+    }
+    return $parts;
   }
 
   /**
@@ -195,12 +205,16 @@ final class StringUtil extends UtilBase {
         $part = '-';
       }
       else {
-        $part = \strtolower(\implode(' ', \preg_split(
+        $sub_parts = \preg_split(
           '/([A-Z][^A-Z]+)/',
           $part,
           -1,
           \PREG_SPLIT_NO_EMPTY | \PREG_SPLIT_DELIM_CAPTURE,
-        )));
+        );
+        if ($sub_parts === false) {
+          throw new \RuntimeException("Failed to sub-split '$part' of '$methodName'.");
+        }
+        $part = \strtolower(\implode(' ', $sub_parts));
       }
     }
     return \ucfirst(\implode(' ', $parts));
