@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Ock\Ock\Evaluator;
 
 /**
- * @template T as mixed
+ * @template T of mixed
  */
 interface EvaluatorInterface {
 
