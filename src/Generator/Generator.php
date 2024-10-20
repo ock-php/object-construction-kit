@@ -15,7 +15,7 @@ final class Generator extends UtilBase {
   /**
    * Materializes a generator from an interface.
    *
-   * @param string $interface
+   * @param class-string $interface
    *   Interface name.
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *   Service that can materialize other objects from formulas.

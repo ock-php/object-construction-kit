@@ -14,6 +14,12 @@ use Ock\Ock\Text\Text;
 #[\Attribute(\Attribute::TARGET_PARAMETER|\Attribute::TARGET_PROPERTY)]
 class OckListOfObjects implements FormulaHavingInterface {
 
+  /**
+   * Constructor.
+   *
+   * @param class-string $interface
+   * @param string|null $singularLabel
+   */
   public function __construct(
     private readonly string $interface,
     private readonly ?string $singularLabel = null,

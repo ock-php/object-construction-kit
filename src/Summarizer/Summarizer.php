@@ -13,7 +13,7 @@ use Ock\Ock\Util\UtilBase;
 final class Summarizer extends UtilBase {
 
   /**
-   * @param string $interface
+   * @param class-string $interface
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *
    * @return \Ock\Ock\Summarizer\SummarizerInterface
