@@ -68,7 +68,7 @@ class Evaluator {
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    *   Service that can materialize other objects from formulas.
    *
-   * @return \Ock\Ock\Evaluator\EvaluatorInterface
+   * @return \Ock\Ock\Evaluator\EvaluatorInterface<mixed>
    *   Materialized evaluator.
    *
    * @throws \Ock\Adaptism\Exception\AdapterException

@@ -15,6 +15,9 @@ use Ock\Ock\Generator\Generator;
 use Ock\Ock\Generator\GeneratorInterface;
 use Psr\Container\ContainerInterface;
 
+/**
+ * @template-implements \Ock\Ock\Evaluator\EvaluatorInterface<mixed>
+ */
 class Evaluator_GeneratorEval implements EvaluatorInterface {
 
   /**
@@ -22,7 +25,7 @@ class Evaluator_GeneratorEval implements EvaluatorInterface {
    * @param \Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface $universalAdapter
    * @param \Psr\Container\ContainerInterface $container
    *
-   * @return \Ock\Ock\Evaluator\EvaluatorInterface
+   * @return \Ock\Ock\Evaluator\EvaluatorInterface<mixed>
    * @throws \Ock\Adaptism\Exception\AdapterException
    */
   #[Adapter]
