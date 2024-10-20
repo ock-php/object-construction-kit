@@ -19,6 +19,9 @@ use Ock\Ock\Plugin\PluginDeclaration;
 use Ock\Ock\Text\Text;
 use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
+/**
+ * @template-implements FactoryInspectorInterface<int, PluginDeclaration>
+ */
 #[AutoconfigureTag(OckPackage::DISCOVERY_TAG_NAME)]
 class FactoryInspector_OckFormulaAttribute implements FactoryInspectorInterface {
 

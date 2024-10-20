@@ -32,6 +32,8 @@ use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 /**
  * Inspector that looks for instance factories.
+ *
+ * @template-implements FactoryInspectorInterface<int, PluginDeclaration>
  */
 #[AutoconfigureTag(OckPackage::DISCOVERY_TAG_NAME)]
 class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface {

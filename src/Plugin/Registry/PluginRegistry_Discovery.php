@@ -16,7 +16,7 @@ class PluginRegistry_Discovery implements PluginRegistryInterface {
   /**
    * Constructor.
    *
-   * @param \Ock\ClassDiscovery\FactsIA\FactsIAInterface $discovery
+   * @param \Ock\ClassDiscovery\FactsIA\FactsIAInterface<mixed, PluginDeclaration> $discovery
    *   Discovery that returns plugin declarations.
    */
   public function __construct(
