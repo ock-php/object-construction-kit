@@ -42,7 +42,7 @@ abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_Sele
    * {@inheritdoc}
    */
   public function idIsKnown(string|int $id): bool {
-    [$id0, $id1] = $this->splitId($id) + [NULL, NULL];
+    [$id0, $id1] = $this->splitId($id);
 
     if (NULL === $id1) {
       return FALSE;
@@ -63,7 +63,7 @@ abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_Sele
    * {@inheritdoc}
    */
   public function idGetLabel(string|int $id): ?TextInterface {
-    [$id0, $id1] = $this->splitId($id) + [NULL, NULL];
+    [$id0, $id1] = $this->splitId($id);
 
     if (NULL === $id1) {
       return NULL;
@@ -105,13 +105,14 @@ abstract class Formula_Select_TwoStepFlatSelectGrandBase implements Formula_Sele
   }
 
   /**
-   * @param string $combinedId
+   * @param string|int $combinedId
    *
-   * @return string[]
+   * @return array{string, string|null}
    *   Format: [$id0, $id1]
    */
-  protected function splitId(string $combinedId): array {
-    return explode(':', $combinedId);
+  protected function splitId(string|int $combinedId): array {
+    // @phpstan-ignore return.type
+    return explode(':', (string) $combinedId) + [null, null];
   }
 
   /**
