@@ -106,7 +106,7 @@ class XmlTestUtil {
       $xml = $node->ownerDocument->saveXML(
         $node,
         in_array($node->tagName, self::EMPTY_TAGS)
-          ? NULL
+          ? 0
           : LIBXML_NOEMPTYTAG);
       assert($xml !== false);
       return $xml;
