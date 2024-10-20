@@ -95,6 +95,8 @@ abstract class Formula_Select_BufferedBase implements Formula_SelectInterface {
    */
   public function getOptionsMap(): array {
     $this->init();
+    // @todo Would be nice to declare this post-condition on init() itself.
+    assert($this->map !== null);
     return $this->map;
   }
 
