@@ -25,7 +25,7 @@ final class Formula extends UtilBase {
    *   Formulas to validate.
    *   In PHP < 8.0, string keys are not allowed here.
    */
-  public static function validate(FormulaInterface ...$formulas) {}
+  public static function validate(FormulaInterface ...$formulas): void {}
 
   /**
    * Validates an array of formulas.

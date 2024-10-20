@@ -25,7 +25,7 @@ class DiscoveryTest extends FormulaTestBase {
   /**
    * Tests that class files in the package are discovered.
    */
-  public function testClassFilesIA() {
+  public function testClassFilesIA(): void {
     $root = dirname(__DIR__, 2);
     $classFilesIA = NamespaceDirectory::fromKnownClass(OckNamespace::class);
     $class_files = iterator_to_array($classFilesIA);
