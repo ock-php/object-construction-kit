@@ -13,7 +13,7 @@ use Ock\Ock\Formula\Formula;
 class EvaluatorLookup implements EvaluatorLookupInterface {
 
   /**
-   * @var array<class-string, EvaluatorInterface>
+   * @var array<class-string, EvaluatorInterface<object>>
    */
   private array $evaluators = [];
 
