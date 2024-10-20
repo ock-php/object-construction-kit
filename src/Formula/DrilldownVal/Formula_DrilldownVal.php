@@ -19,18 +19,11 @@ class Formula_DrilldownVal implements Formula_DrilldownValInterface {
    * @return self
    */
   public static function createArrify(Formula_DrilldownInterface $decorated, string $idKey = NULL, string $optionsKey = NULL): Formula_DrilldownVal {
-
-    if (NULL === $idKey) {
-      $idKey = $decorated->getIdKey();
-    }
-
-    if (NULL === $optionsKey) {
-      $optionsKey = $decorated->getOptionsKey();
-    }
-
-    return new self(
-      $decorated,
-      new V2V_Drilldown_Arrify($idKey, $optionsKey));
+    $v2v = new V2V_Drilldown_Arrify(
+      $idKey ?? $decorated->getIdKey(),
+      $optionsKey ?? $decorated->getOptionsKey(),
+    );
+    return new self($decorated, $v2v);
   }
 
   /**
