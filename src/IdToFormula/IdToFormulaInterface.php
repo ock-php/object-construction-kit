@@ -14,7 +14,7 @@ interface IdToFormulaInterface {
   /**
    * @param string|int $id
    *
-   * @return T|null
+   * @return (T&FormulaInterface)|null
    *
    * @throws \Ock\Ock\Exception\FormulaException
    */
