@@ -66,6 +66,7 @@ class SummarizerTest extends FormulaTestBase {
    * @dataProvider providerTestIface()
    */
   public function testIface(string $type, string $name): void {
+    /** @var class-string $interface */
     $interface = strtr(IntOpInterface::class, ['IntOp' => $type]);
     $filebase = dirname(__DIR__) . '/fixtures/iface/' . $type . '/' . $name;
     $conf = Yaml::parseFile($filebase . '.yml');
