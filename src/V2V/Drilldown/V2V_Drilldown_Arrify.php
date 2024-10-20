@@ -4,13 +4,20 @@ declare(strict_types=1);
 
 namespace Ock\Ock\V2V\Drilldown;
 
+/**
+ * Transforms a drilldown value expression into an array.
+ *
+ * The array will be like [$idKey => $id, $optionsKey => $subValue].
+ */
 class V2V_Drilldown_Arrify implements V2V_DrilldownInterface {
 
   /**
    * Constructor.
    *
    * @param string $idKey
+   *   Array key for the id in the value expression.
    * @param string $optionsKey
+   *   Array key for the value expression from the sub-formula.
    */
   public function __construct(
     private readonly string $idKey = 'id',
