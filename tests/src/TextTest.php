@@ -45,7 +45,7 @@ class TextTest extends TestCase {
    * @return \Iterator
    *   Parameter combos.
    */
-  public function providerText(): \Iterator {
+  public static function providerText(): \Iterator {
     $dir = dirname(__DIR__) . '/fixtures/text';
     $names_map = [];
     foreach (scandir_known($dir) as $candidate) {

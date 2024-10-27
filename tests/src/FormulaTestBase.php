@@ -15,7 +15,7 @@ class FormulaTestBase extends TestCase {
    * @return \Iterator<array{string}>
    *   Parameter combos.
    */
-  public function providerTestFormula(): \Iterator {
+  public static function providerTestFormula(): \Iterator {
     $dir = dirname(__DIR__) . '/fixtures/formula';
     $candidates = scandir_known($dir);
     foreach ($candidates as $candidate) {
@@ -31,7 +31,7 @@ class FormulaTestBase extends TestCase {
    * @return \Iterator<array{string, string}>
    *   Parameter combos.
    */
-  public function providerTestFormulaCases(): \Iterator {
+  public static function providerTestFormulaCases(): \Iterator {
     $dir = dirname(__DIR__) . '/fixtures/formula';
     $candidates = scandir_known($dir);
     // Prevent duplicates, but detect orphan files.
@@ -56,7 +56,7 @@ class FormulaTestBase extends TestCase {
    * @return \Iterator<int, array{string, string}>
    *   Argument combos.
    */
-  public function providerTestIface(): \Iterator {
+  public static function providerTestIface(): \Iterator {
     $dir = dirname(__DIR__) . '/fixtures/iface';
     foreach (scandir_known($dir) as $dir_candidate) {
       if ($dir_candidate === '.' || $dir_candidate === '..') {
