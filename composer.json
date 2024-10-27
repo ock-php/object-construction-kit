@@ -15,7 +15,7 @@
         "ext-dom": "*",
         "ext-libxml": "*",
         "ock/testing": "self.version",
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^10.5.38",
         "symfony/dependency-injection": "^7.1.5",
         "symfony/expression-language": "^7.1.4",
         "symfony/yaml": "^7.1.5"
