@@ -3,7 +3,7 @@
     "description": "Object Construction Kit (Ock)",
     "license": "GPL-2.0-or-later",
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "ock/adaptism": "*",
         "ock/class-discovery": "self.version",
         "ock/di-discovery": "self.version",
