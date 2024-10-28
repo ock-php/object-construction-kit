@@ -8,7 +8,7 @@ use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Summarizer\Summarizer;
 use Ock\Ock\Tests\Fixture\IntOp\IntOpInterface;
-use Ock\Ock\Tests\Translator\Translator_Test;
+use Ock\Ock\Tests\Translator\Translator_Testing;
 use Ock\Ock\Tests\Util\TestingServices;
 use Ock\Ock\Tests\Util\XmlTestUtil;
 use Ock\Ock\Translator\Translator_Passthru;
@@ -49,7 +49,7 @@ class SummarizerTest extends FormulaTestBase {
 
     XmlTestUtil::assertXmlFileContents(
       "$dir/$base.$case.t.html",
-      $summary?->convert(new Translator_Test()) ?? '?',
+      $summary?->convert(new Translator_Testing()) ?? '?',
     );
   }
 
@@ -88,7 +88,7 @@ class SummarizerTest extends FormulaTestBase {
     if (file_exists($file = "$filebase.t.html")) {
       XmlTestUtil::assertXmlFileContents(
         $file,
-        $summary->convert(new Translator_Test()),
+        $summary->convert(new Translator_Testing()),
       );
     }
   }

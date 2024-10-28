@@ -6,7 +6,7 @@ namespace Ock\Ock\Tests\Translator;
 
 use Ock\Ock\Translator\TranslatorInterface;
 
-class Translator_Test implements TranslatorInterface {
+class Translator_Testing implements TranslatorInterface {
 
   /**
    * {@inheritdoc}

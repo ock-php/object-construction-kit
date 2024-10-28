@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ock\Ock\Tests;
 
-use Ock\Ock\Tests\Translator\Translator_Test;
+use Ock\Ock\Tests\Translator\Translator_Testing;
 use Ock\Ock\Tests\Util\XmlTestUtil;
 use Ock\Ock\Text\TextInterface;
 use Ock\Ock\Translator\Translator_Passthru;
@@ -35,7 +35,7 @@ class TextTest extends TestCase {
     if (file_exists($file = "$dir/$name.t.html")) {
       XmlTestUtil::assertXmlFileContents(
         $file,
-        $text->convert(new Translator_Test()));
+        $text->convert(new Translator_Testing()));
     }
   }
 
