@@ -8,8 +8,7 @@
         "ock/class-discovery": "self.version",
         "ock/di-discovery": "self.version",
         "ock/helpers": "self.version",
-        "psr/log": "^1.1.4|^2.0|^3.0",
-        "symfony/config": "^7.1.1"
+        "psr/log": "^1.1.4|^2.0|^3.0"
     },
     "require-dev": {
         "ext-dom": "*",
