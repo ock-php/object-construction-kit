@@ -10,7 +10,6 @@ use Ock\Egg\EggPackage;
 use Ock\Ock\OckPackage;
 use Ock\Ock\Tests\Fixture\OckTestPackage;
 use Psr\Container\ContainerInterface;
-use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
@@ -48,21 +47,6 @@ class TestingServices {
     $container->compile();
 
     return $container;
-  }
-
-  /**
-   * Loads services from a services.php in a package directory.
-   *
-   * @param \Symfony\Component\DependencyInjection\ContainerBuilder $container
-   * @param string $dir
-   *   Directory where the services.php is found.
-   * @param string $file
-   *   File name.
-   */
-  protected static function loadPackageServicesPhp(ContainerBuilder $container, string $dir, string $file = 'services.php'): void {
-    $locator = new FileLocator($dir);
-    $loader = new PhpFileLoader($container, $locator);
-    $loader->load($file);
   }
 
 }
