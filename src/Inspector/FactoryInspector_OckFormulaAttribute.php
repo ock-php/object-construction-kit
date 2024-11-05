@@ -10,6 +10,7 @@ use Ock\ClassDiscovery\Reflection\FactoryReflectionInterface;
 use Ock\ClassDiscovery\Reflection\MethodReflection;
 use Ock\ClassDiscovery\Util\AttributesUtil;
 use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\DependencyInjection\Attribute\ServiceTag;
 use Ock\Ock\Attribute\Plugin\OckPluginFormula;
 use Ock\Ock\Core\Formula\FormulaInterface;
 use Ock\Ock\Formula\Neutral\Formula_Passthru_FormulaFactory;
@@ -17,12 +18,11 @@ use Ock\Ock\OckPackage;
 use Ock\Ock\Plugin\Plugin;
 use Ock\Ock\Plugin\PluginDeclaration;
 use Ock\Ock\Text\Text;
-use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 /**
  * @template-implements FactoryInspectorInterface<int, PluginDeclaration>
  */
-#[AutoconfigureTag(OckPackage::DISCOVERY_TAG_NAME)]
+#[ServiceTag(OckPackage::DISCOVERY_TAG_NAME)]
 class FactoryInspector_OckFormulaAttribute implements FactoryInspectorInterface {
 
   /**

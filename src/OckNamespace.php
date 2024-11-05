@@ -6,12 +6,12 @@ namespace Ock\Ock;
 
 use Ock\Adaptism\AdaptismPackage;
 use Ock\ClassDiscovery\ReflectionClassesIA\CurrentNamespaceBase;
-use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
+use Ock\DependencyInjection\Attribute\ServiceTag;
 
 /**
  * Classes to scan for adapter definitions.
  */
-#[AutoconfigureTag(AdaptismPackage::DISCOVERY_TAG_NAME)]
+#[ServiceTag(AdaptismPackage::DISCOVERY_TAG_NAME)]
 class OckNamespace extends CurrentNamespaceBase {
 
 }

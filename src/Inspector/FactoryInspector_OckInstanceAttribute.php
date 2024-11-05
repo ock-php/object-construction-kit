@@ -13,6 +13,7 @@ use Ock\ClassDiscovery\Reflection\MethodReflection;
 use Ock\ClassDiscovery\Reflection\ParameterReflection;
 use Ock\ClassDiscovery\Util\AttributesUtil;
 use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
+use Ock\DependencyInjection\Attribute\ServiceTag;
 use Ock\Helpers\Util\MessageUtil;
 use Ock\Ock\Attribute\Plugin\OckPluginInstance;
 use Ock\Ock\Contract\FormulaHavingInterface;
@@ -28,14 +29,13 @@ use Ock\Ock\Plugin\PluginDeclaration;
 use Ock\Ock\Text\Text;
 use Ock\Ock\Util\IdentifierLabelUtil;
 use Psr\Container\ContainerInterface;
-use Symfony\Component\DependencyInjection\Attribute\AutoconfigureTag;
 
 /**
  * Inspector that looks for instance factories.
  *
  * @template-implements FactoryInspectorInterface<int, PluginDeclaration>
  */
-#[AutoconfigureTag(OckPackage::DISCOVERY_TAG_NAME)]
+#[ServiceTag(OckPackage::DISCOVERY_TAG_NAME)]
 class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface {
 
   public function __construct(
