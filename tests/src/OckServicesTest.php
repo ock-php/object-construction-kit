@@ -25,7 +25,7 @@ class OckServicesTest extends TestCase {
     // Originally the idea was to populate the array with something other than
     // just null. For now, it is just that.
     $export = array_fill_keys($ids, null);
-    $this->assertAsRecorded($export, 'services', 8);
+    $this->assertAsRecorded($export, 'services');
   }
 
   /**
