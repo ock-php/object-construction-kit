@@ -42,9 +42,12 @@ class OckServicesTest extends TestCase {
       ->withDefaultObject(new Alias('#'))
       ->withDefaultObjectFactory(
         Definition::class,
-        fn (string|int|null $key) => (new Definition(is_string($key) ? $key : null))
-          ->setAutoconfigured(true)
-          ->setAutowired(true),
+        function (string|int|null $key) {
+          $class = is_string($key) ? $key : null;
+          return (new Definition($class))
+            ->setAutoconfigured(true)
+            ->setAutowired(true);
+        },
       );
   }
 
