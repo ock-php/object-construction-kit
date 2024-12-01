@@ -39,8 +39,8 @@ class OckServicesTest extends TestCase {
       )
       ->withObjectGetters(Alias::class)
       ->withObjectGetters(Definition::class, ['isPrivate()', 'getChanges()'])
-      ->withReferenceObject(new Alias('#'))
-      ->withReferenceObjectFactory(
+      ->withDefaultObject(new Alias('#'))
+      ->withDefaultObjectFactory(
         Definition::class,
         function (string|int|null $key) {
           $class = is_string($key) ? $key : null;
