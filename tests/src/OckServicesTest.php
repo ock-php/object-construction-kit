@@ -11,7 +11,6 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
-use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 
 class OckServicesTest extends TestCase {
 

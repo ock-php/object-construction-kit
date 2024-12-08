@@ -11,7 +11,6 @@ use Ock\Ock\OckPackage;
 use Ock\Ock\Tests\Fixture\OckTestPackage;
 use Psr\Container\ContainerInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 
 /**
  * Static method to create a container with common services for testing.
