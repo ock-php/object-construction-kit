@@ -17,6 +17,7 @@ interface TextLookupInterface {
    * @param string|int $id
    *
    * @return \Ock\Ock\Text\TextInterface|null
+   *   The text, or NULL if not found or not labeled.
    */
   public function idGetText(string|int $id): ?TextInterface;
 
