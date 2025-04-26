@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Ock\Ock\Tests;
 
 use Ock\Adaptism\UniversalAdapter\UniversalAdapterInterface;
-use Ock\ClassDiscovery\NamespaceDirectory;
+use Ock\ClassFilesIterator\NamespaceDirectory;
 use Ock\Ock\Formula\Formula;
 use Ock\Ock\Formula\Sequence\Formula_SequenceInterface;
 use Ock\Ock\Generator\Generator;
