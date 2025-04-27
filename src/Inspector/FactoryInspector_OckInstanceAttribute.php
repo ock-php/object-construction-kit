@@ -7,10 +7,10 @@ namespace Ock\Ock\Inspector;
 use Ock\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
 use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
 use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
-use Ock\ClassDiscovery\Reflection\ClassReflection;
-use Ock\ClassDiscovery\Reflection\FactoryReflectionInterface;
-use Ock\ClassDiscovery\Reflection\MethodReflection;
-use Ock\ClassDiscovery\Reflection\ParameterReflection;
+use Ock\Reflection\ClassReflection;
+use Ock\Reflection\FactoryReflectionInterface;
+use Ock\Reflection\MethodReflection;
+use Ock\Reflection\ParameterReflection;
 use Ock\ClassDiscovery\Util\AttributesUtil;
 use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
 use Ock\DependencyInjection\Attribute\ServiceTag;
@@ -97,7 +97,7 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
   }
 
   /**
-   * @param \Ock\ClassDiscovery\Reflection\ParameterReflection[] $parameters
+   * @param \Ock\Reflection\ParameterReflection[] $parameters
    *
    * @return \Ock\Ock\Formula\Group\GroupFormulaBuilder
    *
@@ -147,7 +147,7 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
   /**
    * Gets a service id that would fit a parameter.
    *
-   * @param \Ock\ClassDiscovery\Reflection\ParameterReflection $parameter
+   * @param \Ock\Reflection\ParameterReflection $parameter
    *
    * @return string
    *   A service id.
