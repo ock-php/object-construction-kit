@@ -5,12 +5,12 @@ declare(strict_types = 1);
 namespace Ock\Ock\Inspector;
 
 use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
-use Ock\Reflection\FactoryReflectionInterface;
 use Ock\ClassDiscovery\Util\AttributesUtil;
 use Ock\DependencyInjection\Attribute\Service;
 use Ock\DependencyInjection\Attribute\ServiceTag;
 use Ock\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Ock\Ock\OckPackage;
+use Ock\Reflection\FactoryReflectionInterface;
 
 /**
  * @template TKey

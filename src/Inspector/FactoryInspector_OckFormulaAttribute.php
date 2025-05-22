@@ -6,8 +6,6 @@ namespace Ock\Ock\Inspector;
 
 use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
 use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
-use Ock\Reflection\FactoryReflectionInterface;
-use Ock\Reflection\MethodReflection;
 use Ock\ClassDiscovery\Util\AttributesUtil;
 use Ock\ClassDiscovery\Util\ReflectionTypeUtil;
 use Ock\DependencyInjection\Attribute\ServiceTag;
@@ -18,6 +16,8 @@ use Ock\Ock\OckPackage;
 use Ock\Ock\Plugin\Plugin;
 use Ock\Ock\Plugin\PluginDeclaration;
 use Ock\Ock\Text\Text;
+use Ock\Reflection\FactoryReflectionInterface;
+use Ock\Reflection\MethodReflection;
 
 /**
  * @template-implements FactoryInspectorInterface<int, PluginDeclaration>
