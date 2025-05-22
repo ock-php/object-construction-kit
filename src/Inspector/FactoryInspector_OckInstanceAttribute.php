@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Ock\Ock\Inspector;
 
-use Ock\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
 use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
 use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
 use Ock\ClassDiscovery\Util\AttributesUtil;
@@ -28,6 +27,7 @@ use Ock\Reflection\ClassReflection;
 use Ock\Reflection\FactoryReflectionInterface;
 use Ock\Reflection\MethodReflection;
 use Ock\Reflection\ParameterReflection;
+use Ock\ReflectorAwareAttributes\ReflectorAwareAttributeInterface;
 use Psr\Container\ContainerInterface;
 
 /**
@@ -136,7 +136,7 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
           $e->getMessage(),
         ), 0, $e);
       }
-      /** @var \Ock\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface $attribute */
+      /** @var \Ock\ReflectorAwareAttributes\ReflectorAwareAttributeInterface $attribute */
       foreach (AttributesUtil::getAll($parameter, ReflectorAwareAttributeInterface::class) as $attribute) {
         $attribute->setReflector($parameter);
       }

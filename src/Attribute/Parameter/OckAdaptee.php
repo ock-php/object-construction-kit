@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Ock\Ock\Attribute\Parameter;
 
-use Ock\ClassDiscovery\Attribute\ReflectorAwareAttributeInterface;
 use Ock\ClassDiscovery\Exception\MalformedDeclarationException;
 use Ock\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Ock\Ock\Contract\FormulaHavingInterface;
@@ -15,6 +14,7 @@ use Ock\Ock\Formula\ValueProvider\Formula_FixedPhp_Adaptee;
 use Ock\Ock\Plugin\PluginDeclaration;
 use Ock\Ock\Text\Text;
 use Ock\Ock\Text\TextInterface;
+use Ock\ReflectorAwareAttributes\ReflectorAwareAttributeInterface;
 
 #[\Attribute(\Attribute::TARGET_PARAMETER|\Attribute::TARGET_PROPERTY)]
 class OckAdaptee implements NameHavingInterface, LabelHavingInterface, FormulaHavingInterface, ReflectorAwareAttributeInterface, PluginModifierAttributeInterface {
