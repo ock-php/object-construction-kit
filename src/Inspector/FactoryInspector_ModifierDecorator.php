@@ -39,7 +39,7 @@ class FactoryInspector_ModifierDecorator implements FactoryInspectorInterface {
    */
   public function findInFactory(FactoryReflectionInterface $reflector): \Iterator {
     foreach ($this->decorated->findInFactory($reflector) as $key => $declaration) {
-      $modifierAttributes ??= AttributesUtil::getAll($reflector, PluginModifierAttributeInterface::class);
+      $modifierAttributes ??= AttributesUtil::getAll($reflector->reveal(), PluginModifierAttributeInterface::class);
       foreach ($modifierAttributes as $modifier) {
         $declaration = $modifier->modifyPlugin($declaration);
       }

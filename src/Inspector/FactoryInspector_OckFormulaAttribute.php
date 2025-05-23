@@ -34,7 +34,7 @@ class FactoryInspector_OckFormulaAttribute implements FactoryInspectorInterface 
     ) {
       return;
     }
-    $attribute = AttributesUtil::getSingle($reflector, OckPluginFormula::class);
+    $attribute = AttributesUtil::getSingle($reflector->reveal(), OckPluginFormula::class);
     if ($attribute === null) {
       return;
     }

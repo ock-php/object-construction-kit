@@ -46,7 +46,7 @@ class FactoryInspector_OckInstanceAttribute implements FactoryInspectorInterface
    * {@inheritdoc}
    */
   public function findInFactory(FactoryReflectionInterface $reflector): \Iterator {
-    $attribute = AttributesUtil::getSingle($reflector, OckPluginInstance::class);
+    $attribute = AttributesUtil::getSingle($reflector->reveal(), OckPluginInstance::class);
     if ($attribute === null) {
       return;
     }
