@@ -14,15 +14,19 @@ use Ock\Ock\Formula\ValueProvider\Formula_FixedPhp_Adaptee;
 use Ock\Ock\Plugin\PluginDeclaration;
 use Ock\Ock\Text\Text;
 use Ock\Ock\Text\TextInterface;
-use Ock\ReflectorAwareAttributes\ReflectorAwareAttributeInterface;
+use Ock\ReflectorAwareAttributes\AttributeConstructor;
 
 #[\Attribute(\Attribute::TARGET_PARAMETER|\Attribute::TARGET_PROPERTY)]
-class OckAdaptee implements NameHavingInterface, LabelHavingInterface, FormulaHavingInterface, ReflectorAwareAttributeInterface, PluginModifierAttributeInterface {
+class OckAdaptee implements NameHavingInterface, LabelHavingInterface, FormulaHavingInterface, PluginModifierAttributeInterface {
 
   /**
-   * @var class-string|null
+   * @var class-string
    */
-  private ?string $type;
+  private string $type;
+
+  public function __construct() {
+    $this->type = self::guessType();
+  }
 
   /**
    * {@inheritdoc}
@@ -46,9 +50,10 @@ class OckAdaptee implements NameHavingInterface, LabelHavingInterface, FormulaHa
   }
 
   /**
-   * {@inheritdoc}
+   * @return class-string
    */
-  public function setReflector(\Reflector $reflector): void {
+  private static function guessType(): string {
+    $reflector = AttributeConstructor::getReflector();
     if (!$reflector instanceof \ReflectionParameter) {
       throw new MalformedDeclarationException('This attribute must be on a parameter.');
     }
@@ -64,16 +69,13 @@ class OckAdaptee implements NameHavingInterface, LabelHavingInterface, FormulaHa
       $t = $declaring_class->getName();
     }
     /** @var class-string $t */
-    $this->type = $t;
+    return $t;
   }
 
   /**
    * {@inheritdoc}
    */
   public function modifyPlugin(PluginDeclaration $declaration): PluginDeclaration {
-    if ($this->type === NULL) {
-      throw new \RuntimeException('This attribute is incomplete. Please call ->setReflector().');
-    }
     return $declaration->withSetting('adaptee_type', $this->type);
   }
 
