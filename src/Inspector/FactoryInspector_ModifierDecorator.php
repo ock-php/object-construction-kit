@@ -5,12 +5,12 @@ declare(strict_types = 1);
 namespace Ock\Ock\Inspector;
 
 use Ock\ClassDiscovery\Inspector\FactoryInspectorInterface;
-use Ock\ClassDiscovery\Util\AttributesUtil;
 use Ock\DependencyInjection\Attribute\Service;
 use Ock\DependencyInjection\Attribute\ServiceTag;
 use Ock\Ock\Attribute\PluginModifier\PluginModifierAttributeInterface;
 use Ock\Ock\OckPackage;
 use Ock\Reflection\FactoryReflectionInterface;
+use function Ock\ReflectorAwareAttributes\get_attributes;
 
 /**
  * @template TKey
@@ -39,7 +39,7 @@ class FactoryInspector_ModifierDecorator implements FactoryInspectorInterface {
    */
   public function findInFactory(FactoryReflectionInterface $reflector): \Iterator {
     foreach ($this->decorated->findInFactory($reflector) as $key => $declaration) {
-      $modifierAttributes ??= AttributesUtil::getAll($reflector->reveal(), PluginModifierAttributeInterface::class);
+      $modifierAttributes ??= get_attributes($reflector->reveal(), PluginModifierAttributeInterface::class);
       foreach ($modifierAttributes as $modifier) {
         $declaration = $modifier->modifyPlugin($declaration);
       }
