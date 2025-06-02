@@ -31,8 +31,9 @@ class IntOp_Sequence implements IntOpInterface {
    *
    * @param \Ock\Ock\Tests\Fixture\IntOp\IntOpInterface[] $operations
    */
-  public function __construct(private readonly array $operations) {
-  }
+  public function __construct(
+    private readonly array $operations,
+  ) {}
 
   /**
    * {@inheritdoc}

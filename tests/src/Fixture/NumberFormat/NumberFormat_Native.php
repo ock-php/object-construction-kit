@@ -63,8 +63,11 @@ class NumberFormat_Native implements NumberFormatInterface {
    * @param string $thousandsSeparator
    *   Thousands separator.
    */
-  public function __construct(private readonly int $decimals = 0, private readonly string $decimalSeparator = '.', private readonly string $thousandsSeparator = ',') {
-  }
+  public function __construct(
+    private readonly int $decimals = 0,
+    private readonly string $decimalSeparator = '.',
+    private readonly string $thousandsSeparator = ',',
+  ) {}
 
   /**
    * @param int|float $number

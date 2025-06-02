@@ -13,7 +13,9 @@ class V2V_Value_CallSingleParam implements V2V_ValueInterface {
    *
    * @param string $fqn
    */
-  public function __construct(private readonly string $fqn) {}
+  public function __construct(
+    private readonly string $fqn,
+  ) {}
 
   /**
    * {@inheritdoc}

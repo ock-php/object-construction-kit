@@ -27,8 +27,9 @@ class IntOp_Add implements IntOpInterface {
    *
    * @param int $increment
    */
-  public function __construct(private readonly int $increment) {
-  }
+  public function __construct(
+    private readonly int $increment,
+  ) {}
 
   /**
    * {@inheritdoc}
