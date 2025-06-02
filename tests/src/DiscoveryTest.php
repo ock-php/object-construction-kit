@@ -27,7 +27,7 @@ class DiscoveryTest extends FormulaTestBase {
    */
   public function testClassFilesIA(): void {
     $root = dirname(__DIR__, 2);
-    $classFilesIA = NamespaceDirectory::fromKnownClass(OckNamespace::class);
+    $classFilesIA = NamespaceDirectory::fromClass(OckNamespace::class);
     $class_files = iterator_to_array($classFilesIA);
 
     self::assertSame(
